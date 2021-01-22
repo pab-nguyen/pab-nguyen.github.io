@@ -4,18 +4,17 @@ highlighter:      pygments
 
 # Permalinks
 permalink:        pretty
-relative_permalinks: true
 
 # Setup
-title:            Phan Nguyen 
-tagline:          'A Jekyll theme'
-description:      
-url:              
+title:            Phan Nguyen
+tagline:          
+description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+url:              http://pab-nguyen.github.io
 baseurl:          /
 
 author:
   name:           'Mark Otto'
-  url:            
+  url:            https://twitter.com/mdo
 
 paginate:         5
 
@@ -23,4 +22,4 @@ paginate:         5
 version:          2.1.0
 
 github:
-  repo:           
+  repo:           https://github.com/poole/hyde
