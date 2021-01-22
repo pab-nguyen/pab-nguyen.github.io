@@ -7,11 +7,11 @@ permalink:        pretty
 relative_permalinks: false
 
 # Setup
-title:            Hyde
+title:            Phan Nguyen 
 tagline:          'A Jekyll theme'
-description:      'A brazen two-column <a href="" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="" target="_blank">@mdo</a>.'
+description:      
 url:              
-baseurl:          /
+baseurl:          
 
 author:
   name:           'Mark Otto'
