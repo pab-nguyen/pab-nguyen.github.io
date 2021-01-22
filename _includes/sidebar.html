@@ -1,11 +1,14 @@
 <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <h1>
+      <h3>
+        {{ site.title }}
+        {% comment%}
         <a href="{{ site.baseurl }}">
-          {{ site.title }}
+          
         </a>
-      </h1>
+        {% endcomment %}
+      </h3>
       <p class="lead">{{ site.description }}</p>
     </div>
 
