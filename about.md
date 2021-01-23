@@ -4,8 +4,9 @@ title: About
 sidebar_link: true
 
 ---
-<img align="center" src="/assets/me.jpg" width="480">
-
+<p align="center">
+	<img align="center" src="/assets/me.jpg" width="480">
+</p>
 <p class="message">
   Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
 </p>
@@ -23,4 +24,4 @@ Besides programming and visualization tools, I have substantial knowledge and ex
  
 
 Thank you for your 
-11
+12
