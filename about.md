@@ -4,7 +4,7 @@ title: About
 sidebar_link: true
 
 ---
-![My Profile Pic](/assets/me.jpg)<img src="/assets/me.jpg" width="120" height="120">
+<img src="/assets/me.jpg" width="480">
 
 <p class="message">
   Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
