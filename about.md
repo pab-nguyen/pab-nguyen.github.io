@@ -1,6 +1,8 @@
 ---
 layout: page
 title: About
+sidebar_link: true
+
 ---
 ![My Profile Pic](/assets/me.jpg =250px)
 
