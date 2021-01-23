@@ -9,28 +9,17 @@ sidebar_link: true
   Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
 </p>
 
-Hi, I am Phan. Welcome to my personal website.
+Hi, I am Phan Nguyen. Welcome to my personal website. I am a self-taught data scientist. My previous education has been focusing on finance. Recently, I worked at Sunovion Pharmaceuticals as an intern for their Strategic Pricing department. I got to build these automation macros in Excel VBA, which reduce the average time spent for analysts from a few days to 20 minutes. Even though my job was mainly Excel and VBA related, it sparked something in me. I realized I want to work as data. I also remember a project I did in one of my Statistical Modeling class, where my team built a ML classification model to categorize cars by their MSRP prices and their market label (whether they are luxury/performance). These experiences, along with a lengthy research process, make me realized that statistics, programming and data are all things I am interested in. I am excited for this journey, and by creating this website, I am making the commitment to follow through.  
 
-I am a self-taught data scientist. 
+I have a BS and MS in Finance. I am proficient in R and Python programming languages, data processing with SQL. I am familiar with a handful of libraries like ggplot, dplyr for R and matplotlib, pandas, numpy, seaborn for Python. Tableau is another of my trusted tool to deal with data visualization. Besides programming and visualization tools, I am advanced in Excel and VBA as well. I have built multiples VBA macros sets to automate reports, reducing significantly labor hours in my previous employment.   
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+<button name="button" onclick="">Portfolio</button>   
 
-There are currently two themes built on Poole:
+I have high interest in data science, scripting.  
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
 
-Learn more and contribute on [GitHub](https://github.com/poole).
+Achievements:
+- Passed CFA Level I in top 10%
+-
 
-## Setup
-
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!
+Thank you for your 
