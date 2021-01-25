@@ -1,26 +1,27 @@
-# Dependencies
-markdown:         kramdown
-highlighter:      rouge
-
-# Permalinks
-permalink:        pretty
-
-# Setup
-title:            Phan Nguyen
-tagline:          
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:              http://pab-nguyen.github.io
-baseurl:          /
-
+---
+title: Phan Nguyen
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+tagline: 
+description: A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a>
+  theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo"
+  target="_blank">@mdo</a>.
+url: http://pab-nguyen.github.io
+baseurl: "/"
 author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
-
-paginate:         5
-paginate_path:   "/portfolio/page:num/"
-# Custom vars
-version:          2.1.0
-
+  name: Mark Otto
+  url: https://twitter.com/mdo
+paginate: 5
+paginate_path: "/portfolio/page:num/"
+version: 2.1.0
 github:
-  repo:           https://github.com/poole/hyde
-
+  repo: https://github.com/poole/hyde

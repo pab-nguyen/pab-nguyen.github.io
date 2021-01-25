@@ -1,12 +1,10 @@
 ---
-layout: post
 title: Example content
-summary:
-  <div class="message">
-  Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
-  </div>
+date: 2012-02-07 00:00:00 Z
+layout: post
+summary: <div class="message"> Howdy! This is an example blog post that shows several
+  types of HTML content supported in this theme. </div>
 ---
-
 
 <div class="message">
   Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
