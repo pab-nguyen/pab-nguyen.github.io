@@ -5,7 +5,7 @@ sidebar_link: true
 ---
   
 <p align="center">
-	<img align="center" src="/assets/me.jpg" width="480">
+	<img align="center" src="/assets/me.jpg" width="360">
 </p>
 <p class="message">
   This is Artist Bluff Trails in New Hampshire
