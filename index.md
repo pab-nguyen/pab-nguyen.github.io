@@ -20,7 +20,7 @@ I have a BS and MS in Finance. I am proficient in R and Python programming langu
 Besides programming and visualization tools, I have substantial knowledge and experiences in corporate finance and I am advanced in Excel and VBA.I have worked as an investment analyst at an asset management firm. I have experiences with building complex financial models for equity valuation (DCF), capital budgeting, revenue forecasting, option pricing. Addtionally, I have built multiples VBA macros sets to automate reports, reducing significantly labor hours in my most previous employment. 
 
 <p align="center">
-	<button class="button" name="button" href="pab-nguyen.github.io/portfolio/">Portfolio</button>   
+	<button class="button" name="button" onclick="pab-nguyen.github.io/portfolio/">Portfolio</button>   
 </p>
  
 
