@@ -17,9 +17,10 @@ author:
   url:            https://twitter.com/mdo
 
 paginate:         5
-
+paginate_path:   Portfolio/page:num
 # Custom vars
 version:          2.1.0
 
 github:
   repo:           https://github.com/poole/hyde
+
