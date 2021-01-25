@@ -1,0 +1,688 @@
+---
+layout: posts
+title: Simple Logistic Regression on Titanic
+---
+
+<!DOCTYPE html>
+<!-- saved from url=(0820)https://www.kaggleusercontent.com/kf/49367457/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..OOe4q0BrA6_Cc0jZCkisDg.jFQK2pHeR8qx-ZnjElpigddGh1fdJVTfJGz2MrQEgPXikWZuyV4VgLR019rky0WqNrjCLo-8G923K5177EhRuG4iYYMp9DvM2u07GnxrK7eIaL0Ked2JMkaqmUH1tlW3CLgFOfe0rs0SY2slpQdr7zcofmqBc2II19XqTzJPAzKWbLTkHwCDLew_R5_f7aeQVXWiAAw5wRPYooybIM7bWkmG3a2chq-HAtr_8knoksV-_tqL7AVEpiMxtwUODP3Hw0ajzTN95wyQrO1wdD8JFFJFTZosyJBV6dDsz_TmtgFqAPIQoeCtDam9mv0r_TQAFHZoGcefJwdPgRcYRDzOxlWNw9qFvacj5i8xDjcggEZZG0ku0jlmYRKhQlES92L6B8NY3ofGpOTko998MNXBISjZtEfT4XVGUfjx698mSS_A_mZVrlDR51-qanl_tCOGm_UAxAgeA67A6m2ODRpR5Ny-A3v3EfKfD4HxhKB2WG75UW6GKyklJrTfGPCZUTKyyUWDXycZfBWPFRdJU24fIVC9tfYJoDBzaIeLPbY5XJ1TKQmU65BbRnVcDu5qJ4YhB6nKrJq1V2tihVeo71eOCUEjGHuCSICKn041WNAeOeei8mC5nO5jlFTT53Ju1zka9dZozJocjdBmPkBmp-cLYQ.O2qAilc0-saOCPKmnt0hsw/__results__.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<meta name="generator" content="pandoc">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+
+
+<meta name="author" content="Phan Nguyen">
+
+<meta name="date" content="2020-12-15">
+
+<title>Predicting Survivor Rate of Titanic Passengers - Simple Logistic Regression</title>
+
+<script src="./Predicting Survivor Rate of Titanic Passengers - Simple Logistic Regression_files/jquery.min.js.download"></script><link href="chrome-extension://idpbkophnbfijcnlffdmmppgnncgappc/css/content.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="./Predicting Survivor Rate of Titanic Passengers - Simple Logistic Regression_files/bootstrap.min.css" rel="stylesheet">
+<script src="./Predicting Survivor Rate of Titanic Passengers - Simple Logistic Regression_files/bootstrap.min.js.download"></script>
+<script src="./Predicting Survivor Rate of Titanic Passengers - Simple Logistic Regression_files/html5shiv.min.js.download"></script>
+<script src="./Predicting Survivor Rate of Titanic Passengers - Simple Logistic Regression_files/respond.min.js.download"></script>
+<script src="./Predicting Survivor Rate of Titanic Passengers - Simple Logistic Regression_files/tabsets.js.download"></script>
+<link href="./Predicting Survivor Rate of Titanic Passengers - Simple Logistic Regression_files/default.css" rel="stylesheet">
+<script src="./Predicting Survivor Rate of Titanic Passengers - Simple Logistic Regression_files/highlight.js.download"></script>
+<link href="./Predicting Survivor Rate of Titanic Passengers - Simple Logistic Regression_files/anchor-sections.css" rel="stylesheet">
+<script src="./Predicting Survivor Rate of Titanic Passengers - Simple Logistic Regression_files/anchor-sections.js.download"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type="text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+<!--<base target="_blank">--><base href="." target="_blank"><script src="./Predicting Survivor Rate of Titanic Passengers - Simple Logistic Regression_files/runtime.js.download" async="" defer=""></script><script src="./Predicting Survivor Rate of Titanic Passengers - Simple Logistic Regression_files/notebookviewer.js.download" async="" defer=""></script><script src="./Predicting Survivor Rate of Titanic Passengers - Simple Logistic Regression_files/vendor.js.download" async="" defer=""></script><link href="./Predicting Survivor Rate of Titanic Passengers - Simple Logistic Regression_files/notebookviewer.css" type="text/css" rel="stylesheet"><link href="./Predicting Survivor Rate of Titanic Passengers - Simple Logistic Regression_files/vendor.css" type="text/css" rel="stylesheet"><script type="text/javascript" src="./Predicting Survivor Rate of Titanic Passengers - Simple Logistic Regression_files/MathJax.js.download"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+
+<body data-new-gr-c-s-check-loaded="14.992.0" data-gr-ext-installed=""><div id="MathJax_Message" style="display: none;"></div>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Predicting Survivor Rate of Titanic Passengers - Simple Logistic Regression</h1>
+<h4 class="author">Phan Nguyen</h4>
+<h4 class="date">2020-12-15</h4>
+
+</div>
+
+<div id="TOC">
+<ul>
+<li><a href="https://www.kaggleusercontent.com/kf/49367457/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..OOe4q0BrA6_Cc0jZCkisDg.jFQK2pHeR8qx-ZnjElpigddGh1fdJVTfJGz2MrQEgPXikWZuyV4VgLR019rky0WqNrjCLo-8G923K5177EhRuG4iYYMp9DvM2u07GnxrK7eIaL0Ked2JMkaqmUH1tlW3CLgFOfe0rs0SY2slpQdr7zcofmqBc2II19XqTzJPAzKWbLTkHwCDLew_R5_f7aeQVXWiAAw5wRPYooybIM7bWkmG3a2chq-HAtr_8knoksV-_tqL7AVEpiMxtwUODP3Hw0ajzTN95wyQrO1wdD8JFFJFTZosyJBV6dDsz_TmtgFqAPIQoeCtDam9mv0r_TQAFHZoGcefJwdPgRcYRDzOxlWNw9qFvacj5i8xDjcggEZZG0ku0jlmYRKhQlES92L6B8NY3ofGpOTko998MNXBISjZtEfT4XVGUfjx698mSS_A_mZVrlDR51-qanl_tCOGm_UAxAgeA67A6m2ODRpR5Ny-A3v3EfKfD4HxhKB2WG75UW6GKyklJrTfGPCZUTKyyUWDXycZfBWPFRdJU24fIVC9tfYJoDBzaIeLPbY5XJ1TKQmU65BbRnVcDu5qJ4YhB6nKrJq1V2tihVeo71eOCUEjGHuCSICKn041WNAeOeei8mC5nO5jlFTT53Ju1zka9dZozJocjdBmPkBmp-cLYQ.O2qAilc0-saOCPKmnt0hsw/__results__.html#predicting-survivor-rate-of-titanic" target="_self"><span class="toc-section-number">1</span> Predicting Survivor Rate of Titanic</a><ul>
+<li><a href="https://www.kaggleusercontent.com/kf/49367457/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..OOe4q0BrA6_Cc0jZCkisDg.jFQK2pHeR8qx-ZnjElpigddGh1fdJVTfJGz2MrQEgPXikWZuyV4VgLR019rky0WqNrjCLo-8G923K5177EhRuG4iYYMp9DvM2u07GnxrK7eIaL0Ked2JMkaqmUH1tlW3CLgFOfe0rs0SY2slpQdr7zcofmqBc2II19XqTzJPAzKWbLTkHwCDLew_R5_f7aeQVXWiAAw5wRPYooybIM7bWkmG3a2chq-HAtr_8knoksV-_tqL7AVEpiMxtwUODP3Hw0ajzTN95wyQrO1wdD8JFFJFTZosyJBV6dDsz_TmtgFqAPIQoeCtDam9mv0r_TQAFHZoGcefJwdPgRcYRDzOxlWNw9qFvacj5i8xDjcggEZZG0ku0jlmYRKhQlES92L6B8NY3ofGpOTko998MNXBISjZtEfT4XVGUfjx698mSS_A_mZVrlDR51-qanl_tCOGm_UAxAgeA67A6m2ODRpR5Ny-A3v3EfKfD4HxhKB2WG75UW6GKyklJrTfGPCZUTKyyUWDXycZfBWPFRdJU24fIVC9tfYJoDBzaIeLPbY5XJ1TKQmU65BbRnVcDu5qJ4YhB6nKrJq1V2tihVeo71eOCUEjGHuCSICKn041WNAeOeei8mC5nO5jlFTT53Ju1zka9dZozJocjdBmPkBmp-cLYQ.O2qAilc0-saOCPKmnt0hsw/__results__.html#importing-libraries" target="_self"><span class="toc-section-number">1.1</span> Importing Libraries</a></li>
+<li><a href="https://www.kaggleusercontent.com/kf/49367457/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..OOe4q0BrA6_Cc0jZCkisDg.jFQK2pHeR8qx-ZnjElpigddGh1fdJVTfJGz2MrQEgPXikWZuyV4VgLR019rky0WqNrjCLo-8G923K5177EhRuG4iYYMp9DvM2u07GnxrK7eIaL0Ked2JMkaqmUH1tlW3CLgFOfe0rs0SY2slpQdr7zcofmqBc2II19XqTzJPAzKWbLTkHwCDLew_R5_f7aeQVXWiAAw5wRPYooybIM7bWkmG3a2chq-HAtr_8knoksV-_tqL7AVEpiMxtwUODP3Hw0ajzTN95wyQrO1wdD8JFFJFTZosyJBV6dDsz_TmtgFqAPIQoeCtDam9mv0r_TQAFHZoGcefJwdPgRcYRDzOxlWNw9qFvacj5i8xDjcggEZZG0ku0jlmYRKhQlES92L6B8NY3ofGpOTko998MNXBISjZtEfT4XVGUfjx698mSS_A_mZVrlDR51-qanl_tCOGm_UAxAgeA67A6m2ODRpR5Ny-A3v3EfKfD4HxhKB2WG75UW6GKyklJrTfGPCZUTKyyUWDXycZfBWPFRdJU24fIVC9tfYJoDBzaIeLPbY5XJ1TKQmU65BbRnVcDu5qJ4YhB6nKrJq1V2tihVeo71eOCUEjGHuCSICKn041WNAeOeei8mC5nO5jlFTT53Ju1zka9dZozJocjdBmPkBmp-cLYQ.O2qAilc0-saOCPKmnt0hsw/__results__.html#first-look-at-the-data" target="_self"><span class="toc-section-number">1.2</span> First look at the data</a></li>
+<li><a href="https://www.kaggleusercontent.com/kf/49367457/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..OOe4q0BrA6_Cc0jZCkisDg.jFQK2pHeR8qx-ZnjElpigddGh1fdJVTfJGz2MrQEgPXikWZuyV4VgLR019rky0WqNrjCLo-8G923K5177EhRuG4iYYMp9DvM2u07GnxrK7eIaL0Ked2JMkaqmUH1tlW3CLgFOfe0rs0SY2slpQdr7zcofmqBc2II19XqTzJPAzKWbLTkHwCDLew_R5_f7aeQVXWiAAw5wRPYooybIM7bWkmG3a2chq-HAtr_8knoksV-_tqL7AVEpiMxtwUODP3Hw0ajzTN95wyQrO1wdD8JFFJFTZosyJBV6dDsz_TmtgFqAPIQoeCtDam9mv0r_TQAFHZoGcefJwdPgRcYRDzOxlWNw9qFvacj5i8xDjcggEZZG0ku0jlmYRKhQlES92L6B8NY3ofGpOTko998MNXBISjZtEfT4XVGUfjx698mSS_A_mZVrlDR51-qanl_tCOGm_UAxAgeA67A6m2ODRpR5Ny-A3v3EfKfD4HxhKB2WG75UW6GKyklJrTfGPCZUTKyyUWDXycZfBWPFRdJU24fIVC9tfYJoDBzaIeLPbY5XJ1TKQmU65BbRnVcDu5qJ4YhB6nKrJq1V2tihVeo71eOCUEjGHuCSICKn041WNAeOeei8mC5nO5jlFTT53Ju1zka9dZozJocjdBmPkBmp-cLYQ.O2qAilc0-saOCPKmnt0hsw/__results__.html#fitting-the-model" target="_self"><span class="toc-section-number">1.3</span> Fitting the model</a></li>
+<li><a href="https://www.kaggleusercontent.com/kf/49367457/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..OOe4q0BrA6_Cc0jZCkisDg.jFQK2pHeR8qx-ZnjElpigddGh1fdJVTfJGz2MrQEgPXikWZuyV4VgLR019rky0WqNrjCLo-8G923K5177EhRuG4iYYMp9DvM2u07GnxrK7eIaL0Ked2JMkaqmUH1tlW3CLgFOfe0rs0SY2slpQdr7zcofmqBc2II19XqTzJPAzKWbLTkHwCDLew_R5_f7aeQVXWiAAw5wRPYooybIM7bWkmG3a2chq-HAtr_8knoksV-_tqL7AVEpiMxtwUODP3Hw0ajzTN95wyQrO1wdD8JFFJFTZosyJBV6dDsz_TmtgFqAPIQoeCtDam9mv0r_TQAFHZoGcefJwdPgRcYRDzOxlWNw9qFvacj5i8xDjcggEZZG0ku0jlmYRKhQlES92L6B8NY3ofGpOTko998MNXBISjZtEfT4XVGUfjx698mSS_A_mZVrlDR51-qanl_tCOGm_UAxAgeA67A6m2ODRpR5Ny-A3v3EfKfD4HxhKB2WG75UW6GKyklJrTfGPCZUTKyyUWDXycZfBWPFRdJU24fIVC9tfYJoDBzaIeLPbY5XJ1TKQmU65BbRnVcDu5qJ4YhB6nKrJq1V2tihVeo71eOCUEjGHuCSICKn041WNAeOeei8mC5nO5jlFTT53Ju1zka9dZozJocjdBmPkBmp-cLYQ.O2qAilc0-saOCPKmnt0hsw/__results__.html#prediction" target="_self"><span class="toc-section-number">1.4</span> Prediction</a></li>
+</ul></li>
+</ul>
+</div>
+
+<div id="predicting-survivor-rate-of-titanic" class="section level1">
+<h1 class="hasAnchor"><span class="header-section-number">1</span> Predicting Survivor Rate of Titanic<a href="https://www.kaggleusercontent.com/kf/49367457/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..OOe4q0BrA6_Cc0jZCkisDg.jFQK2pHeR8qx-ZnjElpigddGh1fdJVTfJGz2MrQEgPXikWZuyV4VgLR019rky0WqNrjCLo-8G923K5177EhRuG4iYYMp9DvM2u07GnxrK7eIaL0Ked2JMkaqmUH1tlW3CLgFOfe0rs0SY2slpQdr7zcofmqBc2II19XqTzJPAzKWbLTkHwCDLew_R5_f7aeQVXWiAAw5wRPYooybIM7bWkmG3a2chq-HAtr_8knoksV-_tqL7AVEpiMxtwUODP3Hw0ajzTN95wyQrO1wdD8JFFJFTZosyJBV6dDsz_TmtgFqAPIQoeCtDam9mv0r_TQAFHZoGcefJwdPgRcYRDzOxlWNw9qFvacj5i8xDjcggEZZG0ku0jlmYRKhQlES92L6B8NY3ofGpOTko998MNXBISjZtEfT4XVGUfjx698mSS_A_mZVrlDR51-qanl_tCOGm_UAxAgeA67A6m2ODRpR5Ny-A3v3EfKfD4HxhKB2WG75UW6GKyklJrTfGPCZUTKyyUWDXycZfBWPFRdJU24fIVC9tfYJoDBzaIeLPbY5XJ1TKQmU65BbRnVcDu5qJ4YhB6nKrJq1V2tihVeo71eOCUEjGHuCSICKn041WNAeOeei8mC5nO5jlFTT53Ju1zka9dZozJocjdBmPkBmp-cLYQ.O2qAilc0-saOCPKmnt0hsw/__results__.html#predicting-survivor-rate-of-titanic" class="anchor-section" target="_self"></a></h1>
+<p>Hello, welcome to my first attempt at cracking this competition. I am new at data science, therefore any comments would be highly appreciated.</p>
+<div id="importing-libraries" class="section level2">
+<h2 class="hasAnchor"><span class="header-section-number">1.1</span> Importing Libraries<a href="https://www.kaggleusercontent.com/kf/49367457/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..OOe4q0BrA6_Cc0jZCkisDg.jFQK2pHeR8qx-ZnjElpigddGh1fdJVTfJGz2MrQEgPXikWZuyV4VgLR019rky0WqNrjCLo-8G923K5177EhRuG4iYYMp9DvM2u07GnxrK7eIaL0Ked2JMkaqmUH1tlW3CLgFOfe0rs0SY2slpQdr7zcofmqBc2II19XqTzJPAzKWbLTkHwCDLew_R5_f7aeQVXWiAAw5wRPYooybIM7bWkmG3a2chq-HAtr_8knoksV-_tqL7AVEpiMxtwUODP3Hw0ajzTN95wyQrO1wdD8JFFJFTZosyJBV6dDsz_TmtgFqAPIQoeCtDam9mv0r_TQAFHZoGcefJwdPgRcYRDzOxlWNw9qFvacj5i8xDjcggEZZG0ku0jlmYRKhQlES92L6B8NY3ofGpOTko998MNXBISjZtEfT4XVGUfjx698mSS_A_mZVrlDR51-qanl_tCOGm_UAxAgeA67A6m2ODRpR5Ny-A3v3EfKfD4HxhKB2WG75UW6GKyklJrTfGPCZUTKyyUWDXycZfBWPFRdJU24fIVC9tfYJoDBzaIeLPbY5XJ1TKQmU65BbRnVcDu5qJ4YhB6nKrJq1V2tihVeo71eOCUEjGHuCSICKn041WNAeOeei8mC5nO5jlFTT53Ju1zka9dZozJocjdBmPkBmp-cLYQ.O2qAilc0-saOCPKmnt0hsw/__results__.html#importing-libraries" class="anchor-section" target="_self"></a></h2>
+<p>These are the libraries I found neccessary to perform this model building exercise.</p>
+<pre class="r"><code class="hljs"><span class="hljs-keyword">library</span>(tidyverse)<span class="hljs-comment"># metapackage of all tidyverse packages</span>
+<span class="hljs-keyword">library</span>(<span class="hljs-string">'plyr'</span>) <span class="hljs-comment"># data manipulation</span>
+<span class="hljs-keyword">library</span>(<span class="hljs-string">'dplyr'</span>)</code></pre>
+</div>
+<div id="first-look-at-the-data" class="section level2">
+<h2 class="hasAnchor"><span class="header-section-number">1.2</span> First look at the data<a href="https://www.kaggleusercontent.com/kf/49367457/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..OOe4q0BrA6_Cc0jZCkisDg.jFQK2pHeR8qx-ZnjElpigddGh1fdJVTfJGz2MrQEgPXikWZuyV4VgLR019rky0WqNrjCLo-8G923K5177EhRuG4iYYMp9DvM2u07GnxrK7eIaL0Ked2JMkaqmUH1tlW3CLgFOfe0rs0SY2slpQdr7zcofmqBc2II19XqTzJPAzKWbLTkHwCDLew_R5_f7aeQVXWiAAw5wRPYooybIM7bWkmG3a2chq-HAtr_8knoksV-_tqL7AVEpiMxtwUODP3Hw0ajzTN95wyQrO1wdD8JFFJFTZosyJBV6dDsz_TmtgFqAPIQoeCtDam9mv0r_TQAFHZoGcefJwdPgRcYRDzOxlWNw9qFvacj5i8xDjcggEZZG0ku0jlmYRKhQlES92L6B8NY3ofGpOTko998MNXBISjZtEfT4XVGUfjx698mSS_A_mZVrlDR51-qanl_tCOGm_UAxAgeA67A6m2ODRpR5Ny-A3v3EfKfD4HxhKB2WG75UW6GKyklJrTfGPCZUTKyyUWDXycZfBWPFRdJU24fIVC9tfYJoDBzaIeLPbY5XJ1TKQmU65BbRnVcDu5qJ4YhB6nKrJq1V2tihVeo71eOCUEjGHuCSICKn041WNAeOeei8mC5nO5jlFTT53Ju1zka9dZozJocjdBmPkBmp-cLYQ.O2qAilc0-saOCPKmnt0hsw/__results__.html#first-look-at-the-data" class="anchor-section" target="_self"></a></h2>
+<p>First, I’m going to pull in the data from Kaggle. There are two data sets, train and test.</p>
+<pre class="r"><code class="hljs">train &lt;- read.csv(<span class="hljs-string">"../input/titanic/train.csv"</span>)
+test &lt;- read.csv (<span class="hljs-string">"../input/titanic/test.csv"</span>)
+dim(train)</code></pre>
+<pre><code class="hljs">## [1] 891  12</code></pre>
+<pre class="r"><code class="hljs">dim(test)</code></pre>
+<pre><code class="hljs">## [1] 418  11</code></pre>
+<p>The train data set has 891 rows, each row represents a passenger and the test set has 418 rows. Let’s look at the first few rows of the data.</p>
+<pre class="r"><code class="hljs">head(train,n=<span class="hljs-number">5</span>)</code></pre>
+<pre><code class="hljs">##   PassengerId Survived Pclass
+## 1           1        0      3
+## 2           2        1      1
+## 3           3        1      3
+## 4           4        1      1
+## 5           5        0      3
+##                                                  Name    Sex Age SibSp Parch
+## 1                             Braund, Mr. Owen Harris   male  22     1     0
+## 2 Cumings, Mrs. John Bradley (Florence Briggs Thayer) female  38     1     0
+## 3                              Heikkinen, Miss. Laina female  26     0     0
+## 4        Futrelle, Mrs. Jacques Heath (Lily May Peel) female  35     1     0
+## 5                            Allen, Mr. William Henry   male  35     0     0
+##             Ticket    Fare Cabin Embarked
+## 1        A/5 21171  7.2500              S
+## 2         PC 17599 71.2833   C85        C
+## 3 STON/O2. 3101282  7.9250              S
+## 4           113803 53.1000  C123        S
+## 5           373450  8.0500              S</code></pre>
+<p>These are the 12 variables in the train data set. The test data set doesn’t contain Survived.</p>
+<table class="table table-condensed">
+<thead>
+<tr class="header">
+<th>Variable Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Survived</td>
+<td>Survived (1) or died (0)</td>
+</tr>
+<tr class="even">
+<td>Pclass</td>
+<td>Passenger’s class</td>
+</tr>
+<tr class="odd">
+<td>Name</td>
+<td>Passenger’s name</td>
+</tr>
+<tr class="even">
+<td>Sex</td>
+<td>Passenger’s sex</td>
+</tr>
+<tr class="odd">
+<td>Age</td>
+<td>Passenger’s age</td>
+</tr>
+<tr class="even">
+<td>SibSp</td>
+<td>Number of siblings/spouses aboard</td>
+</tr>
+<tr class="odd">
+<td>Parch</td>
+<td>Number of parents/children aboard</td>
+</tr>
+<tr class="even">
+<td>Ticket</td>
+<td>Ticket number</td>
+</tr>
+<tr class="odd">
+<td>Fare</td>
+<td>Fare</td>
+</tr>
+<tr class="even">
+<td>Cabin</td>
+<td>Cabin</td>
+</tr>
+<tr class="odd">
+<td>Embarked</td>
+<td>Port of embarkation</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>Right off the bat, I am speculating that sex and age will be significant in detecting the Survivor Rate. Passenger ID, Name and Ticket are not relevant in my opinion.</p>
+<p>For this exercise, I am going to fit a logistic model.</p>
+<p>However, first, we are going to remove missing data from the train data set.</p>
+<pre class="r"><code class="hljs">a &lt;- nrow(train)
+train &lt;- na.omit(train)
+a - nrow(train)</code></pre>
+<pre><code class="hljs">## [1] 177</code></pre>
+<pre class="r"><code class="hljs">plyr::count(train$Survived)</code></pre>
+<pre><code class="hljs">##   x freq
+## 1 0  424
+## 2 1  290</code></pre>
+<p>We removed 177 observations due to missing data. Among the 714 passengers, 424 died and 290 survived.</p>
+</div>
+<div id="fitting-the-model" class="section level2">
+<h2 class="hasAnchor"><span class="header-section-number">1.3</span> Fitting the model<a href="https://www.kaggleusercontent.com/kf/49367457/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..OOe4q0BrA6_Cc0jZCkisDg.jFQK2pHeR8qx-ZnjElpigddGh1fdJVTfJGz2MrQEgPXikWZuyV4VgLR019rky0WqNrjCLo-8G923K5177EhRuG4iYYMp9DvM2u07GnxrK7eIaL0Ked2JMkaqmUH1tlW3CLgFOfe0rs0SY2slpQdr7zcofmqBc2II19XqTzJPAzKWbLTkHwCDLew_R5_f7aeQVXWiAAw5wRPYooybIM7bWkmG3a2chq-HAtr_8knoksV-_tqL7AVEpiMxtwUODP3Hw0ajzTN95wyQrO1wdD8JFFJFTZosyJBV6dDsz_TmtgFqAPIQoeCtDam9mv0r_TQAFHZoGcefJwdPgRcYRDzOxlWNw9qFvacj5i8xDjcggEZZG0ku0jlmYRKhQlES92L6B8NY3ofGpOTko998MNXBISjZtEfT4XVGUfjx698mSS_A_mZVrlDR51-qanl_tCOGm_UAxAgeA67A6m2ODRpR5Ny-A3v3EfKfD4HxhKB2WG75UW6GKyklJrTfGPCZUTKyyUWDXycZfBWPFRdJU24fIVC9tfYJoDBzaIeLPbY5XJ1TKQmU65BbRnVcDu5qJ4YhB6nKrJq1V2tihVeo71eOCUEjGHuCSICKn041WNAeOeei8mC5nO5jlFTT53Ju1zka9dZozJocjdBmPkBmp-cLYQ.O2qAilc0-saOCPKmnt0hsw/__results__.html#fitting-the-model" class="anchor-section" target="_self"></a></h2>
+<p>Let’s fit the a logistic model with all the variables, except for PassengerId, Name and Ticket</p>
+<pre class="r"><code class="hljs">titanic.lr &lt;- glm(formula=as.factor(Survived)~.-PassengerId-Name-Ticket,data=train,family=<span class="hljs-string">'binomial'</span>)
+summary(titanic.lr)</code></pre>
+<pre><code class="hljs">## 
+## Call:
+## glm(formula = as.factor(Survived) ~ . - PassengerId - Name - 
+##     Ticket, family = "binomial", data = train)
+## 
+## Deviance Residuals: 
+##     Min       1Q   Median       3Q      Max  
+## -1.9325  -0.5407  -0.2779   0.3380   2.4949  
+## 
+## Coefficients: (1 not defined because of singularities)
+##                        Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept)           4.829e+00  8.132e-01   5.938 2.88e-09 ***
+## Pclass               -1.027e+00  2.352e-01  -4.367 1.26e-05 ***
+## Sexmale              -2.664e+00  2.510e-01 -10.612  &lt; 2e-16 ***
+## Age                  -4.926e-02  1.040e-02  -4.737 2.17e-06 ***
+## SibSp                -5.055e-01  1.505e-01  -3.358 0.000784 ***
+## Parch                -1.999e-02  1.356e-01  -0.147 0.882753    
+## Fare                  8.274e-03  6.561e-03   1.261 0.207334    
+## CabinA10             -1.863e+01  6.523e+03  -0.003 0.997721    
+## CabinA16              1.694e+01  6.523e+03   0.003 0.997928    
+## CabinA20              1.951e+01  6.523e+03   0.003 0.997614    
+## CabinA23              2.112e+01  6.523e+03   0.003 0.997416    
+## CabinA24             -1.859e+01  6.523e+03  -0.003 0.997725    
+## CabinA26              1.952e+01  6.523e+03   0.003 0.997612    
+## CabinA31              1.877e+01  6.523e+03   0.003 0.997704    
+## CabinA34              1.699e+01  6.523e+03   0.003 0.997922    
+## CabinA36             -1.778e+01  6.523e+03  -0.003 0.997825    
+## CabinA5              -1.686e+01  6.523e+03  -0.003 0.997937    
+## CabinA6               1.851e+01  6.523e+03   0.003 0.997735    
+## CabinA7              -1.757e+01  6.523e+03  -0.003 0.997851    
+## CabinB101             1.454e+01  6.523e+03   0.002 0.998221    
+## CabinB18              1.555e+01  4.422e+03   0.004 0.997194    
+## CabinB19             -1.698e+01  6.523e+03  -0.003 0.997923    
+## CabinB20              1.788e+01  3.680e+03   0.005 0.996123    
+## CabinB22             -1.636e-01  2.609e+00  -0.063 0.949990    
+## CabinB28              1.667e+01  4.469e+03   0.004 0.997024    
+## CabinB3               1.515e+01  6.523e+03   0.002 0.998146    
+## CabinB30             -1.737e+01  6.523e+03  -0.003 0.997876    
+## CabinB35              1.500e+01  4.612e+03   0.003 0.997405    
+## CabinB37             -1.746e+01  6.523e+03  -0.003 0.997864    
+## CabinB38             -1.771e+01  6.523e+03  -0.003 0.997834    
+## CabinB39              1.511e+01  6.523e+03   0.002 0.998152    
+## CabinB4               1.633e+01  6.523e+03   0.003 0.998002    
+## CabinB41              1.988e+01  6.523e+03   0.003 0.997568    
+## CabinB42              1.545e+01  6.523e+03   0.002 0.998110    
+## CabinB49              1.701e+01  3.794e+03   0.004 0.996423    
+## CabinB5               1.414e+01  4.563e+03   0.003 0.997527    
+## CabinB50              1.838e+01  6.523e+03   0.003 0.997752    
+## CabinB51 B53 B55     -1.754e+00  2.781e+00  -0.631 0.528242    
+## CabinB57 B59 B63 B66  1.424e+01  4.610e+03   0.003 0.997536    
+## CabinB58 B60         -3.046e+00  2.047e+00  -1.488 0.136785    
+## CabinB69              1.708e+01  6.523e+03   0.003 0.997911    
+## CabinB71             -1.810e+01  6.523e+03  -0.003 0.997786    
+## CabinB73              1.547e+01  6.523e+03   0.002 0.998108    
+## CabinB77              1.560e+01  4.610e+03   0.003 0.997299    
+## CabinB79              1.484e+01  6.523e+03   0.002 0.998185    
+## CabinB80              1.604e+01  6.523e+03   0.002 0.998038    
+## CabinB82 B84         -1.846e+01  6.523e+03  -0.003 0.997741    
+## CabinB86             -1.955e+01  6.523e+03  -0.003 0.997609    
+## CabinB94             -1.773e+01  6.523e+03  -0.003 0.997831    
+## CabinB96 B98          1.732e+01  2.708e+03   0.006 0.994897    
+## CabinC101             1.796e+01  6.523e+03   0.003 0.997803    
+## CabinC103             1.740e+01  6.523e+03   0.003 0.997871    
+## CabinC104             1.974e+01  6.523e+03   0.003 0.997586    
+## CabinC110            -1.782e+01  6.523e+03  -0.003 0.997820    
+## CabinC111            -1.883e+01  6.523e+03  -0.003 0.997697    
+## CabinC118            -1.848e+01  6.523e+03  -0.003 0.997740    
+## CabinC123            -6.302e-01  1.802e+00  -0.350 0.726500    
+## CabinC124            -1.770e+01  6.523e+03  -0.003 0.997835    
+## CabinC125             1.598e+01  4.526e+03   0.004 0.997183    
+## CabinC126             1.987e+01  6.523e+03   0.003 0.997570    
+## CabinC148             1.809e+01  6.523e+03   0.003 0.997787    
+## CabinC2              -1.259e+00  1.878e+00  -0.670 0.502655    
+## CabinC22 C26         -4.052e+00  1.598e+00  -2.535 0.011234 *  
+## CabinC23 C25 C27     -1.791e+00  1.926e+00  -0.930 0.352431    
+## CabinC30             -1.725e+01  6.523e+03  -0.003 0.997890    
+## CabinC32              1.504e+01  6.523e+03   0.002 0.998160    
+## CabinC45              1.438e+01  6.523e+03   0.002 0.998241    
+## CabinC46             -1.808e+01  6.523e+03  -0.003 0.997789    
+## CabinC49             -2.051e+01  6.523e+03  -0.003 0.997491    
+## CabinC50              1.648e+01  6.523e+03   0.003 0.997984    
+## CabinC52              1.859e+01  6.523e+03   0.003 0.997726    
+## CabinC54              1.489e+01  6.523e+03   0.002 0.998179    
+## CabinC62 C64          1.390e+01  6.523e+03   0.002 0.998299    
+## CabinC65             -2.374e+00  1.863e+00  -1.275 0.202381    
+## CabinC68             -1.065e+00  1.973e+00  -0.540 0.589165    
+## CabinC7               1.497e+01  6.523e+03   0.002 0.998169    
+## CabinC70              1.702e+01  6.523e+03   0.003 0.997918    
+## CabinC78             -1.468e-01  2.210e+00  -0.066 0.947047    
+## CabinC82             -2.046e+01  6.523e+03  -0.003 0.997498    
+## CabinC83             -6.845e-01  1.932e+00  -0.354 0.723085    
+## CabinC85              1.618e+01  6.523e+03   0.002 0.998021    
+## CabinC86             -1.799e+01  6.523e+03  -0.003 0.997800    
+## CabinC87             -1.687e+01  6.523e+03  -0.003 0.997936    
+## CabinC90              1.517e+01  6.523e+03   0.002 0.998145    
+## CabinC91             -1.908e+01  6.523e+03  -0.003 0.997666    
+## CabinC92              1.924e+01  6.523e+03   0.003 0.997647    
+## CabinC93              1.806e+01  3.838e+03   0.005 0.996246    
+## CabinC99              1.537e+01  6.523e+03   0.002 0.998120    
+## CabinD                2.671e-01  1.528e+00   0.175 0.861213    
+## CabinD10 D12          1.769e+01  6.523e+03   0.003 0.997837    
+## CabinD11              1.714e+01  6.523e+03   0.003 0.997904    
+## CabinD15              1.534e+01  6.523e+03   0.002 0.998124    
+## CabinD17              1.694e+01  4.612e+03   0.004 0.997069    
+## CabinD19              1.957e+01  6.523e+03   0.003 0.997606    
+## CabinD20              1.686e+01  4.611e+03   0.004 0.997082    
+## CabinD26             -1.866e+01  4.357e+03  -0.004 0.996583    
+## CabinD28              1.525e+01  6.523e+03   0.002 0.998135    
+## CabinD30             -1.870e+01  6.523e+03  -0.003 0.997712    
+## CabinD33              1.833e+01  3.899e+03   0.005 0.996248    
+## CabinD35              1.849e+01  4.037e+03   0.005 0.996346    
+## CabinD36              1.530e+01  4.595e+03   0.003 0.997343    
+## CabinD37              1.723e+01  6.523e+03   0.003 0.997892    
+## CabinD46             -1.767e+01  6.523e+03  -0.003 0.997838    
+## CabinD47              1.552e+01  6.523e+03   0.002 0.998101    
+## CabinD48             -1.812e+01  6.523e+03  -0.003 0.997784    
+## CabinD49              1.775e+01  6.523e+03   0.003 0.997828    
+## CabinD50             -1.697e+01  6.523e+03  -0.003 0.997925    
+## CabinD56              2.002e+01  6.523e+03   0.003 0.997551    
+## CabinD6              -1.852e+01  6.523e+03  -0.003 0.997734    
+## CabinD7               1.773e+01  6.523e+03   0.003 0.997831    
+## CabinD9               1.515e+01  6.523e+03   0.002 0.998146    
+## CabinE10              2.099e+01  6.523e+03   0.003 0.997432    
+## CabinE101             1.716e+01  4.605e+03   0.004 0.997026    
+## CabinE12              1.957e+01  6.523e+03   0.003 0.997606    
+## CabinE121             1.900e+01  4.203e+03   0.005 0.996394    
+## CabinE17              1.972e+01  6.523e+03   0.003 0.997588    
+## CabinE24              1.912e+01  4.599e+03   0.004 0.996684    
+## CabinE25              1.898e+01  4.612e+03   0.004 0.996716    
+## CabinE31             -1.744e+01  6.523e+03  -0.003 0.997867    
+## CabinE33              1.541e+01  6.523e+03   0.002 0.998115    
+## CabinE34              1.578e+01  6.523e+03   0.002 0.998070    
+## CabinE36              1.540e+01  6.523e+03   0.002 0.998116    
+## CabinE38             -1.672e+01  6.523e+03  -0.003 0.997955    
+## CabinE40              1.530e+01  6.523e+03   0.002 0.998128    
+## CabinE44             -2.347e-01  1.930e+00  -0.122 0.903231    
+## CabinE46             -1.747e+01  6.523e+03  -0.003 0.997863    
+## CabinE49              1.615e+01  6.523e+03   0.002 0.998024    
+## CabinE50              1.834e+01  6.523e+03   0.003 0.997757    
+## CabinE58             -1.760e+01  6.523e+03  -0.003 0.997847    
+## CabinE63             -1.771e+01  6.523e+03  -0.003 0.997834    
+## CabinE67             -3.619e-01  1.972e+00  -0.184 0.854360    
+## CabinE68              1.503e+01  6.523e+03   0.002 0.998161    
+## CabinE77             -1.862e+01  6.523e+03  -0.003 0.997722    
+## CabinE8               1.792e+01  3.975e+03   0.005 0.996403    
+## CabinF G63           -1.564e+01  6.523e+03  -0.002 0.998086    
+## CabinF G73           -1.664e+01  4.603e+03  -0.004 0.997116    
+## CabinF2               1.458e+00  1.304e+00   1.118 0.263681    
+## CabinF33              1.714e+01  3.750e+03   0.005 0.996353    
+## CabinF4               1.828e+01  3.929e+03   0.005 0.996289    
+## CabinG6              -8.603e-01  1.083e+00  -0.795 0.426753    
+## CabinT               -1.778e+01  6.523e+03  -0.003 0.997825    
+## EmbarkedC             3.712e-01  3.560e-01   1.043 0.297138    
+## EmbarkedQ            -4.129e-01  5.877e-01  -0.702 0.482378    
+## EmbarkedS                    NA         NA      NA       NA    
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 964.52  on 713  degrees of freedom
+## Residual deviance: 490.36  on 571  degrees of freedom
+## AIC: 776.36
+## 
+## Number of Fisher Scoring iterations: 17</code></pre>
+<p>Among all these variables, only Ticket Class, Sex, Age, SibSp are significant.</p>
+<p>These variables, in my opnion, make logical sense for survival rate. Sex would be a great factor, since men back then is more likely to know how to swim. Age plays an important part too, since younger people might have higher chance to survive, due to increased physical strength and agility. Having traveled with siblings and spouses traveling with might improve survival rate, since passenger has someone to help them.</p>
+<p>The only problem I have is with ticket class. My guess is people with higher ticket class might have a higher social status, thus being prioritized. Or it might be the ticket class reflects access to lifeboats.</p>
+<p>Let’s fit the model one more time with these variables</p>
+<pre class="r"><code class="hljs">titanic.lr &lt;- glm(formula=as.factor(Survived)~as.factor(Pclass)+as.factor(Sex)+Age+SibSp,data=train,family=<span class="hljs-string">'binomial'</span>)
+summary(titanic.lr)</code></pre>
+<pre><code class="hljs">## 
+## Call:
+## glm(formula = as.factor(Survived) ~ as.factor(Pclass) + as.factor(Sex) + 
+##     Age + SibSp, family = "binomial", data = train)
+## 
+## Deviance Residuals: 
+##     Min       1Q   Median       3Q      Max  
+## -2.7876  -0.6417  -0.3864   0.6261   2.4539  
+## 
+## Coefficients:
+##                     Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept)         4.334201   0.450700   9.617  &lt; 2e-16 ***
+## as.factor(Pclass)2 -1.414360   0.284727  -4.967 6.78e-07 ***
+## as.factor(Pclass)3 -2.652618   0.285832  -9.280  &lt; 2e-16 ***
+## as.factor(Sex)male -2.627679   0.214771 -12.235  &lt; 2e-16 ***
+## Age                -0.044760   0.008225  -5.442 5.27e-08 ***
+## SibSp              -0.380190   0.121516  -3.129  0.00176 ** 
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 964.52  on 713  degrees of freedom
+## Residual deviance: 636.56  on 708  degrees of freedom
+## AIC: 648.56
+## 
+## Number of Fisher Scoring iterations: 5</code></pre>
+<p>All the variables have low p-value, with high significance values. I believe this is the best model for logistic regression.</p>
+</div>
+<div id="prediction" class="section level2">
+<h2 class="hasAnchor"><span class="header-section-number">1.4</span> Prediction<a href="https://www.kaggleusercontent.com/kf/49367457/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..OOe4q0BrA6_Cc0jZCkisDg.jFQK2pHeR8qx-ZnjElpigddGh1fdJVTfJGz2MrQEgPXikWZuyV4VgLR019rky0WqNrjCLo-8G923K5177EhRuG4iYYMp9DvM2u07GnxrK7eIaL0Ked2JMkaqmUH1tlW3CLgFOfe0rs0SY2slpQdr7zcofmqBc2II19XqTzJPAzKWbLTkHwCDLew_R5_f7aeQVXWiAAw5wRPYooybIM7bWkmG3a2chq-HAtr_8knoksV-_tqL7AVEpiMxtwUODP3Hw0ajzTN95wyQrO1wdD8JFFJFTZosyJBV6dDsz_TmtgFqAPIQoeCtDam9mv0r_TQAFHZoGcefJwdPgRcYRDzOxlWNw9qFvacj5i8xDjcggEZZG0ku0jlmYRKhQlES92L6B8NY3ofGpOTko998MNXBISjZtEfT4XVGUfjx698mSS_A_mZVrlDR51-qanl_tCOGm_UAxAgeA67A6m2ODRpR5Ny-A3v3EfKfD4HxhKB2WG75UW6GKyklJrTfGPCZUTKyyUWDXycZfBWPFRdJU24fIVC9tfYJoDBzaIeLPbY5XJ1TKQmU65BbRnVcDu5qJ4YhB6nKrJq1V2tihVeo71eOCUEjGHuCSICKn041WNAeOeei8mC5nO5jlFTT53Ju1zka9dZozJocjdBmPkBmp-cLYQ.O2qAilc0-saOCPKmnt0hsw/__results__.html#prediction" class="anchor-section" target="_self"></a></h2>
+<p>Let’s push the test data through this model</p>
+<pre class="r"><code class="hljs">prob &lt;- predict(titanic.lr,newdata=test,type=<span class="hljs-string">"response"</span>)
+prediction &lt;- rep(<span class="hljs-number">0</span>,nrow(test))
+prediction[prob&gt;<span class="hljs-number">0.5</span>] &lt;- <span class="hljs-number">1</span>
+solution &lt;- data.frame(PassengerID = test$PassengerId, Survived = prediction)</code></pre>
+<p>And write it into a submission file</p>
+<pre class="r"><code class="hljs">write.csv(solution, file = <span class="hljs-string">'solution.csv'</span>, row.names = <span class="hljs-literal">F</span>)
+head(solution)</code></pre>
+<pre><code class="hljs">##   PassengerID Survived
+## 1         892        0
+## 2         893        0
+## 3         894        0
+## 4         895        0
+## 5         896        1
+## 6         897        0</code></pre>
+<p>** Thank you for reading my report on Logistic Regression to predict Titanic Survivals !!! **</p>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+
+
+</body><div></div></html>
