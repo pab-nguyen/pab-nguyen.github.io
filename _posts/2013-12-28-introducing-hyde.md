@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Introducing Hyde
-summary: Hyde is a brazen two-column Jekyll theme that pairs a prominent sidebar with uncomplicated content. It's based on Poole, the Jekyll butler.
+summary: "Hyde is a brazen two-column Jekyll theme that pairs a prominent sidebar with uncomplicated content. It's based on Poole, the Jekyll butler.
 
 ### Built on Poole
 
@@ -12,7 +12,7 @@ Poole is the Jekyll Butler, serving as an upstanding and effective foundation fo
 * Easily scalable text and component sizing with `rem` units in the CSS
 * Support for a wide gamut of HTML elements
 * Related posts (time-based, because Jekyll) below each post
-* Syntax highlighting, courtesy Pygments (the Python-based code snippet highlighter)
+* Syntax highlighting, courtesy Pygments (the Python-based code snippet highlighter)"
 ---
 
 Hyde is a brazen two-column [Jekyll](http://jekyllrb.com) theme that pairs a prominent sidebar with uncomplicated content. It's based on [Poole](http://getpoole.com), the Jekyll butler.
