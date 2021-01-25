@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: About
 sidebar_link: true
 ---
