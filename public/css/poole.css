@@ -428,3 +428,8 @@ a.pagination-item:hover {
     border-bottom-right-radius: 4px;
   }
 }
+
+.button{
+  background-color: #3b9cba
+  color: #fff;
+}
