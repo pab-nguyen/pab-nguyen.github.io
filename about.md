@@ -2,13 +2,13 @@
 layout: page
 title: About
 sidebar_link: true
-
 ---
+  
 <p align="center">
 	<img align="center" src="/assets/me.jpg" width="480">
 </p>
 <p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
+  This is Artist Bluff Trails in New Hampshire
 </p>
 
 Hi, I am Phan Nguyen, a self-taught data scientist. Welcome to my personal website.   
@@ -19,9 +19,10 @@ I have a BS and MS in Finance. I am proficient in R and Python programming langu
 
 Besides programming and visualization tools, I have substantial knowledge and experiences in corporate finance and I am advanced in Excel and VBA.I have worked as an investment analyst at an asset management firm. I have experiences with building complex financial models for equity valuation (DCF), capital budgeting, revenue forecasting, option pricing. Addtionally, I have built multiples VBA macros sets to automate reports, reducing significantly labor hours in my most previous employment. 
 
-<button name="button" onclick="">Portfolio</button>   
-
+<p align="center">
+	<button name="button" onclick="/Portfolio">Portfolio</button>   
+</p>
  
 
-Thank you for your 
-12
+Thank you for your attention
+13
