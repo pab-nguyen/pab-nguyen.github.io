@@ -1,9 +1,9 @@
 ---
-layout: default
 title: About
+layout: default
 sidebar_link: true
 ---
-  
+
 <p align="center">
 	<img align="center" src="/assets/me.jpg" width="360">
 </p>
