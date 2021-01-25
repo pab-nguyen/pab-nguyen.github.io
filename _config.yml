@@ -6,7 +6,7 @@ highlighter:      rouge
 permalink:        pretty
 
 # Setup
-title:            Phan Nguyen
+title:            "Phan Nguyen"
 tagline:          
 description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
 url:              http://pab-nguyen.github.io
@@ -24,3 +24,5 @@ version:          2.1.0
 github:
   repo:           https://github.com/poole/hyde
 
+#gems
+gems: [jekyll-paginate]
