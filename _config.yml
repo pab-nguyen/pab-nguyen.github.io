@@ -20,7 +20,6 @@ baseurl: "/"
 author:
   name: Mark Otto
   url: https://twitter.com/mdo
-paginate: 5
 paginate_path: "/portfolio/page:num"
 version: 2.1.0
 github:
