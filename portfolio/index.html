@@ -15,7 +15,9 @@ layout: page
     </h1>
 
     <span class="post-date">{{ post.date | date_to_string }}</span>
-    {{post.image}}
+      <p align="center">
+        <img align="center" src="{{post.image}}" width="480">
+      </p>
     {{ post.summary }}
 
   </div>
