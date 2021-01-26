@@ -2,7 +2,7 @@
 layout: page
 title: CV
 ---
-# Curriculum Vitae
+<h1 style="color:#00A5F9">Curriculum Vitae</h1>
 
 ## Professional Experiences    
 #### Sunovion Pharmaceuticals       
