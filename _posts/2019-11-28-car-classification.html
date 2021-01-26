@@ -210,8 +210,10 @@ library(tidyverse)</code></pre>
 <p>Before starting the analysis process, we cleaned the data set for data points that were not relevant for the goals of this project. We started with removing information of cars which has manufacturer suggested retail price less than and equal to 2,000 USD as well as the cars with MSRP higher than or equal to 100,000. We applied Hierarchical Clustering and used PCR to predict MSRP. We fit a linear model to the dataset as a benchmark to see how does the PCR model perform. We also fitted a regression tree to MSRP and used cross validation to find the best size of the tree. We then applied classification tree as well as logistic regression to predict the market category of cars.</p>
 </div>
 <div id="building-models" class="section level1">
+
 <h1>Building Models</h1>
-<pre class="r"><code>data &lt;- read.csv(&#39;C:\\Users\\nguyen_phan\\Downloads\\Data Science\\ST635 - Intermediate Statistical Modeling\\Data\\car.csv&#39;, header=TRUE)
+<pre class="r"><code>
+<!-- data &lt;- read.csv(&#39;C:\\Users\\nguyen_phan\\Downloads\\Data Science\\ST635 - Intermediate Statistical Modeling\\Data\\car.csv&#39;, header=TRUE) -->
 dim(data)</code></pre>
 <pre><code>## [1] 10879    19</code></pre>
 <pre class="r"><code>data &lt;- na.omit(data)
