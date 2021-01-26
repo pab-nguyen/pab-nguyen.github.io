@@ -1,4 +1,7 @@
----
+# Dependencies
+markdown: kramdown
+highlighter: rouge
+
 title: Phan Nguyen
 timezone: UTC
 collections:
@@ -8,8 +11,7 @@ collections:
   uploads:
     title: Uploads
     output: true
-markdown: kramdown
-highlighter: rouge
+
 permalink: pretty
 tagline: 
 description: A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a>
