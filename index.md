@@ -3,7 +3,7 @@ title: About
 layout: default
 sidebar_link: true
 ---
-
+<h2 class="page-title">{{ page.title }}</h2>
 <p align="center">
 	<img align="center" src="/assets/me.jpg" width="360">
 </p>
