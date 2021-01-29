@@ -1,11 +1,10 @@
 ---
+layout:post
 title: Equity Valuation
 date: 2020-09-01
 tags: Finance
 summary: >
-	I used to work as an investment analyst for an asset management firm back in Vietnam. Additionally, for my coursework in college and grad school, I had the chance to analyze a few companies for academic purposes. Here are some samples of my analysis.
-
-	I used DCF, multiples, and dividends growth model methods in these valuations. 
+	I used to work as an investment analyst for an asset management firm back in Vietnam. Additionally, for my coursework in college and grad school, I had the chance to analyze a few companies for academic purposes. Here are some samples of my analysis. </br> I used DCF, multiples, and dividends growth model methods in these valuations. 
 image: /assets/equity.jpg
 ---
 
