@@ -12,7 +12,7 @@ layout: page
       <div class="post">
         <h3 class="post-title">
           <a href="{{ post.url }}">
-            {{post.tags}}
+            {{tag[0]}}
             {{ post.title }}
           </a>
         </h3>
@@ -23,7 +23,7 @@ layout: page
     {{ post.summary }}
   </div>
       
-    {%endfor%}   
+    {%end for%}   
   {% endfor %}
 </div>
 
