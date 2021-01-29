@@ -9,7 +9,7 @@ layout: page
 
   {% for i in site.tags %}
     {% for post in paginator.posts %}
-      {% for x in post.tags%}
+      {% if i in post.tags%}
       <div class="post">
         <h3 class="post-title">
           <a href="{{ post.url }}">
@@ -23,7 +23,7 @@ layout: page
     </p>
     {{ post.summary }}
   </div>
-      {%endfor%}
+      {%endif%}
     {%endfor%}   
   {% endfor %}
 </div>
