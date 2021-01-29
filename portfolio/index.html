@@ -6,20 +6,24 @@ layout: page
 <h2 class="page-title">{{ page.title }}</h2>
 
 <div class="posts" style="font-size:17px">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h3 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h3>
-
+  {% for tag in site.tags %}
+    {% for post in paginator.posts %}
+      {%if post.tags == tag}
+      <div class="post">
+        <h3 class="post-title">
+          <a href="{{ post.url }}">
+            {{post.tags}}
+            {{ post.title }}
+          </a>
+        </h3>
     <!--<span class="post-date">{{ post.date | date_to_string }}</span>-->
     <p align="center">
       <img align="center" src="{{post.image}}" width="480">
     </p>
     {{ post.summary }}
   </div>
+      {%endif%}
+    {%endfor%}   
   {% endfor %}
 </div>
 
