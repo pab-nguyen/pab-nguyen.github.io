@@ -7,9 +7,8 @@ layout: page
 
 <div class="posts" style="font-size:17px">
 
-  {% for i in site.tags %}
-    {% for post in paginator.posts %}
-      {% if i == post.tags[0]%}
+  {% for tag in site.tags %}
+    {% for post tag[1] %}
       <div class="post">
         <h3 class="post-title">
           <a href="{{ post.url }}">
@@ -23,7 +22,7 @@ layout: page
     </p>
     {{ post.summary }}
   </div>
-      {%endif%}
+      
     {%endfor%}   
   {% endfor %}
 </div>
