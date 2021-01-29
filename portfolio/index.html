@@ -3,9 +3,10 @@ title: Portfolio
 layout: page
 ---
 
-<h2 class="page-title">{{ page.title }}</h2>
+<h2 class="page-title">{{ page.title }} site.tags paginator.posts.tags</h2>
 
 <div class="posts" style="font-size:17px">
+
   {% for i in site.tags %}
     {% for post in paginator.posts %}
       {% if i == post.tags%}
