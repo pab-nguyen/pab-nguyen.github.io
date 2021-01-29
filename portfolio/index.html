@@ -9,7 +9,7 @@ layout: page
 
   {% for i in site.tags %}
     {% for post in paginator.posts %}
-      {% if i[0] == post.tags%}
+      {% if i == post.tags[0]%}
       <div class="post">
         <h3 class="post-title">
           <a href="{{ post.url }}">
