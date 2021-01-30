@@ -2,26 +2,39 @@
 markdown: kramdown
 highlighter: rouge
 
-title: Phan Nguyen
-timezone: UTC
-collections:
-  posts:
-    title: Posts
-    output: true
-  uploads:
-    title: Uploads
-    output: true
 
-permalink: pretty
-tagline: 
-description: A human learner
-url: http://pab-nguyen.github.io
-baseurl: "/"
+# Setup
+title:            Phan Nguyen
+tagline:          
+description:      'A human learner'
+url:              http://pab-nguyen.github.io
+baseurl:          '/'
+                  # the optional subpath of your site, e.g. "/blog"
+                  # NB: This applies to all pages in your Jekyll site.
+                  # If you want to move just the blog index pages but keep
+                  # other pages at root, see the paginate_path and
+                  # sidebar_blog_link below.
+
 author:
-  name: Mark Otto
-  url: https://twitter.com/mdo
+  name:           'Andrew Fong'
+  url:            https://twitter.com/fongandrewc
+
 paginate: 100
 paginate_path: "/portfolio/page:num"
+  # paginate_path:    '/page:num'
+                    # Or '/blog/page:num' if you want to move your index pages
+
+plugins:
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate
+
+# Sidebar link settings
+sidebar_home_link:  true
+# sidebar_blog_link:  '/blog'   # By default, your home page is your blog
+                                # page. If you change your paginate_path,
+                                # set this to the root of the paginate_path
+                                # to enable a separate blog link.
+
+# Custom Vars
 version: 2.1.0
-github:
-  repo: https://github.com/pab-nguyen
