@@ -1,11 +1,9 @@
 ---
 title: Tier Comparison Macro
 date: 2020-08-01
+layout: post
 summary: >
-	I wrote this Excel VBA Macro during one of my internships. This script allows user to compare two drug formulary tier to see whether the brand my company owns underperform or overperform competitor's brand, in terms of drug formulary.
-	You can download the macro and the calendar file below.
-	https://drive.google.com/file/d/1gYL3Oc3gx_kOCbYjGzYOX9zyiUgWe4f5/view?usp=sharing
-image:
+	I wrote this Excel VBA Macro during one of my internships. This script allows user to compare two drug formulary tier to see whether the brand my company owns underperform or overperform competitor's brand, in terms of drug formulary. You can download the macro and the calendar file below. https://drive.google.com/file/d/1gYL3Oc3gx_kOCbYjGzYOX9zyiUgWe4f5/view?usp=sharing
 ---
 
 
@@ -63,9 +61,6 @@ a:
     Next i
         
 End Sub
-
-
-
 
 
 Explanation
