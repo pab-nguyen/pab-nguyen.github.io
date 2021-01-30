@@ -59,6 +59,14 @@ html {
   color: rgba(255,255,255,.5);
   background-color: #202020;
 }
+
+.sidebar-right{
+  text-align: center;
+  padding: 2rem 1rem;
+  color: rgba(255,255,255,.5);
+  background-color: #202020;
+}
+
 @media (min-width: 48em) {
   .sidebar {
     position: fixed;
@@ -67,6 +75,14 @@ html {
     bottom: 0;
     width: 18rem;
     text-align: left;
+  }
+  .sidebar-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 18rem;
+    text-align: right;
   }
 }
 
@@ -264,3 +280,4 @@ a.sidebar-nav-item:focus {
   margin: 4px 2px;
   cursor: pointer;
 }
+
