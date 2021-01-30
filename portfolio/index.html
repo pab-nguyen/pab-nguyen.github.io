@@ -26,7 +26,7 @@ layout: page
 
     <h3 id="output"> {{tag[0]}} </h3>
     <script>
-      input = document.getElementById('output').innerHTML
+      input = document.getElementById('output').value
       output = input.split("-")
       window.onload = function(){
       document.getElementById('output').innerHTML = output
