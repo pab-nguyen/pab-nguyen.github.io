@@ -68,6 +68,10 @@ html {
   background-color: #fff;
 }
 
+.sidebar-right a{
+  color: #202020;
+}
+
 @media (min-width: 48em) {
   .sidebar {
     position: fixed;
