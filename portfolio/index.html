@@ -3,6 +3,16 @@ title: Portfolio
 layout: page
 ---
 
+<div class="layout-reverse sidebar"> 
+{% for tag in site.tags %}
+  <p> {{tag[0]}} </p>
+  {% for post in tag[1] %}
+  <p> {{post.title}} </p>
+  {% endfor %}   
+{% endfor %}
+
+</div>
+
 <h2 class="page-title">{{ page.title }}</h2>
 
 <div class="posts" style="font-size:17px">
@@ -23,8 +33,7 @@ layout: page
     {{ post.summary }}
   </div>
       
-    {% endfor %}   
-  {% endfor %}
+    
 </div>
 
 <!--
