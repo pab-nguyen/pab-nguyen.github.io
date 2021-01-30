@@ -4,15 +4,19 @@ layout: page
 ---
 
 <script>
-
+  input = document.getElementById('output').value
+      output = input.split("-")
+      window.onload = function(){
+      document.getElementById('output').value = output
+      }
 </script>
 
 <div class="sidebar-right"> 
   <h4> Table of Content </h4>
     {% for tag in site.tags %}
-      <p>{{tag[0]}}</p> 
+      <a href="#{{tag[0]}}">{{tag[0]}}</a> 
       {% for post in tag[1] %}
-      <p>{{post.title}}</p> 
+      <a href="#{{post.title}}">{{post.title}}</a> 
       {% endfor %}   
     {% endfor %}
 
@@ -25,13 +29,7 @@ layout: page
   {% for tag in site.tags %}
 
     <h3 id="output"> {{tag[0]}} </h3>
-    <script>
-      input = document.getElementById('output').value
-      output = input.split("-")
-      window.onload = function(){
-      document.getElementById('output').innerHTML = output
-      }
-    </script>
+    
 
     {% for post in tag[1] %}
       <div class="post">
