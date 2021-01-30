@@ -3,7 +3,7 @@ layout: post
 title: Equity Valuation
 date: 2020-09-01
 tags: finance
-
+summary: a
 image: /assets/equity.JPG
 ---
 
