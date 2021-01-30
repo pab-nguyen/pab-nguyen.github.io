@@ -4,12 +4,13 @@ layout: page
 ---
 
 <div class="sidebar-right"> 
-{% for tag in site.tags %}
-  <h4> {{tag[0]}} </h4>
-  {% for post in tag[1] %}
-  <h5> {{post.title}} </h5>
-  {% endfor %}   
-{% endfor %}
+  <h4> Table of Content </h4>
+    {% for tag in site.tags %}
+      {{tag[0]}} 
+      {% for post in tag[1] %}
+        {{post.title}} 
+      {% endfor %}   
+    {% endfor %}
 
 </div>
 
