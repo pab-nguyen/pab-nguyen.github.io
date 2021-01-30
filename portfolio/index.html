@@ -3,6 +3,10 @@ title: Portfolio
 layout: page
 ---
 
+<script>
+
+</script>
+
 <div class="sidebar-right"> 
   <h4> Table of Content </h4>
     {% for tag in site.tags %}
@@ -19,7 +23,12 @@ layout: page
 <div class="posts" style="font-size:17px">
 
   {% for tag in site.tags %}
-    <h3> {{tag[0]}}</h3>
+    
+    <script>
+      input = tag[0]
+      output = tag[0].split("-")
+    </script>
+    <h3> {{tag[0]}} output</h3>
     {% for post in tag[1] %}
       <div class="post">
         <h3 class="post-title">
