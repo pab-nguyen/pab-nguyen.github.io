@@ -25,6 +25,6 @@ You can check out my portfolio and my CV below.
 
 <p align="center">
 	<a class="button" name="button" href="/portfolio/">Portfolio</a>
-	<a class="button" name="button" href="/CV/">CV</a>    
+	<a class="button" name="button" href="/CV.html">CV</a>    
 </p>
  
