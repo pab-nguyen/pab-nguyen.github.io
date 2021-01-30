@@ -28,9 +28,11 @@ layout: page
     <script>
       input = tag[0]
       output = tag[0].split("-")
+      window.onload = function(){
       document.getElementById('output').innerHTML = output
+      }
     </script>
-    
+
     {% for post in tag[1] %}
       <div class="post">
         <h3 class="post-title">
