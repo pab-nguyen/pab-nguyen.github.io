@@ -28,7 +28,7 @@ layout: page
 
   {% for tag in site.tags %}
 
-    <A href='#{{tag[0]}}'>
+    <A id='#{{tag[0]}}' >
       <h3> 
         {{tag[0]}} 
       </h3>
@@ -37,13 +37,14 @@ layout: page
 
     {% for post in tag[1] %}
       <div class="post">
-        <A href="#{{post.title}}">
+        <A id="#{{post.title}}">
           <h3 class="post-title">
             <a href="{{ post.url }}">
               {{ post.title }}
             </a>
           </h3>
         </A>
+    
     <!--<span class="post-date">{{ post.date | date_to_string }}</span>-->
     <p align="center">
       <img align="center" src="{{post.image}}" width="480">
