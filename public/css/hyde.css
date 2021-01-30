@@ -286,3 +286,7 @@ a.sidebar-nav-item:focus {
   cursor: pointer;
 }
 
+pre {
+  white-space: pre-wrap;
+}
+
