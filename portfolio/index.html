@@ -31,23 +31,20 @@ layout: page
 <div class="posts" style="font-size:17px">
 
   {% for tag in site.tags %}
-
-    <A id='#{{tag[0]}}' >
-      <h3> 
-        {{tag[0]}} 
-      </h3>
-    </A>
+    <h3 id='{{tag[0]}}'> 
+      {{tag[0]}} 
+    </h3>
+    
     
 
     {% for post in tag[1] %}
       <div class="post">
-        <A id="#{{post.title}}">
-          <h3 class="post-title">
-            <a href="{{ post.url }}">
-              {{ post.title }}
-            </a>
-          </h3>
-        </A>
+        <h3 class="post-title", id="{{post.title}}">
+          <a href="{{ post.url }}">
+            {{ post.title }}
+          </a>
+        </h3>
+
     
     <!--<span class="post-date">{{ post.date | date_to_string }}</span>-->
     <p align="center">
