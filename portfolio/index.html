@@ -14,9 +14,9 @@ layout: page
 <div class="sidebar-right"> 
   <h4> Table of Content </h4>
     {% for tag in site.tags %}
-      <a href="#{{tag[0]}}">{{tag[0]}}</a> 
+      <a href="#{{tag[0]}}">{{tag[0]}}</a></br> 
       {% for post in tag[1] %}
-      <a href="#{{post.title}}">{{post.title}}</a> 
+      <a href="#{{post.title}}">{{post.title}}</a></br>
       {% endfor %}   
     {% endfor %}
 
