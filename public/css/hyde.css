@@ -32,7 +32,7 @@
  */
 
 html {
-  font-family: Georgia,"EB Garamond",Times,serif;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
 }
 @media (min-width: 48em) {
   html {
