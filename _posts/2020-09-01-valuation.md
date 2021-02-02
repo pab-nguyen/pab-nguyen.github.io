@@ -3,11 +3,8 @@ layout: post
 title: An Overview of Equity Valuation
 date: 2020-09-01
 tags: finance
-summary: >
-	This is some samples of my financial analysis work. I used to work as an investment analyst for an asset management
-	firm back in Vietnam. I was in team managing a small fund of $3M USD. My responsiblities were to find opportunities in
-	public stocks of the Plastics industry, analyze those stocks to find their appropriate value, figure out whether this
-	is a good investment and pitch my recommendation to the portfolio managers.
+summary: "This is some samples of my financial analysis work. I used to work as an investment analyst for an asset management firm back in Vietnam. I was in team managing a small fund of $3M USD. My responsiblities were to find opportunities in public stocks of the Plastics industry, analyze those stocks to find their appropriate value, figure out whether this is a good investment and pitch my recommendation to the portfolio managers."
+
 image: /assets/equity.JPG
 ---
 ### Overview
