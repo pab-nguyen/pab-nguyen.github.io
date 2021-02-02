@@ -33,12 +33,35 @@ After getting all the information and having a firm grasp of the firm, the indus
 
 Next, I use Sales to predict the rest of the Income Statement items. I can make assumptions like the COGS are going to be equal to 40% of Sales, because that's the average of COGS/Sales in the last 5 years. Average of the last 5 years and most recent number are most common assumptions. The rest of the items in Balance Sheet and Income Statements are forecasted in the same manner. 
 
+<figure align="center">
+	<img align="center" src="/assets/balance-sheet.JPG" >
+	<figcaption> 
+  		Pro-Forma Balance Sheet
+	</figcaption>
+</figure>
+
 After getting all the pro forma financial Statements, we will find WACC of the firm. This is the Weighted Average Cost of Capital, or the average cost to get money for the firm. With WACC found, I try to calculate the Equity Value, by choosing one or multiple methods, like DCF, Dividends Growth Models and Comparables/Multiples. DCF is the most common method. It works by having the analyst find the forecasted Free Cash Flow of the firm. Let's refresh our memory. 
 
 <div class="message">
   Free Cash Flow = EBIT(1-Tax Rate) + Depreciation - Capital Expenditures - Net changes in Working Capital 
 </div>
 
+<figure align="center">
+	<img align="center" src="/assets/dcf.JPG" >
+	<figcaption> 
+  		Discounted Cash Flow
+	</figcaption>
+</figure>
+
 Then we discounted all the free cash flow back to today, sum them up with a Terminal Value, to arrive at the Enterprise Value. Terminal Value is the number representing the firm's present value from the time point where the analyst finding the Terminal Value until forever. It uses growth rate and WACC as inputs. With the Enterprise Value available, we subtracts debt and cash from it to arrive at Equity Value. This is the intrinsic value of the firm. And by dividing it by the number of shares, we arrive at average price per share, or the price we believe the stock should be at. This is the DCF (Discounted Cash Flow) approach. The other two common approach are Dividends Growth Model, and Multiples. DGM use dividends and WACC as the inputs, and multiples use other similar firms as inputs. These two approaches are much simpler than DCF. I usually triangulate the results of different methods out, to find a range of stocks that makes sense. Then I build a slide deck to communicate this information to portfolio managers, so that they can decide to buy this stock or not. 
+
+<figure align="center">
+	<img align="center" src="/assets/sensitivity.JPG" >
+	<figcaption> 
+  		Sensitivity Analysis - Prices versus WACC, Price versus Growth
+	</figcaption>
+</figure>
+
+There are other analysis you can do at this point. This is an example of sensitivity analysis, where we find the stock price at different levels of growth rate and WACC rate. This is important because growth rate and WACC affects the stock price significantly. By doing this type of analysis, we can see the range of prices that the stock can fall into. Additionally, in this example, we can see that for every one percent change in long term growth rate, the price of stocks goes up by 10 dollars, approximately. 
 
 The process I just describe are quite common and used widely by funds to pick stocks for their portfolio. I hope you had a good read. 
