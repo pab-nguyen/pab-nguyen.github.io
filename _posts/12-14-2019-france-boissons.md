@@ -3,7 +3,6 @@ layout:post
 title: France Boissons Relational Database with SQL 
 date: 2019-12-14
 tags: data-analytics
-author: Phan Nguyen
 image: /assets/bev.jpg
 
 ---
