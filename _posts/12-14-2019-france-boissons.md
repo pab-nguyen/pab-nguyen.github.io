@@ -67,4 +67,22 @@ from inventoryt inner join productt on inventoryt.productid = productt.productid
 select * from Low_Quantity;
 </pre>
 
-3.
+3. Most quantities purchased from a customer
+<pre>
+Drop view QuantityPurchase;
+
+#create view quantitiy purchase
+Create view QuantityPurchase as
+Select cust.customerID, cust.customername,orderT.orderID, prod.productID, prod.productname,prod.productdescription, staff.staffID, staff.staffname, 
+        orderlineT.orderlineID, orderlineT.orderlinequantity quantity
+From customerT cust inner join orderT  on cust.customerID = orderT.customerID
+	Inner join orderlineT on orderT.orderID = orderlineT.orderID
+	Inner join productT prod on orderlineT.productID = prod.productID
+	Inner join staffT staff on orderT.staffID = staff.staffID;
+
+#find max quantity purchase
+select max(customername)as customername, max(productid) as productid, max(productname) as productname, max(quantity) MaxQuantityPurchased
+from AllPurchases
+group by customername;
+
+</pre>
