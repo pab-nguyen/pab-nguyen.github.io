@@ -12,14 +12,18 @@ image: /assets/equity.JPG
 ### Overview
 I used to work as an investment analyst for an asset management firm back in Vietnam. I was in team managing a small fund of $3M USD. My responsiblities were to find opportunities in public stocks of the Plastics industry, analyze those stocks to find their appropriate value, figure out whether this is a good investment and pitch my recommendation to the portfolio managers. 
 
+<p align="center">
+	<img align="center" src="/assets/equity.JPG" >
+</p>
+
 ### Equity Valuation Samples
-This is the samples of my financial analysis work. You can download it by clicking on these links
+This is the samples of my financial analysis work. You can download it by clicking on these links.
 
-MSFT 05/03/2020
+[MSFT 05/03/2020](https://drive.google.com/file/d/1JVACo-lfvI9EMP0c8RZCmJByUMLUbOcs/view?usp=sharing)
 
-TXN 11/26/2019
+[TXN 11/26/2019](https://drive.google.com/file/d/1MBhZ71mA1huIfQ4Fqo7UjHVzzNXqjGml/view?usp=sharing)
 
-BMP 06/2019: Overview + WACC + Valuation
+BMP 06/2019: [Overview](https://drive.google.com/file/d/1DIMFU2Ed_nGqNKoMw_DOBO4XbwvyznzS/view?usp=sharing) + [WACC](https://drive.google.com/file/d/1dUd0Z3n6QXI45znfRjVL3dWtstM9Tj_Z/view?usp=sharing) + [Valuation](https://drive.google.com/file/d/1fpb_TqEeMMDLbLQI7JfsOazu_q4GnsoQ/view?usp=sharing)
 
 ### How to Analyze
 
@@ -36,3 +40,5 @@ After getting all the pro forma financial Statements, we will find WACC of the f
 </div>
 
 Then we discounted all the free cash flow back to today, sum them up with a Terminal Value, to arrive at the Enterprise Value. Terminal Value is the number representing the firm's present value from the time point where the analyst finding the Terminal Value until forever. It uses growth rate and WACC as inputs. With the Enterprise Value available, we subtracts debt and cash from it to arrive at Equity Value. This is the intrinsic value of the firm. And by dividing it by the number of shares, we arrive at average price per share, or the price we believe the stock should be at. This is the DCF (Discounted Cash Flow) approach. The other two common approach are Dividends Growth Model, and Multiples. DGM use dividends and WACC as the inputs, and multiples use other similar firms as inputs. These two approaches are much simpler than DCF. I usually triangulate the results of different methods out, to find a range of stocks that makes sense. Then I build a slide deck to communicate this information to portfolio managers, so that they can decide to buy this stock or not. 
+
+The process I just describe are quite common and used widely by funds to pick stocks for their portfolio. I hope you had a good read. 

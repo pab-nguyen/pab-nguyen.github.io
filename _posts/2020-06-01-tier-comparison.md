@@ -3,20 +3,17 @@ title: Tier Comparison Macro
 date: 2020-08-01
 layout: post
 tags: excel-vba
-summary: >
-	I wrote this Excel VBA Macro during one of my internships. This script allows user to compare two drug formulary tier to see whether the brand my company owns underperform or overperform competitor's brand, in terms of drug formulary. You can download the macro and the calendar file below. https://drive.google.com/file/d/1gYL3Oc3gx_kOCbYjGzYOX9zyiUgWe4f5/view?usp=sharing
+summary: I wrote this Excel VBA Macro during one of my internships. This script allows user to compare two drug formulary tier to see whether the brand my company owns underperform or overperform competitor's brand, in terms of drug formulary. You can download the macro and the calendar file below.
+image: /assets/tier-comparison.JPG
 ---
 
-
+### Overview
 I wrote this Excel VBA Macro during one of my internships. This script allows user to compare two drug formulary tier to see whether the brand my company owns underperform or overperform competitor's brand, in terms of drug formulary. 
 
+You can download the macro and the calendar file [here](https://drive.google.com/file/d/1gYL3Oc3gx_kOCbYjGzYOX9zyiUgWe4f5/view?usp=sharing)
 
-You can download the macro and the calendar file below.
-
-​
-https://drive.google.com/file/d/1gYL3Oc3gx_kOCbYjGzYOX9zyiUgWe4f5/view?usp=sharing
-
-**Full Macro**
+### Full Macro
+<pre>
 Sub compare_tier()
 '***********************************************
 'Purpose: compare two product tier and returns whether Sunovion product is at advantage, parity or disadvantage compare to competitors'
@@ -62,8 +59,8 @@ a:
     Next i
         
 End Sub
+</pre>
 
-
-Explanation
+### Explanation
 
 I created an array of the tier (tierlist), better to worse from left to right. While going through each row, my macro will find compare two brands by finding their position in the array, then compare them. Whichever brand got a lower number for position, has advantage over the other. The macro will the input either Advantaged, Disadvantaged, or Parity accordingly
