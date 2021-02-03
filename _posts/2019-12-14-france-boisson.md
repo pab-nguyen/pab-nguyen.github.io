@@ -12,7 +12,7 @@ summary: France Boissons is a study case company, having the same name as the be
 France Boissons is a study case company, having the same name as the beverage distributing company in France. As a group of six, we built a operational relational database for France Boissons and wrote the most common queries for them. Our team use Oracle SQL to generate tables and queries.
 
 <figure align="center">
-	<img align="center", src="/assets/diagram.png", width= "600" >
+	<img align="center" src="/assets/diagram.png" width= "600" >
 	<figcaption> 
   		EER Diagram
 	</figcaption>
