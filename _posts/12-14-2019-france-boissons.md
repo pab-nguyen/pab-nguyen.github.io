@@ -4,6 +4,7 @@ title: France Boissons Relational Database with SQL
 date: 2019-12-24
 tags: data-analytics
 image: /assets/bev.jpg
+
 ---
 
 ### Overview
