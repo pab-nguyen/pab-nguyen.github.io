@@ -7,7 +7,7 @@ summary: I wrote this Excel VBA Macro during one of my internships. This script 
 image: /assets/tier-comparison.JPG
 ---
 <p align="center">
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/ZHWA5N7iJtc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/ZHWA5N7iJtc?rel=0?version=3&autoplay=1&controls=0&&showinfo=0&loop=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 
 ### Overview

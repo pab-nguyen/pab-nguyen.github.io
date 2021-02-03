@@ -14,7 +14,7 @@ This macro is used to automate the client meetings logs recording process. I wro
 I have built a VBA script to automate this process. It allows users to extract the calendar from Outlook, under a .csv file, then extract the data from this .csv file into a template. This script reduces the process to only five minutes. You can watch the video to understand how it works. 
 
 <p align="center">
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/pPoAgRRNHiE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/pPoAgRRNHiE?rel=0?version=3&autoplay=1&controls=0&&showinfo=0&loop=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 
 ### Download
