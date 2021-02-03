@@ -1,5 +1,5 @@
 ---
-title: Decision Trees for Titanic Survivors
+title: Decision Trees
 date: 2020-12-21 00:00:00 Z
 layout: post
 image: /assets/titanic.jpg
@@ -8,32 +8,35 @@ summary: This is my attempt at the Titanic competition from Kaggle. It asked par
   to predict the survivor rate of Titanic Passengers, given a training and a test
   datasets. I used Logistic Regression on my first try. My accuracy was 75%.
 ---
+
 <!DOCTYPE html>
-<!-- saved from url=(0862)https://www.kaggleusercontent.com/kf/49863386/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..waEdt4961ljeppY1A8XTSQ.E4VZx5uD_ReZnrU7oR8Ayq8rAq1iq8uMdXkQV3WM0qR-Jt_owy4iCyFxjP7JB2boS8M3BYMHxRIM9B07TzUUGEkjCRO-uPpDCuzB33mciwb_9v2y7-EkfgPlVb-LAhSIv5ChniYfivm1Q8K3PX1x280m-SlWQO_FIDwyAbmaLQzGQNzAh02oTqS87jFI1FuAsghjA6li6whe9NbFlIZQwkIiHkYkHUKm0OCIjxOFOUUjt5xllggd6w-FyZBskHBRATaRjC_I880lgIBrLPbYjzsY6hTVoTykaQOzXIno9qoKtis0e_jceP5c4ZDfdRVXHWbFaOOFzBrIEGNvV2cEFryHvuZmky5RCQSMOd7FjILtoy7My3T_BJkU1aJfg7i1uUeNsvA3Lm-95n7_ROgI7lP_OQmcJF3Xelr3nYWjQQF_3pwNCruGoGYKkrU9m2ZrmqV4x_QaptCQaREP1oirnXLY2_PPMMrsKGUtgrxF1ukpmp16EyeXiBBNz7joIOJuuCqC9EI5j9KH8m3miI5gsecveGom6XJCTGyF-tintMKCjHVRO_MzXD3jB3pcdH5QLQiPLRyk2yp22mkzmupMwzYGbgQ7q3q-PS4RyT6e96jl0M0MtAUMZVei2gC2Zg2V-ra_MqdzGTAfeBg04DT-bqMUp_7NVG2mS-d5UdTWHKwgZGyUt0SaTJFwDGzzSx-j.DJi7Knqjm_UXLk53Hs0jKQ/__results__.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="generator" content="pandoc">
-<meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+<meta name="author" content="Phan Nguyen" />
 
-
-<meta name="author" content="Phan Nguyen">
-
-<meta name="date" content="2020-12-21">
+<meta name="date" content="2020-12-21" />
 
 <title>Using Decision Tree to find Titanic Survival</title>
 
-<script src="./2020-12-21-titanic-decision-trees_files/jquery.min.js.download"></script><link href="chrome-extension://idpbkophnbfijcnlffdmmppgnncgappc/css/content.css" rel="stylesheet" type="text/css">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="./2020-12-21-titanic-decision-trees_files/bootstrap.min.css" rel="stylesheet">
-<script src="./2020-12-21-titanic-decision-trees_files/bootstrap.min.js.download"></script>
-<script src="./2020-12-21-titanic-decision-trees_files/html5shiv.min.js.download"></script>
-<script src="./2020-12-21-titanic-decision-trees_files/respond.min.js.download"></script>
-<script src="./2020-12-21-titanic-decision-trees_files/tabsets.js.download"></script>
-<link href="./2020-12-21-titanic-decision-trees_files/default.css" rel="stylesheet">
-<script src="./2020-12-21-titanic-decision-trees_files/highlight.js.download"></script>
-<link href="./2020-12-21-titanic-decision-trees_files/anchor-sections.css" rel="stylesheet">
-<script src="./2020-12-21-titanic-decision-trees_files/anchor-sections.js.download"></script>
+<script src="__results___files/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="__results___files/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="__results___files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="__results___files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="__results___files/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="__results___files/navigation-1.1/tabsets.js"></script>
+<link href="__results___files/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="__results___files/highlightjs-9.12.0/highlight.js"></script>
+<link href="__results___files/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="__results___files/anchor-sections-1.0/anchor-sections.js"></script>
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -92,7 +95,7 @@ h6 {
 
 
 
-<style type="text/css">
+<style type = "text/css">
 .main-container {
   max-width: 940px;
   margin-left: auto;
@@ -183,104 +186,9 @@ summary {
 
 
 
-<!--<base target="_blank">--><base href="." target="_blank"><script src="./2020-12-21-titanic-decision-trees_files/runtime.js.download" async="" defer=""></script><script src="./2020-12-21-titanic-decision-trees_files/notebookviewer.js.download" async="" defer=""></script><script src="./2020-12-21-titanic-decision-trees_files/vendor.js.download" async="" defer=""></script><link href="./2020-12-21-titanic-decision-trees_files/notebookviewer.css" type="text/css" rel="stylesheet"><link href="./2020-12-21-titanic-decision-trees_files/vendor.css" type="text/css" rel="stylesheet"><script type="text/javascript" src="./2020-12-21-titanic-decision-trees_files/MathJax.js.download"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
-.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
-.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
-.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
-.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
-</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
-#MathJax_About.MathJax_MousePost {outline: none}
-.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
-.MathJax_MenuItem {padding: 2px 2em; background: transparent}
-.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
-.MathJax_MenuActive .MathJax_MenuArrow {color: white}
-.MathJax_MenuArrow.RTL {left: .5em; right: auto}
-.MathJax_MenuCheck {position: absolute; left: .7em}
-.MathJax_MenuCheck.RTL {right: .7em; left: auto}
-.MathJax_MenuRadioCheck {position: absolute; left: 1em}
-.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
-.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
-.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
-.MathJax_MenuDisabled {color: GrayText}
-.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
-.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
-.MathJax_ContextMenu:focus {outline: none}
-.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
-#MathJax_AboutClose {top: .2em; right: .2em}
-.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
-.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
-.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
-.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
-.MathJax_MenuClose:hover span {background-color: #CCC!important}
-.MathJax_MenuClose:hover:focus {outline: none}
-</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
-</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
-.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
-</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
-#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
-#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
-#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
-</style><style type="text/css">.MathJax_Preview {color: #888}
-#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
-#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
-.MathJax_Error {color: #CC0000; font-style: italic}
-</style><style type="text/css">.MJXp-script {font-size: .8em}
-.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
-.MJXp-bold {font-weight: bold}
-.MJXp-italic {font-style: italic}
-.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
-.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
-.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
-.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
-.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
-.MJXp-largeop {font-size: 150%}
-.MJXp-largeop.MJXp-int {vertical-align: -.2em}
-.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
-.MJXp-display {display: block; text-align: center; margin: 1em 0}
-.MJXp-math span {display: inline-block}
-.MJXp-box {display: block!important; text-align: center}
-.MJXp-box:after {content: " "}
-.MJXp-rule {display: block!important; margin-top: .1em}
-.MJXp-char {display: block!important}
-.MJXp-mo {margin: 0 .15em}
-.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
-.MJXp-denom {display: inline-table!important; width: 100%}
-.MJXp-denom > * {display: table-row!important}
-.MJXp-surd {vertical-align: top}
-.MJXp-surd > * {display: block!important}
-.MJXp-script-box > *  {display: table!important; height: 50%}
-.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
-.MJXp-script-box > *:last-child > * {vertical-align: bottom}
-.MJXp-script-box > * > * > * {display: block!important}
-.MJXp-mphantom {visibility: hidden}
-.MJXp-munderover {display: inline-table!important}
-.MJXp-over {display: inline-block!important; text-align: center}
-.MJXp-over > * {display: block!important}
-.MJXp-munderover > * {display: table-row!important}
-.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
-.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
-.MJXp-mtr {display: table-row!important}
-.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
-.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
-.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
-.MJXp-mlabeledtr {display: table-row!important}
-.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
-.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
-.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
-.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
-.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
-.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
-.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
-.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
-.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
-.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
-.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
-.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
-.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
-.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
-</style></head>
+<base target="_blank" /><script src="https://www.kaggle.com/static/assets/runtime.js?v=34c26e5f7b953acee573" async defer></script><script src="https://www.kaggle.com/static/assets/notebookviewer.js?v=b729052dc924364a2aa1" async defer></script><script src="https://www.kaggle.com/static/assets/vendor.js?v=f262f190185d35c8f517" async defer></script><link href="https://www.kaggle.com/static/assets/notebookviewer.css?v=463f93fe3076c165b2dd" type="text/css" rel="stylesheet" /><link href="https://www.kaggle.com/static/assets/vendor.css?v=10d6472ada36614be1ee" type="text/css" rel="stylesheet" /></head>
 
-<body data-new-gr-c-s-check-loaded="14.993.0" data-gr-ext-installed=""><div id="MathJax_Message" style="display: none;"></div>
+<body>
 
 
 <div class="container-fluid main-container">
@@ -300,30 +208,30 @@ summary {
 
 <div id="TOC">
 <ul>
-<li><a href="https://www.kaggleusercontent.com/kf/49863386/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..waEdt4961ljeppY1A8XTSQ.E4VZx5uD_ReZnrU7oR8Ayq8rAq1iq8uMdXkQV3WM0qR-Jt_owy4iCyFxjP7JB2boS8M3BYMHxRIM9B07TzUUGEkjCRO-uPpDCuzB33mciwb_9v2y7-EkfgPlVb-LAhSIv5ChniYfivm1Q8K3PX1x280m-SlWQO_FIDwyAbmaLQzGQNzAh02oTqS87jFI1FuAsghjA6li6whe9NbFlIZQwkIiHkYkHUKm0OCIjxOFOUUjt5xllggd6w-FyZBskHBRATaRjC_I880lgIBrLPbYjzsY6hTVoTykaQOzXIno9qoKtis0e_jceP5c4ZDfdRVXHWbFaOOFzBrIEGNvV2cEFryHvuZmky5RCQSMOd7FjILtoy7My3T_BJkU1aJfg7i1uUeNsvA3Lm-95n7_ROgI7lP_OQmcJF3Xelr3nYWjQQF_3pwNCruGoGYKkrU9m2ZrmqV4x_QaptCQaREP1oirnXLY2_PPMMrsKGUtgrxF1ukpmp16EyeXiBBNz7joIOJuuCqC9EI5j9KH8m3miI5gsecveGom6XJCTGyF-tintMKCjHVRO_MzXD3jB3pcdH5QLQiPLRyk2yp22mkzmupMwzYGbgQ7q3q-PS4RyT6e96jl0M0MtAUMZVei2gC2Zg2V-ra_MqdzGTAfeBg04DT-bqMUp_7NVG2mS-d5UdTWHKwgZGyUt0SaTJFwDGzzSx-j.DJi7Knqjm_UXLk53Hs0jKQ/__results__.html#importing-packages" target="_self"><span class="toc-section-number">0.1</span> Importing packages</a></li>
-<li><a href="https://www.kaggleusercontent.com/kf/49863386/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..waEdt4961ljeppY1A8XTSQ.E4VZx5uD_ReZnrU7oR8Ayq8rAq1iq8uMdXkQV3WM0qR-Jt_owy4iCyFxjP7JB2boS8M3BYMHxRIM9B07TzUUGEkjCRO-uPpDCuzB33mciwb_9v2y7-EkfgPlVb-LAhSIv5ChniYfivm1Q8K3PX1x280m-SlWQO_FIDwyAbmaLQzGQNzAh02oTqS87jFI1FuAsghjA6li6whe9NbFlIZQwkIiHkYkHUKm0OCIjxOFOUUjt5xllggd6w-FyZBskHBRATaRjC_I880lgIBrLPbYjzsY6hTVoTykaQOzXIno9qoKtis0e_jceP5c4ZDfdRVXHWbFaOOFzBrIEGNvV2cEFryHvuZmky5RCQSMOd7FjILtoy7My3T_BJkU1aJfg7i1uUeNsvA3Lm-95n7_ROgI7lP_OQmcJF3Xelr3nYWjQQF_3pwNCruGoGYKkrU9m2ZrmqV4x_QaptCQaREP1oirnXLY2_PPMMrsKGUtgrxF1ukpmp16EyeXiBBNz7joIOJuuCqC9EI5j9KH8m3miI5gsecveGom6XJCTGyF-tintMKCjHVRO_MzXD3jB3pcdH5QLQiPLRyk2yp22mkzmupMwzYGbgQ7q3q-PS4RyT6e96jl0M0MtAUMZVei2gC2Zg2V-ra_MqdzGTAfeBg04DT-bqMUp_7NVG2mS-d5UdTWHKwgZGyUt0SaTJFwDGzzSx-j.DJi7Knqjm_UXLk53Hs0jKQ/__results__.html#exploring-data" target="_self"><span class="toc-section-number">0.2</span> Exploring Data</a></li>
-<li><a href="https://www.kaggleusercontent.com/kf/49863386/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..waEdt4961ljeppY1A8XTSQ.E4VZx5uD_ReZnrU7oR8Ayq8rAq1iq8uMdXkQV3WM0qR-Jt_owy4iCyFxjP7JB2boS8M3BYMHxRIM9B07TzUUGEkjCRO-uPpDCuzB33mciwb_9v2y7-EkfgPlVb-LAhSIv5ChniYfivm1Q8K3PX1x280m-SlWQO_FIDwyAbmaLQzGQNzAh02oTqS87jFI1FuAsghjA6li6whe9NbFlIZQwkIiHkYkHUKm0OCIjxOFOUUjt5xllggd6w-FyZBskHBRATaRjC_I880lgIBrLPbYjzsY6hTVoTykaQOzXIno9qoKtis0e_jceP5c4ZDfdRVXHWbFaOOFzBrIEGNvV2cEFryHvuZmky5RCQSMOd7FjILtoy7My3T_BJkU1aJfg7i1uUeNsvA3Lm-95n7_ROgI7lP_OQmcJF3Xelr3nYWjQQF_3pwNCruGoGYKkrU9m2ZrmqV4x_QaptCQaREP1oirnXLY2_PPMMrsKGUtgrxF1ukpmp16EyeXiBBNz7joIOJuuCqC9EI5j9KH8m3miI5gsecveGom6XJCTGyF-tintMKCjHVRO_MzXD3jB3pcdH5QLQiPLRyk2yp22mkzmupMwzYGbgQ7q3q-PS4RyT6e96jl0M0MtAUMZVei2gC2Zg2V-ra_MqdzGTAfeBg04DT-bqMUp_7NVG2mS-d5UdTWHKwgZGyUt0SaTJFwDGzzSx-j.DJi7Knqjm_UXLk53Hs0jKQ/__results__.html#grow-the-tree" target="_self"><span class="toc-section-number">0.3</span> Grow the tree</a></li>
+<li><a href="#importing-packages"><span class="toc-section-number">0.1</span> Importing packages</a></li>
+<li><a href="#exploring-data"><span class="toc-section-number">0.2</span> Exploring Data</a></li>
+<li><a href="#grow-the-tree"><span class="toc-section-number">0.3</span> Grow the tree</a></li>
 </ul>
 </div>
 
 <p>In this notebook, I’m gonna use decision tree to predict the survivals of Titanic passengers. My last attempt was building a logistic regression</p>
 <div id="importing-packages" class="section level2">
-<h2 class="hasAnchor"><span class="header-section-number">0.1</span> Importing packages<a href="https://www.kaggleusercontent.com/kf/49863386/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..waEdt4961ljeppY1A8XTSQ.E4VZx5uD_ReZnrU7oR8Ayq8rAq1iq8uMdXkQV3WM0qR-Jt_owy4iCyFxjP7JB2boS8M3BYMHxRIM9B07TzUUGEkjCRO-uPpDCuzB33mciwb_9v2y7-EkfgPlVb-LAhSIv5ChniYfivm1Q8K3PX1x280m-SlWQO_FIDwyAbmaLQzGQNzAh02oTqS87jFI1FuAsghjA6li6whe9NbFlIZQwkIiHkYkHUKm0OCIjxOFOUUjt5xllggd6w-FyZBskHBRATaRjC_I880lgIBrLPbYjzsY6hTVoTykaQOzXIno9qoKtis0e_jceP5c4ZDfdRVXHWbFaOOFzBrIEGNvV2cEFryHvuZmky5RCQSMOd7FjILtoy7My3T_BJkU1aJfg7i1uUeNsvA3Lm-95n7_ROgI7lP_OQmcJF3Xelr3nYWjQQF_3pwNCruGoGYKkrU9m2ZrmqV4x_QaptCQaREP1oirnXLY2_PPMMrsKGUtgrxF1ukpmp16EyeXiBBNz7joIOJuuCqC9EI5j9KH8m3miI5gsecveGom6XJCTGyF-tintMKCjHVRO_MzXD3jB3pcdH5QLQiPLRyk2yp22mkzmupMwzYGbgQ7q3q-PS4RyT6e96jl0M0MtAUMZVei2gC2Zg2V-ra_MqdzGTAfeBg04DT-bqMUp_7NVG2mS-d5UdTWHKwgZGyUt0SaTJFwDGzzSx-j.DJi7Knqjm_UXLk53Hs0jKQ/__results__.html#importing-packages" class="anchor-section" target="_self"></a></h2>
+<h2><span class="header-section-number">0.1</span> Importing packages</h2>
 <p>Let’s import these packages.</p>
-<pre class="r"><code class="hljs"><span class="hljs-keyword">library</span>(tidyverse)<span class="hljs-comment"># metapackage of all tidyverse packages</span>
-<span class="hljs-keyword">library</span>(dplyr)
-<span class="hljs-keyword">library</span>(tree)
-<span class="hljs-keyword">library</span>(ggplot2) <span class="hljs-comment"># visualization</span></code></pre>
+<pre class="r"><code>library(tidyverse)# metapackage of all tidyverse packages
+library(dplyr)
+library(tree)
+library(ggplot2) # visualization</code></pre>
 </div>
 <div id="exploring-data" class="section level2">
-<h2 class="hasAnchor"><span class="header-section-number">0.2</span> Exploring Data<a href="https://www.kaggleusercontent.com/kf/49863386/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..waEdt4961ljeppY1A8XTSQ.E4VZx5uD_ReZnrU7oR8Ayq8rAq1iq8uMdXkQV3WM0qR-Jt_owy4iCyFxjP7JB2boS8M3BYMHxRIM9B07TzUUGEkjCRO-uPpDCuzB33mciwb_9v2y7-EkfgPlVb-LAhSIv5ChniYfivm1Q8K3PX1x280m-SlWQO_FIDwyAbmaLQzGQNzAh02oTqS87jFI1FuAsghjA6li6whe9NbFlIZQwkIiHkYkHUKm0OCIjxOFOUUjt5xllggd6w-FyZBskHBRATaRjC_I880lgIBrLPbYjzsY6hTVoTykaQOzXIno9qoKtis0e_jceP5c4ZDfdRVXHWbFaOOFzBrIEGNvV2cEFryHvuZmky5RCQSMOd7FjILtoy7My3T_BJkU1aJfg7i1uUeNsvA3Lm-95n7_ROgI7lP_OQmcJF3Xelr3nYWjQQF_3pwNCruGoGYKkrU9m2ZrmqV4x_QaptCQaREP1oirnXLY2_PPMMrsKGUtgrxF1ukpmp16EyeXiBBNz7joIOJuuCqC9EI5j9KH8m3miI5gsecveGom6XJCTGyF-tintMKCjHVRO_MzXD3jB3pcdH5QLQiPLRyk2yp22mkzmupMwzYGbgQ7q3q-PS4RyT6e96jl0M0MtAUMZVei2gC2Zg2V-ra_MqdzGTAfeBg04DT-bqMUp_7NVG2mS-d5UdTWHKwgZGyUt0SaTJFwDGzzSx-j.DJi7Knqjm_UXLk53Hs0jKQ/__results__.html#exploring-data" class="anchor-section" target="_self"></a></h2>
-<pre class="r"><code class="hljs">train &lt;- read.csv(<span class="hljs-string">"../input/titanic/train.csv"</span>)
-test &lt;- read.csv (<span class="hljs-string">"../input/titanic/test.csv"</span>)</code></pre>
+<h2><span class="header-section-number">0.2</span> Exploring Data</h2>
+<pre class="r"><code>train &lt;- read.csv(&quot;../input/titanic/train.csv&quot;)
+test &lt;- read.csv (&quot;../input/titanic/test.csv&quot;)</code></pre>
 <p>The competition gave us two sets of data: train set and test set. Let’s import them into two variables train and test.</p>
-<pre class="r"><code class="hljs">dim(train)</code></pre>
-<pre><code class="hljs">## [1] 891  12</code></pre>
+<pre class="r"><code>dim(train)</code></pre>
+<pre><code>## [1] 891  12</code></pre>
 <p>Train set contains 891 observations and 12 variables.</p>
-<table class="table table-condensed">
+<table>
 <thead>
 <tr class="header">
 <th>Variable Name</th>
@@ -380,55 +288,55 @@ test &lt;- read.csv (<span class="hljs-string">"../input/titanic/test.csv"</span
 <p>This is the list of variables in this dataset. Test set doesn’t contain Survived.</p>
 <p>Our dependent variable is Survived.</p>
 <p>Let’s look at some of the variables. Pclass stands for Ticket Class, where 1 stands for first class, 2 for second and 3 for third.</p>
-<p><img src="./2020-12-21-titanic-decision-trees_files/unnamed-chunk-4-1.png" width="672"></p>
+<p><img src="__results___files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 <p>First class ticket holders have the highest survivor rate, around 63%, where third class people have 24% A reason for this might be because ticket class also relates to social class back then.</p>
-<pre><code class="hljs">## Warning: Removed 1 rows containing missing values (geom_point).</code></pre>
-<p><img src="./2020-12-21-titanic-decision-trees_files/unnamed-chunk-5-1.png" width="672"> There is no clear correlation between Age and Survived. Kids and teenagers have higher survival rate, while that of people between 20 and 60 years old is lower. I can make a guess that kids and teenagers travel with family, and family might have a higher survival rate. Let’s look at Parent/Children to see if this is true.</p>
+<pre><code>## Warning: Removed 1 rows containing missing values (geom_point).</code></pre>
+<p><img src="__results___files/figure-html/unnamed-chunk-5-1.png" width="672" /> There is no clear correlation between Age and Survived. Kids and teenagers have higher survival rate, while that of people between 20 and 60 years old is lower. I can make a guess that kids and teenagers travel with family, and family might have a higher survival rate. Let’s look at Parent/Children to see if this is true.</p>
 <p>This is a variable indicate how many parent/children a passenger has. Combining with Sib/Sp, we can find out how big is a family size. In another word, family size = parent/children + sibling/spouse + 1. The 1 accounts for the passenger his/herself.9</p>
-<p><img src="./2020-12-21-titanic-decision-trees_files/unnamed-chunk-6-1.png" width="672"></p>
+<p><img src="__results___files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
 <p>It seems that Famiy size does play a part in surviving. Family tends to have a higher surviving rate than people traveling alone, but only small families which has less than five members. Big families tend to not surviving, due to the size of the family. There is one family with 11 people which has no survivors.</p>
 <p>After going through some variables, it’s time to fit our tree.</p>
 </div>
 <div id="grow-the-tree" class="section level2">
-<h2 class="hasAnchor"><span class="header-section-number">0.3</span> Grow the tree<a href="https://www.kaggleusercontent.com/kf/49863386/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..waEdt4961ljeppY1A8XTSQ.E4VZx5uD_ReZnrU7oR8Ayq8rAq1iq8uMdXkQV3WM0qR-Jt_owy4iCyFxjP7JB2boS8M3BYMHxRIM9B07TzUUGEkjCRO-uPpDCuzB33mciwb_9v2y7-EkfgPlVb-LAhSIv5ChniYfivm1Q8K3PX1x280m-SlWQO_FIDwyAbmaLQzGQNzAh02oTqS87jFI1FuAsghjA6li6whe9NbFlIZQwkIiHkYkHUKm0OCIjxOFOUUjt5xllggd6w-FyZBskHBRATaRjC_I880lgIBrLPbYjzsY6hTVoTykaQOzXIno9qoKtis0e_jceP5c4ZDfdRVXHWbFaOOFzBrIEGNvV2cEFryHvuZmky5RCQSMOd7FjILtoy7My3T_BJkU1aJfg7i1uUeNsvA3Lm-95n7_ROgI7lP_OQmcJF3Xelr3nYWjQQF_3pwNCruGoGYKkrU9m2ZrmqV4x_QaptCQaREP1oirnXLY2_PPMMrsKGUtgrxF1ukpmp16EyeXiBBNz7joIOJuuCqC9EI5j9KH8m3miI5gsecveGom6XJCTGyF-tintMKCjHVRO_MzXD3jB3pcdH5QLQiPLRyk2yp22mkzmupMwzYGbgQ7q3q-PS4RyT6e96jl0M0MtAUMZVei2gC2Zg2V-ra_MqdzGTAfeBg04DT-bqMUp_7NVG2mS-d5UdTWHKwgZGyUt0SaTJFwDGzzSx-j.DJi7Knqjm_UXLk53Hs0jKQ/__results__.html#grow-the-tree" class="anchor-section" target="_self"></a></h2>
+<h2><span class="header-section-number">0.3</span> Grow the tree</h2>
 <p>First, let’s fit a decision tree with all variables. We will not include categorical variables with too many levels, i.e too many things. Additionally, Passenger ID won’t be r elevant.</p>
-<pre class="r"><code class="hljs">tree.fit &lt;- tree(as.factor(Survived)~.-Ticket - Name-PassengerId-Cabin, data=train)
+<pre class="r"><code>tree.fit &lt;- tree(as.factor(Survived)~.-Ticket - Name-PassengerId-Cabin, data=train)
 summary(tree.fit)</code></pre>
-<pre><code class="hljs">## 
+<pre><code>## 
 ## Classification tree:
 ## tree(formula = as.factor(Survived) ~ . - Ticket - Name - PassengerId - 
 ##     Cabin, data = train)
 ## Variables actually used in tree construction:
-## [1] "Sex"    "Pclass" "Fare"   "Age"    "SibSp" 
+## [1] &quot;Sex&quot;    &quot;Pclass&quot; &quot;Fare&quot;   &quot;Age&quot;    &quot;SibSp&quot; 
 ## Number of terminal nodes:  7 
 ## Residual mean deviance:  0.7975 = 563.9 / 707 
 ## Misclassification error rate: 0.1737 = 124 / 714</code></pre>
-<pre class="r"><code class="hljs">plot(tree.fit)
-text(tree.fit, pretty=<span class="hljs-number">0</span>)</code></pre>
-<p><img src="./2020-12-21-titanic-decision-trees_files/unnamed-chunk-7-1.png" width="672"></p>
+<pre class="r"><code>plot(tree.fit)
+text(tree.fit, pretty=0)</code></pre>
+<p><img src="__results___files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 <p>Ticket class was treated as a numerical variables, which is not, so let’s fit the tree again.</p>
-<pre class="r"><code class="hljs">tree.fit &lt;- tree(as.factor(Survived)~.-Pclass +as.factor(Pclass)-Ticket - Name-PassengerId-Cabin, data=train)
+<pre class="r"><code>tree.fit &lt;- tree(as.factor(Survived)~.-Pclass +as.factor(Pclass)-Ticket - Name-PassengerId-Cabin, data=train)
 summary(tree.fit)</code></pre>
-<pre><code class="hljs">## 
+<pre><code>## 
 ## Classification tree:
 ## tree(formula = as.factor(Survived) ~ . - Pclass + as.factor(Pclass) - 
 ##     Ticket - Name - PassengerId - Cabin, data = train)
 ## Variables actually used in tree construction:
-## [1] "Sex"               "as.factor(Pclass)" "Fare"             
-## [4] "Age"               "SibSp"            
+## [1] &quot;Sex&quot;               &quot;as.factor(Pclass)&quot; &quot;Fare&quot;             
+## [4] &quot;Age&quot;               &quot;SibSp&quot;            
 ## Number of terminal nodes:  7 
 ## Residual mean deviance:  0.7975 = 563.9 / 707 
 ## Misclassification error rate: 0.1737 = 124 / 714</code></pre>
-<pre class="r"><code class="hljs">plot(tree.fit)
-text(tree.fit, pretty=<span class="hljs-number">0</span>)</code></pre>
-<p><img src="./2020-12-21-titanic-decision-trees_files/unnamed-chunk-8-1.png" width="672"></p>
+<pre class="r"><code>plot(tree.fit)
+text(tree.fit, pretty=0)</code></pre>
+<p><img src="__results___files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
 <p>Let’s interpret this tree. This is a decision tree. You read this tree starting from the top. For every level, the observation/passenger will pass through a check, if the check is true, they go down a level using the left route. Otherwise, they use the right route.</p>
 <p>The first level here is whether a passenger is a female. If she is, we are going to check whether her ticket is a third/lower class. If it’s not, she survives. If it is, and her fare is less than 20.8, then she survives. If her ticket is lower class, and her fare is more than 20.8, she might not survive.</p>
 <p>This is quite hard to explain. I can only think that the ticket class, and also the class fare, reflects the seat position. From what I know about boats, passengers with higher ticket classes stays in the upper deck. They would have more time to prepare and also gets higher access for lifeboats. The first class might contain people with higher status, like a duke or a countess, so these people might be saved first.</p>
 <p>This tree looks good with 7 nodes, but let’s find out if they can be reduced more with decreased deviation</p>
-<pre class="r"><code class="hljs">set.seed(<span class="hljs-number">567</span>)
-(cvtree &lt;- cv.tree(tree.fit, FUN = prune.tree, K = <span class="hljs-number">10</span>))</code></pre>
-<pre><code class="hljs">## $size
+<pre class="r"><code>set.seed(567)
+(cvtree &lt;- cv.tree(tree.fit, FUN = prune.tree, K = 10))</code></pre>
+<pre><code>## $size
 ## [1] 7 6 3 2 1
 ## 
 ## $dev
@@ -438,22 +346,22 @@ text(tree.fit, pretty=<span class="hljs-number">0</span>)</code></pre>
 ## [1]      -Inf  14.47245  30.51568  80.81551 213.81576
 ## 
 ## $method
-## [1] "deviance"
+## [1] &quot;deviance&quot;
 ## 
-## attr(,"class")
-## [1] "prune"         "tree.sequence"</code></pre>
-<pre class="r"><code class="hljs">bestsize &lt;- cvtree$size[which.min(cvtree$dev)]
+## attr(,&quot;class&quot;)
+## [1] &quot;prune&quot;         &quot;tree.sequence&quot;</code></pre>
+<pre class="r"><code>bestsize &lt;- cvtree$size[which.min(cvtree$dev)]
 bestsize</code></pre>
-<pre><code class="hljs">## [1] 6</code></pre>
+<pre><code>## [1] 6</code></pre>
 <p>We will use cross validation to find the number of nodes with the least amount of deviation. The optimal number of nodes are 6. Prune the tree and plot it again.</p>
-<pre class="r"><code class="hljs">prune &lt;- prune.tree(tree.fit,best=bestsize)
+<pre class="r"><code>prune &lt;- prune.tree(tree.fit,best=bestsize)
 plot(prune)
-text(prune, pretty=<span class="hljs-number">0</span>)</code></pre>
-<p><img src="./2020-12-21-titanic-decision-trees_files/unnamed-chunk-10-1.png" width="672"></p>
+text(prune, pretty=0)</code></pre>
+<p><img src="__results___files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
 <p>This is our most optimal tree. We will use this model with the test set, and put it into submission</p>
-<pre class="r"><code class="hljs">prediction &lt;- predict(prune,newdata=test,type=<span class="hljs-string">"class"</span>)
+<pre class="r"><code>prediction &lt;- predict(prune,newdata=test,type=&quot;class&quot;)
 solution &lt;- data.frame(PassengerID = test$PassengerId, Survived = prediction)
-write.csv(solution, file = <span class="hljs-string">'solution.csv'</span>, row.names = <span class="hljs-literal">F</span>)</code></pre>
+write.csv(solution, file = &#39;solution.csv&#39;, row.names = F)</code></pre>
 </div>
 
 
@@ -501,6 +409,5 @@ $(document).ready(function () {
   })();
 </script>
 
-
-
-</body><div></div></html>
+</body>
+</html>
