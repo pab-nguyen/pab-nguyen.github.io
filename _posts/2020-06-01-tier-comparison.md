@@ -6,6 +6,9 @@ tags: excel-vba
 summary: I wrote this Excel VBA Macro during one of my internships. This script allows user to compare two drug formulary tier to see whether the brand my company owns underperform or overperform competitor's brand, in terms of drug formulary. You can download the macro and the calendar file below.
 image: /assets/tier-comparison.JPG
 ---
+<p align="center">
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/ZHWA5N7iJtc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
 
 ### Overview
 I wrote this Excel VBA Macro during one of my internships. This script allows user to compare two drug formulary tier to see whether the brand my company owns underperform or overperform competitor's brand, in terms of drug formulary. 

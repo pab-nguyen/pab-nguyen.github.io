@@ -9,7 +9,7 @@ summary: One of my biggest Excel VBA scripts written to date. ​</br></br>There
 ---
 
 <p align="center">
-	<img align="center" src="/assets/variance.JPG" >
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/_FFB0z4Thc0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 
 ### Overview 

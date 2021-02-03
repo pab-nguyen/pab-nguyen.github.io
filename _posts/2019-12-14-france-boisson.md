@@ -4,6 +4,7 @@ title: France Boissons Relational Database with SQL
 date: 2019-12-24
 tags: data-analytics
 image: /assets/bev.jpg
+summary: France Boissons is a study case company, having the same name as the beverage distributing company in France. As a group of six, we built a operational relational database for France Boissons and wrote the most common queries for them. Our team use Oracle SQL to generate tables and queries.</br></br> Our database consists of 11 tables. Each table contains a primary key. Some tables contains one or more foreign key. Primary key is the field to seperate between instances in one table, and foreign key of a table is the primary key of another one. All the tables are formulated with the purpose of simulate a real life operational database with highly simple structure. We have common tables like Customers, Orders, Inventory, and more complex one like Inventory and Shipping, with many foreign keys. We used Oracle SQL to generate the tables and populate data.
 
 ---
 
