@@ -9,6 +9,9 @@ summary: One of my biggest Excel VBA scripts written to date. ​</br></br>There
 ---
 
 <p align="center">
+	<video muted autoplay controls width="560">
+    	<source src="{{ site.media_path }}/variance.mp4" type="video/mp4">
+	</video>
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/_FFB0z4Thc0?rel=0?version=3&autoplay=1&showinfo=0&loop=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 
