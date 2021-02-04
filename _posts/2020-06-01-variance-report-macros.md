@@ -1,6 +1,6 @@
 --- 
 layout: post
-title: Variance Report Macros
+title: Variance Reports Full Automation
 tags: excel-vba
 date: 2020-06-01
 image: /assets/variance.JPG
