@@ -56,6 +56,10 @@ After having the tables set up, we came up with some often used few queries that
     group by productt.producttype;
   </pre>
 
+  <figure align="center">
+  <img align="center" src="/assets/images/sql/1.png" >
+  </figure>
+
 2. All Products with inventory less than 500 in all centers  
   <pre>
   drop view Low_Quantity;
@@ -66,6 +70,9 @@ After having the tables set up, we came up with some often used few queries that
              where inventoryquantity <500 ; 
   select * from Low_Quantity;
   </pre>
+  <figure align="center">
+  <img align="center" src="/assets/images/sql/2.png" >
+  </figure>
 
 3. Most quantities purchased from a customer  
   <pre>
@@ -78,13 +85,22 @@ After having the tables set up, we came up with some often used few queries that
   Inner join orderlineT on orderT.orderID = orderlineT.orderID
   Inner join productT prod on orderlineT.productID = prod.productID
   Inner join staffT staff on orderT.staffID = staff.staffID;
+  </pre>
 
+  <figure align="center">
+  <img align="center" src="/assets/images/sql/3.png" >
+  </figure>
+
+  </pre>
   #find max quantity purchase
   select max(customername)as customername, max(productid) as productid, max(productname) as productname, max(quantity) MaxQuantityPurchased
   from AllPurchases
   group by customername;
-
   </pre>
+
+  <figure align="center">
+  <img align="center" src="/assets/images/sql/3.2.png" >
+  </figure>
 
 4. Assemble all information necessary to create an invoice for order number 10000010  
   <pre>
@@ -99,6 +115,10 @@ After having the tables set up, we came up with some often used few queries that
   and OrderT.OrderID = 10000010;
   </pre>
 
+  <figure align="center">
+  <img align="center" src="/assets/images/sql/4.png" >
+  </figure>
+
 5. Usual Product List: Most frequent items bought by a customer and the staff who sold them.  
   <pre>
   # all puchases
@@ -111,13 +131,23 @@ After having the tables set up, we came up with some often used few queries that
   	Inner join orderlineT on orderT.orderID = orderlineT.orderID
   	Inner join productT prod on orderlineT.productID = prod.productID
   	Inner join staffT staff on orderT.staffID = staff.staffID;
+  </pre>
 
+  <figure align="center">
+  <img align="center" src="/assets/images/sql/5.1.png" >
+  </figure>
+
+  <pre>
   # usual product list
   select max(customername)as customername, max(productid) as productid, max(productname) as productname,max(productdescription) as productdescription, max(staffID)as staffID, max(staffname) as salesman, count(productid) TimePurchased, round(avg(quantity),0) AverageQuantityPurchased
   from AllPurchases
   group by customername
   having count(productid) > 2;
   </pre>
+
+  <figure align="center">
+  <img align="center" src="/assets/images/sql/5.2.png" >
+  </figure>
 
 ### Advantages and Limits
 Following is some reflection on this project  
