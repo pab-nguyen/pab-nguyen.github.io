@@ -12,9 +12,7 @@ layout: page
 </script>
 
 
-{% for tag in site.topics %}
-  <p>{{tag}}</p>
-{% endfor %}
+
 
 <div class="sidebar-right"> 
   <h4> Table of Content </h4>
@@ -36,6 +34,10 @@ layout: page
 
 <div class="posts" style="font-size:17px">
 
+  {% for tag in site.topics %}
+  <p>{{tag}}</p>
+  {% endfor %}
+  
   {% for tag in site.tags %}
     <h3 id='{{tag[0]}}'> 
       {{tag[0]}} 
