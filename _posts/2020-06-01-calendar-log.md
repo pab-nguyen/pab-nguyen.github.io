@@ -15,10 +15,9 @@ I have built a VBA script to automate this process. It allows users to extract t
 
 
 <p align="center">
-	<video muted autoplay controls width="560">
+	<video muted autoplay controls loop width="560">
     	<source src="{{ site.media_path }}/calendar.mp4" type="video/mp4">
 	</video>
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/pPoAgRRNHiE?rel=0?version=3&autoplay=1&showinfo=0&loop=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 
 ### Download
