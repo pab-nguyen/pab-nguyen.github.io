@@ -13,16 +13,8 @@ layout: page
 
 
 {% for tag in site.topics %}
-      <a href="#{{topics[0]}}">
-        <b>{{topics[0]}}</b>
-      </a></br> 
-      {% for post in topics[1] %}
-      <a href="#{{post.title}}">
-        {{post.title}}
-      </a></br>
-      {% endfor %} 
-      </br>  
-    {% endfor %}
+  <p>{{tag}}</p>
+{% endfor %}
 
 <div class="sidebar-right"> 
   <h4> Table of Content </h4>
