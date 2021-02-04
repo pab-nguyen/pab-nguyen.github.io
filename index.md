@@ -3,7 +3,7 @@ title: About
 layout: default
 sidebar_link: true
 ---
-<h2 class="page-title">{{ page.title }}</h2>
+<h2 class="page-title" >{{ page.title }}</h2>
 
 
 <p align="center">
@@ -13,7 +13,7 @@ sidebar_link: true
   This is Artist Bluff Trails in New Hampshire
 </p>
 
-Hi, I am Phan Nguyen, a self-taught data scientist. Welcome to my personal website.   
+Hi, I am Phan Nguyen, a self-taught data scientist. Welcome to my website. This is where I'm showcasing my projects, my hobbies and  
 
 Quick story: My previous education has been focusing on finance. From June to October 2020, I worked at Sunovion Pharmaceuticals as an intern for their Strategic Pricing department. My responsibilities were to make financial models to estimate financial impact of new government policies changes. During the internship, I learned to build automation macros in Excel VBA, which reduced the average time spent for analysts from a few days to 20 minutes. This sparked something in me. I realized I like to code, and work with data. I also remember a project I did in one of my Statistical Modeling class, where my team built a ML classification model to categorize cars by their MSRP prices and their market label (whether they are luxury/performance). These experiences, along with a lengthy research process, make me realized that statistics, programming and data are all things I am interested in. I want to be a data scientist, and I am teaching myself how to become one. I am excited for this journey, and by creating this website, I am making the commitment to follow through.  
 
