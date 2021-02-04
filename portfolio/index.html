@@ -34,8 +34,10 @@ layout: page
 
 <div class="posts" style="font-size:17px">
 
-  {% for tag in site.topics %}
-  <p>{{tag}}</p>
+  {% for items in site.my_collection %}
+    {% for item in items %}
+      {{ item }}: {{ items[item] }}
+    {% endfor %}
   {% endfor %}
   
   {% for tag in site.tags %}
