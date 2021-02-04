@@ -21,18 +21,25 @@ summary: What is your chance of surviving Titanic?</br></br> Titanic is a tragic
 
 <p> You can find the full report and dataset <a href="https://www.kaggle.com/heolinhdam/simple-logistic-regression/output">here</a> on Kaggle.</p>
 
+<div id="TOC" class="sidebar-right">
+	<a href="#importing-libraries">1. Importing Libraries</a>
+	<a href="#first-look-at-the-data">2. First look at the data</a>
+	<a href="#fitting-the-model">3. Fitting the model</a>
+
+
+</div>
 <div id="predicting-survivor-rate-of-titanic" class="section level1">
-  <h1 class="hasAnchor"><span class="header-section-number">1</span> Predicting Survivor Rate of Titanic</h1>
+  <h1 class="hasAnchor"><span class="header-section-number"></span> Predicting Survivor Rate of Titanic</h1>
 <p>Hello, welcome to my first attempt at cracking this competition. I am new at data science, therefore any comments would be highly appreciated.</p>
 <div id="importing-libraries" class="section level2">
-<h2 class="hasAnchor"><span class="header-section-number">1.1</span> Importing Libraries</h2>
+<h2 class="hasAnchor"><span class="header-section-number">1</span> Importing Libraries</h2>
 <p>These are the libraries I found neccessary to perform this model building exercise.</p>
 <pre class="r"><code class="hljs"><span class="hljs-keyword">library</span>(tidyverse)<span class="hljs-comment"># metapackage of all tidyverse packages</span>
 <span class="hljs-keyword">library</span>(<span class="hljs-string">'plyr'</span>) <span class="hljs-comment"># data manipulation</span>
 <span class="hljs-keyword">library</span>(<span class="hljs-string">'dplyr'</span>)</code></pre>
 </div>
 <div id="first-look-at-the-data" class="section level2">
-<h2 class="hasAnchor"><span class="header-section-number">1.2</span> First look at the data</h2>
+<h2 class="hasAnchor"><span class="header-section-number">2</span> First look at the data</h2>
 <p>First, I’m going to pull in the data from Kaggle. There are two data sets, train and test.</p>
 <pre class="r"><code class="hljs">train &lt;- read.csv(<span class="hljs-string">"../input/titanic/train.csv"</span>)
 test &lt;- read.csv (<span class="hljs-string">"../input/titanic/test.csv"</span>)
@@ -130,7 +137,7 @@ a - nrow(train)</code></pre>
 <p>We removed 177 observations due to missing data. Among the 714 passengers, 424 died and 290 survived.</p>
 </div>
 <div id="fitting-the-model" class="section level2">
-<h2 class="hasAnchor"><span class="header-section-number">1.3</span> Fitting the model</h2>
+<h2 class="hasAnchor"><span class="header-section-number">3</span> Fitting the model</h2>
 <p>Let’s fit the a logistic model with all the variables, except for PassengerId, Name and Ticket</p>
 <pre class="r"><code class="hljs">titanic.lr &lt;- glm(formula=as.factor(Survived)~.-PassengerId-Name-Ticket,data=train,family=<span class="hljs-string">'binomial'</span>)
 summary(titanic.lr)</code></pre>
