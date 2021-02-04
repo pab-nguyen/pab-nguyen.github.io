@@ -13,7 +13,7 @@ sidebar_link: true
 	Artist Bluff Trails in New Hampshire
 </p>
 
-Hi, I am Phan Nguyen, a self-taught data scientist. Welcome to my website. This is where I'm showcasing my projects and portfolio. My areas of interest are data science, data anlytics, equity valuation, Excel VBA scripting. 
+Hi, I am Phan Nguyen, a self-taught data scientist. Welcome to my website. This is where I'm showcasing my projects and portfolio. My areas of interest are [data science](https://pab-nguyen.github.io/portfolio/#machine-learning), [data anlytics](https://pab-nguyen.github.io/portfolio/#data-analytics), [equity valuation](https://pab-nguyen.github.io/portfolio/#equity-valuation), and [Excel VBA scripting](https://pab-nguyen.github.io/portfolio/#excel-vba). 
 
 #### Overview
 I recently finished my MS in Financial Analytic. I have experiences working in pharmaceuticals and asset managment industries. My most recent employment is at Sunovion Pharmaceuticals, where I work as an intern in the Strategic Pricing and Reimbursement department. This is one of the special departments in pharmaceuticals. During this internship, I had the opportunity to build financial models to quantify policies impact on firms, scripted VBA macros to automate report processes, co-created an improved intern program with other interns in my cohort. At this job, I had to constantly use Excel VBA and Microsoft Teams to communicate with management. 
@@ -27,7 +27,7 @@ I am currently learning data science by myself. I am reading [Introduction to St
 
 My previous education has been focusing on finance. Last year, I had the chance to work at Sunovion Pharmaceuticals as an intern for their Strategic Pricing department. My responsibilities were to make financial models to estimate financial impact of new government policies changes. During the internship, I learned to build automation macros in Excel VBA, which reduced the average time spent for analysts from a few days to 20 minutes. This sparked something in me. I realized I like to code, and work with data. I also remember a project I did in one of my Statistical Modeling class, where my team built a [ML classification model](https://pab-nguyen.github.io/2019/11/28/car-classification.html) to categorize cars by their MSRP prices and their market label (whether they are luxury/performance). These experiences, along with a lengthy research process, make me realized that statistics, programming and data are all things I am highly interested in. I want to be a data scientist, and I am teaching myself how to become one. I am excited for this journey, and by creating this website, I am making the commitment to follow through.  
 
-You can check out my portfolio and my CV below.
+You can check out my portfolio and my CV below. Thank you very much for visiting my website!
 
 <p align="center">
 	<a class="button" name="button" href="/portfolio/">Portfolio</a>
@@ -35,4 +35,4 @@ You can check out my portfolio and my CV below.
 </p>
  
 #### Contact
-Feel free to contact me through email [phananh.nguyen.vn@gmail.com](mailto:phananh.nguyen.vn@gmail.com). You can check my work on Kaggle and Github as well. :D
+Feel free to contact me through email [phananh.nguyen.vn@gmail.com](mailto:phananh.nguyen.vn@gmail.com). You can check my work on Kaggle and Github on the side bar as well :D
