@@ -33,13 +33,13 @@ layout: page
 <h2 class="page-title">{{ page.title }}</h2>
 
 <div class="posts" style="font-size:17px">
-
+  <p>
   {% for items in site.my_collection %}
     {% for item in items %}
       {{ item }}: {{ items[item] }}
     {% endfor %}
   {% endfor %}
-  
+  </p>
   {% for tag in site.tags %}
     <h3 id='{{tag[0]}}'> 
       {{tag[0]}} 
