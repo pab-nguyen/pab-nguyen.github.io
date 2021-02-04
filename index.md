@@ -3,7 +3,7 @@ title: About
 layout: default
 sidebar_link: true
 ---
-<h2 class="page-title" >{{ page.title }}</h2>
+<h1 class="page-title" >{{ page.title }}</h1>
 
 
 <p align="center">
