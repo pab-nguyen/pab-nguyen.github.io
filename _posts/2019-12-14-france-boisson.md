@@ -49,7 +49,7 @@ We populate each table with at least 20 rows of data. If you can't tell, populat
 After having the tables set up, we came up with some often used few queries that benefits the business. These queries are SQL codes allowing extract and load columns from different tables. Here are some few of them
 
 1. Count the number of products sold for each category  
-
+  
 <pre>
   select SUM(orderlinet.orderlinequantity), productt.producttype
   from orderlinet inner join productt
@@ -62,7 +62,7 @@ After having the tables set up, we came up with some often used few queries that
   </figure>
 
 2. All Products with inventory less than 500 in all centers  
-
+  
 <pre>
 drop view Low_Quantity;
 Create View Low_Quantity as
@@ -77,7 +77,7 @@ select * from Low_Quantity;
 </figure>
 
 3. Most quantities purchased from a customer  
-
+  
 <pre>
 Drop view QuantityPurchase;
 
@@ -94,7 +94,7 @@ Inner join staffT staff on orderT.staffID = staff.staffID;
 <img align="center" src="/assets/images/sql/3.png" >
 </figure>
 
-</pre>
+<pre>
 #find max quantity purchase
 select max(customername)as customername, max(productid) as productid, max(productname) as productname, max(quantity) MaxQuantityPurchased
 from AllPurchases
@@ -106,7 +106,7 @@ group by customername;
 </figure>
 
 4. Assemble all information necessary to create an invoice for order number 10000010  
-
+  
 <pre>
 Select CustomerT.CustomerID, CustomerName, CustomerAddress,
    Ordert.OrderID, OrderDate, OrderLineT.OrderlineQuantity, 
@@ -123,7 +123,8 @@ and OrderT.OrderID = 10000010;
 <img align="center" src="/assets/images/sql/4.png" >
 </figure>
 
-5. Usual Product List: Most frequent items bought by a customer and the staff who sold them.  
+5. Usual Product List: Most frequent items bought by a customer and the staff who sold them. 
+   
 <pre>
 # all puchases
 Drop view AllPurchases;
@@ -154,7 +155,7 @@ having count(productid) > 2;
 </figure>
 
 ### Advantages and Limits
-Advantages of this database
+Advantages of this database:  
 ●	It is simple, the architecture is quite common, but the big advantage is that it remains applicable for other businesses as well.  
 ●	We have chosen to be very precise about the naming convention so that it is easy to understand the tables and also very easy to retrieve data and build queries.  
 ●	Data structure ensures business efficiency. Our advantage here is about the Usual Product List that helps sales man to have a better understanding of their customer preferences.  
