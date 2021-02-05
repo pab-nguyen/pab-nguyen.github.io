@@ -48,7 +48,7 @@ We populate each table with at least 20 rows of data. If you can't tell, populat
 ### Queries
 After having the tables set up, we came up with some often used few queries that benefits the business. These queries are SQL codes allowing extract and load columns from different tables. Here are some few of them
 
-1. Count the number of products sold for each category  
+1/. Count the number of products sold for each category  
   
 <pre>
   select SUM(orderlinet.orderlinequantity), productt.producttype
@@ -61,7 +61,7 @@ After having the tables set up, we came up with some often used few queries that
   <img align="center" src="/assets/images/sql/1.png" >
   </figure>
 
-2. All Products with inventory less than 500 in all centers  
+2/. All Products with inventory less than 500 in all centers  
   
 <pre>
 drop view Low_Quantity;
@@ -76,7 +76,7 @@ select * from Low_Quantity;
 <img align="center" src="/assets/images/sql/2.png" >
 </figure>
 
-3. Most quantities purchased from a customer  
+3/. Most quantities purchased from a customer  
   
 <pre>
 Drop view QuantityPurchase;
@@ -105,7 +105,7 @@ group by customername;
 <img align="center" src="/assets/images/sql/3.2.png" >
 </figure>
 
-4. Assemble all information necessary to create an invoice for order number 10000010  
+4/. Assemble all information necessary to create an invoice for order number 10000010  
   
 <pre>
 Select CustomerT.CustomerID, CustomerName, CustomerAddress,
@@ -123,8 +123,8 @@ and OrderT.OrderID = 10000010;
 <img align="center" src="/assets/images/sql/4.png" >
 </figure>
 
-5. Usual Product List: Most frequent items bought by a customer and the staff who sold them. 
-   
+5/. Usual Product List: Most frequent items bought by a customer and the staff who sold them. 
+
 <pre>
 # all puchases
 Drop view AllPurchases;
