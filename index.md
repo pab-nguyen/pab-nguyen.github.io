@@ -3,6 +3,7 @@ title: About
 layout: default
 sidebar_link: true
 ---
+<div class="sidebar-right" style="background-color:#202020"></div>
 <h1 class="page-title" >{{ page.title }}</h1>
 
 Hi, I am Phan Nguyen, a self-taught data scientist. Welcome to my website. This is where I'm showcasing my projects and portfolio. My areas of interest are [data science](https://pab-nguyen.github.io/portfolio/#machine-learning), [data anlytics](https://pab-nguyen.github.io/portfolio/#data-analytics), [equity valuation](https://pab-nguyen.github.io/portfolio/#equity-valuation), and [Excel VBA scripting](https://pab-nguyen.github.io/portfolio/#excel-vba). 
