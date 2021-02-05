@@ -7,7 +7,7 @@ title: CV
 ## Professional Experiences    
 #### Sunovion Pharmaceuticals       
 ***Strategic Pricing and Contracting Intern***     
-*June 2020 - October 2020, Marlborough, MA* 
+*June 2020 - October 2020, Marlborough, MA*  
 • Reduced average time spent on various operations with VBA Macros: variance report automation from 10 hours to 30 minutes, customer meetings extract from Outlook to Excel from two hours to 10 minutes, Medicaid invoice
 data cleaning and reformatting from five hours to an hour.  
 • Analyzed potential changes in health policies, built models to quantify financial impacts of such policies to firm, presented findings to executive team, helped management team being aware of $300 million potential liability.  
@@ -61,10 +61,10 @@ capability to pay loans.
 
 
 ## Skills  
-• Finance: Equity Valuation, Capital Budgeting, Revenue Forecasting, Option Pricing  
-• Data Science: Exploratory Analysis, Regression, Classification  
-• Technical:  
-	• Programming: Python (NumPy, Pandas), R, SQL, Tableau   
-	• Visualization: Tableau, Matplotlib, Seaborn, ggplot2   
-	• Finance: Excel, Excel VBA   
-	• Designing: Adobe Photoshop, Premiere   
+- Finance: Equity Valuation, Capital Budgeting, Revenue Forecasting, Option Pricing  
+- Data Science: Exploratory Analysis, Regression, Classification  
+- Technical:  
+	- Programming: Python (NumPy, Pandas), R, SQL, Tableau   
+	- Visualization: Tableau, Matplotlib, Seaborn, ggplot2   
+	- Finance: Excel, Excel VBA   
+	- Designing: Adobe Photoshop, Premiere   
