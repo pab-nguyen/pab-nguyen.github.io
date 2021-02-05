@@ -2,6 +2,7 @@
 layout: page
 title: CV
 ---
+<div class="sidebar-right" style="background-color:#202020"></div>
 <h1 class="page-title">Curriculum Vitae</h1>
 
 ## Professional Experiences    
