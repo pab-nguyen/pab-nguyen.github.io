@@ -338,12 +338,9 @@ tbody tr:nth-child(odd) th {
 /*Portfolio content*/
 .pcontent{ 
   margin-right:14rem;
+  max-width: 100rem
 }
-@media (min-width: 48em){
-  .pcontent{
-  margin-right:0rem;
-  }
-}
+
 
 
 /* Blog post or page title */
