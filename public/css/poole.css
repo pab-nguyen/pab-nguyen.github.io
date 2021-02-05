@@ -337,8 +337,7 @@ tbody tr:nth-child(odd) th {
 
 /*Portfolio content*/
 .pcontent{ 
-  margin-right:14rem;
-  max-width: 100rem
+  max-width: 100rem;
 }
 
 
