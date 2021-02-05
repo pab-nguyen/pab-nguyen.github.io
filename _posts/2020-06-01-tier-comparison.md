@@ -3,7 +3,7 @@ title: Drug Tier Comparison
 date: 2020-08-01
 layout: post
 tags: excel-vba
-summary: This script allows user to compare two drug formulary tier to see whether the brand my company owns underperform or overperform competitor's brand, in terms of drug formulary. You can download the macro and the calendar file below.
+summary: This script allows user to compare two drug formulary tier, to see whether the brand my company owns underperform or overperform competitor's brand. </br></br> I created an array of the tier (tierlist), better to worse from left to right. While going through each row, my macro will find compare two brands by finding their position in the array, then compare them. Whichever brand got a lower number for position, has advantage over the other. The macro will the input either Advantaged, Disadvantaged, or Parity accordingly.
 image: /assets/tier-comparison.JPG
 ---
 <p align="center">
