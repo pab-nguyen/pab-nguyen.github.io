@@ -66,12 +66,12 @@ html {
   font-size: 14px;
   color: #202020;
   background-color: #fff;
-  float:right;
 }
 
 .sidebar-right a{
   color: #202020;
 }
+
 
 @media (min-width: 48em) {
   .sidebar {
@@ -150,6 +150,7 @@ a.sidebar-nav-item:focus {
 .content {
   padding-top:    2rem;
   padding-bottom: 2rem;
+  height: 100%;
 }
 
 @media (min-width: 48em) {
