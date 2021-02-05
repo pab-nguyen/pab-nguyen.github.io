@@ -335,6 +335,17 @@ tbody tr:nth-child(odd) th {
   margin-right:2rem;
 }
 
+/*Portfolio content*/
+.pcontent{
+  float:left; 
+  margin-right:14rem;
+}
+@media (min-width: 48em){
+  .pcontent{
+  margin-right:0rem;
+  }
+}
+
 
 /* Blog post or page title */
 
