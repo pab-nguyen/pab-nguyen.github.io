@@ -331,7 +331,8 @@ tbody tr:nth-child(odd) th {
 .page,
 .post,{
   margin-bottom: 4em;
- 
+  padding-left:2rem;
+  padding-right:2rem;
 }
 
 
