@@ -360,6 +360,9 @@ tbody tr:nth-child(odd) th {
 
 .page-title{
   text-align: center
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #f2f3f3;
+
 }
 
 /* Meta data line below post title */
