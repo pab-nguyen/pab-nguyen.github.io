@@ -14,7 +14,7 @@ layout: page
 
 
 
-<div class="sidebar-right"> 
+<div class="sidebar-right" style="float:left"> 
   <h4> Table of Content </h4>
     {% for tag in site.tags %}
       <a href="#{{tag[0]}}">
@@ -28,6 +28,7 @@ layout: page
       </br>  
     {% endfor %}
 </div>
+
 <div style="float:left">
 <h1 class="page-title">{{ page.title }}</h1>
 
