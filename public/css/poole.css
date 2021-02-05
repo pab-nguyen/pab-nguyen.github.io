@@ -336,8 +336,7 @@ tbody tr:nth-child(odd) th {
 }
 
 /*Portfolio content*/
-.pcontent{
-  float:left; 
+.pcontent{ 
   margin-right:14rem;
 }
 @media (min-width: 48em){
