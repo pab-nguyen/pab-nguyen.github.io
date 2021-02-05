@@ -352,6 +352,7 @@ tbody tr:nth-child(odd) th {
 .post-title,
 .post-title a {
   color: #303030;
+
 }
 .page-title,
 .post-title {
@@ -359,7 +360,7 @@ tbody tr:nth-child(odd) th {
 }
 
 .page-title{
-  text-align: center
+  text-align: center;
   margin-bottom: 1rem;
   border-bottom: 1px solid #f2f3f3;
 
@@ -397,7 +398,10 @@ tbody tr:nth-child(odd) th {
 .related-posts li a:hover small {
   color: inherit;
 }
-
+/*Table of Contents*/
+.toc{
+  padding: 2rem 0rem;
+}
 
 /*
  * Pagination
