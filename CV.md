@@ -6,18 +6,16 @@ title: CV
 
 ## Professional Experiences    
 #### Sunovion Pharmaceuticals       
-***Strategic Pricing and Contracting Intern***   
-Marlborough, MA, United States  
-June 2020 - October 2020  
+***Strategic Pricing and Contracting Intern***     
+*June 2020 - October 2020, Marlborough, MA* 
 • Reduced average time spent on various operations with VBA Macros: variance report automation from 10 hours to 30 minutes, customer meetings extract from Outlook to Excel from two hours to 10 minutes, Medicaid invoice
 data cleaning and reformatting from five hours to an hour.  
 • Analyzed potential changes in health policies, built models to quantify financial impacts of such policies to firm, presented findings to executive team, helped management team being aware of $300 million potential liability.  
 • Led team of six people to brainstorm, develop and pitch a best-in-class intern program recommendation.  
 
 #### IPA Asset Management      
-***Investment Analyst Intern***  
-Hanoi, Vietnam      
-June 2019 - September 2019   
+***Investment Analyst Intern***        
+*June 2019 - September 2019, Hanoi, Vietnam*     
 • Formulated valuation models using DCF, Multiples, and NAV method with Microsoft Excel; evaluated stocks in oil and plastics industries and issued recommendations for management team.  
 • Pitched 5+ stocks in plastics industries to aid portfolio managers in making
 accurate and timely investment decisions regarding firm's $3M+ portfolio.  
@@ -27,8 +25,7 @@ price moves.
 
 #### Deloitte     
 ***Intern at Audit Support Dept.***    
-Hanoi, Vietnam  
-June 2017 - August 2017    
+*June 2017 - August 2017, Hanoi, Vietnam*      
 • Increased efficiency of auditing process by reviewing 60+ audit reports
 and cross-checking with companies' financial statements prior to publishing.  
 • Identified and investigated 30+ operating and future projects on Energy
@@ -41,8 +38,7 @@ contribute to local communities.
 
 #### Bentley Microfinance Group     
 ***Loan Analyst***    
-Waltham, MA  
-August 2015 - December 2015   
+*August 2015 - December 2015, Waltham, MA*     
 • Reviewed loan applications totaling $6000 from small business and start-ups
 in Waltham area.  
 • Identified and evaluated risk factors in customers’ balance statements, tax
@@ -53,13 +49,22 @@ capability to pay loans.
 
 ## Education   
 #### Bentley University - McCallum Graduate School of Business 
-Waltham, MA, United States   
-Master of Science in Finance & Data Analytics  
-Graduated 2020. GPA: 3.9/4.0 
+**Master of Science in Finance & Data Analytics, 2020**  
+• GPA: 3.9/4.0  
+• *Coursework*: Data Management & SQL, Managing with Analytics & Tableau, Statistical Modeling for Business
+& R, Corporate Finance, Financial Modeling & VBA, Advanced Managerial Finance, Market & Investments   
 #### Bentley University  
-Waltham, MA, United States  
-Bachelor of Science in Corporate Finance  
-Graduated 2019. GPA: 3.5/4.0  
-#### Wasatch Academy  
-Mount Pleasant, UT, United States  
-High school. Graduated 2015   
+**Bachelor of Science in Corporate Finance, 2019**   
+• GPA: 3.5/4.0   
+• Dean's List (GPA over 3.3) for 6 semesters  
+• *Coursework*: Derivatives, Computational Finance, Applied Corporate Finance  
+
+
+## Skills  
+• Finance: Equity Valuation, Capital Budgeting, Revenue Forecasting, Option Pricing  
+• Data Science: Exploratory Analysis, Regression, Classification  
+• Technical:  
+	• Programming: Python (NumPy, Pandas), R, SQL, Tableau   
+	• Visualization: Tableau, Matplotlib, Seaborn, ggplot2   
+	• Finance: Excel, Excel VBA   
+	• Designing: Adobe Photoshop, Premiere   
