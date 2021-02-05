@@ -25,6 +25,7 @@ summary: What is your chance of surviving Titanic?</br></br> Titanic is the name
 	<a href="#importing-libraries">1. Importing Libraries</a></br>
 	<a href="#first-look-at-the-data">2. First look at the data</a></br>
 	<a href="#fitting-the-model">3. Fitting the model</a></br>
+	<a href="#prediction">4. Prediction</a></br>
 
 
 </div>
@@ -342,7 +343,7 @@ summary(titanic.lr)</code></pre>
 <p>All the variables have low p-value, with high significance values. I believe this is the best model for logistic regression.</p>
 </div>
 <div id="prediction" class="section level2">
-<h2 class="hasAnchor"><span class="header-section-number">1.4</span> Prediction<a href="https://www.kaggleusercontent.com/kf/49367457/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..OOe4q0BrA6_Cc0jZCkisDg.jFQK2pHeR8qx-ZnjElpigddGh1fdJVTfJGz2MrQEgPXikWZuyV4VgLR019rky0WqNrjCLo-8G923K5177EhRuG4iYYMp9DvM2u07GnxrK7eIaL0Ked2JMkaqmUH1tlW3CLgFOfe0rs0SY2slpQdr7zcofmqBc2II19XqTzJPAzKWbLTkHwCDLew_R5_f7aeQVXWiAAw5wRPYooybIM7bWkmG3a2chq-HAtr_8knoksV-_tqL7AVEpiMxtwUODP3Hw0ajzTN95wyQrO1wdD8JFFJFTZosyJBV6dDsz_TmtgFqAPIQoeCtDam9mv0r_TQAFHZoGcefJwdPgRcYRDzOxlWNw9qFvacj5i8xDjcggEZZG0ku0jlmYRKhQlES92L6B8NY3ofGpOTko998MNXBISjZtEfT4XVGUfjx698mSS_A_mZVrlDR51-qanl_tCOGm_UAxAgeA67A6m2ODRpR5Ny-A3v3EfKfD4HxhKB2WG75UW6GKyklJrTfGPCZUTKyyUWDXycZfBWPFRdJU24fIVC9tfYJoDBzaIeLPbY5XJ1TKQmU65BbRnVcDu5qJ4YhB6nKrJq1V2tihVeo71eOCUEjGHuCSICKn041WNAeOeei8mC5nO5jlFTT53Ju1zka9dZozJocjdBmPkBmp-cLYQ.O2qAilc0-saOCPKmnt0hsw/__results__.html#prediction" class="anchor-section" target="_self"></a></h2>
+<h2 class="hasAnchor"><span class="header-section-number">4</span> Prediction<a href="https://www.kaggleusercontent.com/kf/49367457/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..OOe4q0BrA6_Cc0jZCkisDg.jFQK2pHeR8qx-ZnjElpigddGh1fdJVTfJGz2MrQEgPXikWZuyV4VgLR019rky0WqNrjCLo-8G923K5177EhRuG4iYYMp9DvM2u07GnxrK7eIaL0Ked2JMkaqmUH1tlW3CLgFOfe0rs0SY2slpQdr7zcofmqBc2II19XqTzJPAzKWbLTkHwCDLew_R5_f7aeQVXWiAAw5wRPYooybIM7bWkmG3a2chq-HAtr_8knoksV-_tqL7AVEpiMxtwUODP3Hw0ajzTN95wyQrO1wdD8JFFJFTZosyJBV6dDsz_TmtgFqAPIQoeCtDam9mv0r_TQAFHZoGcefJwdPgRcYRDzOxlWNw9qFvacj5i8xDjcggEZZG0ku0jlmYRKhQlES92L6B8NY3ofGpOTko998MNXBISjZtEfT4XVGUfjx698mSS_A_mZVrlDR51-qanl_tCOGm_UAxAgeA67A6m2ODRpR5Ny-A3v3EfKfD4HxhKB2WG75UW6GKyklJrTfGPCZUTKyyUWDXycZfBWPFRdJU24fIVC9tfYJoDBzaIeLPbY5XJ1TKQmU65BbRnVcDu5qJ4YhB6nKrJq1V2tihVeo71eOCUEjGHuCSICKn041WNAeOeei8mC5nO5jlFTT53Ju1zka9dZozJocjdBmPkBmp-cLYQ.O2qAilc0-saOCPKmnt0hsw/__results__.html#prediction" class="anchor-section" target="_self"></a></h2>
 <p>Let’s push the test data through this model</p>
 <pre class="r"><code class="hljs">prob &lt;- predict(titanic.lr,newdata=test,type=<span class="hljs-string">"response"</span>)
 prediction &lt;- rep(<span class="hljs-number">0</span>,nrow(test))
