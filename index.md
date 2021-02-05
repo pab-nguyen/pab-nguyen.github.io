@@ -15,7 +15,7 @@ Hi, I am Phan Nguyen, a self-taught data scientist. Welcome to my website. This 
 </figcaption>
 
 ### Overview  
-I recently finished my MS in Financial Analytic. I have experiences working in pharmaceuticals and asset managment industries. My most recent employment is at Sunovion Pharmaceuticals, where I work as an intern in the Strategic Pricing and Reimbursement department. This is one of the special departments in pharmaceuticals. During this internship, I had the opportunity to build financial models to quantify policies impact on firms, scripted VBA macros to automate report processes, co-created an improved intern program with other interns in my cohort. At this job, I had to constantly use Excel VBA and Microsoft Teams to communicate with management. 
+I recently finished my MS in Finance and Data Analytics at Bentley University I have experiences working in pharmaceuticals and asset managment industries. My most recent employment is at Sunovion Pharmaceuticals, where I work as an intern in the Strategic Pricing and Reimbursement department. This is one of the special departments in pharmaceuticals. During this internship, I had the opportunity to build financial models to quantify policies impact on firms, scripted VBA macros to automate report processes, co-created an improved intern program with other interns in my cohort. At this job, I had to constantly use Excel VBA and Microsoft Teams to communicate with management. 
 
 I am proficient in R and Python programming languages, data processing with SQL. I am familiar with a handful of libraries like ggplot, dplyr for R and matplotlib, pandas, numpy, seaborn for Python. Tableau is another of my trusted tool to deal with data visualization. 
 
