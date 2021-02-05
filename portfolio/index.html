@@ -29,10 +29,9 @@ layout: page
     {% endfor %}
 </div>
 
-<div style="margin-right:2rem;">
 <h1 class="page-title">{{ page.title }}</h1>
 
-<div class="posts" style="font-size:17px; margin-right:1rem">
+<div class="posts">
   <p>
   {% for items in site.my_collection %}
     {% for item in items %}
@@ -63,7 +62,6 @@ layout: page
   </div>  
     {% endfor %}   
 {% endfor %} 
-</div>
 </div>
 
 <!--
