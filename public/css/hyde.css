@@ -58,6 +58,7 @@ html {
   padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
   background-color: #202020;
+  float:left;
 }
 
 .sidebar-right{
@@ -66,6 +67,7 @@ html {
   font-size: 14px;
   color: #202020;
   background-color: #fff;
+  float:right;
 }
 
 .sidebar-right a{
