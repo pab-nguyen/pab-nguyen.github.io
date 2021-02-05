@@ -47,12 +47,12 @@ layout: page
           </a>
         </h3>
 
-    
+        {{ post.summary }}
     <!--<span class="post-date">{{ post.date | date_to_string }}</span>-->
-    <p align="center">
-      <img align="center" src="{{post.image}}" width="480">
-    </p>
-    {{ post.summary }}
+        <p align="center">
+          <img align="center" src="{{post.image}}" width="480">
+        </p>
+    
     </br></br>
   </div>  
     {% endfor %}   
