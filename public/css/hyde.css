@@ -154,15 +154,15 @@ a.sidebar-nav-item:focus {
 
 @media (min-width: 48em) {
   .content {
-    max-width: 50rem;
-    margin-left:20rem;
+    max-width: 54rem;
+    margin-left:18rem;
     margin-right:13rem;
   }
 }
 
 @media (min-width: 64em) {
   .content {
-    margin-left:20rem;
+    margin-left:18rem;
     margin-right:13rem;
 
   }
