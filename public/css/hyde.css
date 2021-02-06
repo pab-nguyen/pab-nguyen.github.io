@@ -66,14 +66,15 @@ html {
   font-size: 14px;
   color: #202020;
   background-color: #fff;
-}
+  flex-grow: 1;
+  overflow-y: auto;}
 
 .sidebar-right a{
   color: #202020;
 }
 
 
-@media (min-width: 48em) {
+@media (min-width: 60em) {
   .sidebar {
     position: fixed;
     top: 0;
@@ -87,9 +88,8 @@ html {
     top: 0;
     right: 0;
     bottom: 0;
-    width: 13rem;
+    width: 14%;
     text-align: left;
-    display: :flex;
 
   }
 }
@@ -133,7 +133,7 @@ a.sidebar-nav-item:focus {
  * contents to the bottom of the sidebar in tablets and up.
  */
 
-@media (min-width: 48em) {
+@media (min-width: 60em) {
   .sidebar-sticky {
     position: absolute;
     right:  1rem;
@@ -153,20 +153,17 @@ a.sidebar-nav-item:focus {
   padding-top:    2rem;
   padding-bottom: 2rem;
   height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
 }
 
-@media (min-width: 48em) {
+@media (min-width: 60em) {
   .content {
+    margin-left:20rem;
+    margin-right:22%;
     max-width: 54rem;
-    margin-left:20rem;
-    margin-right:15rem;
-  }
-}
 
-@media (min-width: 64em) {
-  .content {
-    margin-left:20rem;
-    margin-right:15rem;
 
   }
 }
