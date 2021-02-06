@@ -9,6 +9,7 @@ title: CV
 		border-bottom: 1px solid #c5c5c5;
 	}
 </style>
+
 ## Professional Experiences    
 ### Sunovion Pharmaceuticals       
 ***Strategic Pricing and Contracting Intern***     
