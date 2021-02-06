@@ -28,6 +28,12 @@
           {% endif %}
         {% endif %}
       {% endfor %}
+    
+
+      <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+    </div>
+    </nav>
+
     <div class="sidebar-sticky" style="font-size:15px; line-height: 2">
 
       <a href="mailto:phananh.nguyen.vn@gmail.com"><i class="fas fa-envelope fa-fw" ></i>  Email</a></br>  
@@ -40,10 +46,6 @@
 
       <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
       <span> Powered by Jekyll and Github Pages </span>
-
-      <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
-    </div>
-    </nav>
 
     
   </div>
