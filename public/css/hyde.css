@@ -74,7 +74,7 @@ html {
 }
 
 
-@media (min-width: 60em) {
+@media (min-width: 55em) {
   .sidebar {
     position: fixed;
     top: 0;
@@ -133,7 +133,7 @@ a.sidebar-nav-item:focus {
  * contents to the bottom of the sidebar in tablets and up.
  */
 
-@media (min-width: 60em) {
+@media (min-width: 55em) {
   .sidebar-sticky {
     position: absolute;
     right:  1rem;
@@ -155,7 +155,7 @@ a.sidebar-nav-item:focus {
   height: 100%;
 }
 
-@media (min-width: 60em) {
+@media (min-width: 55em) {
   .content {
     margin-left:20rem;
     margin-right:22%;
