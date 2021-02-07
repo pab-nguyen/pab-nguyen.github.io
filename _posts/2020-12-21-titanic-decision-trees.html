@@ -382,7 +382,7 @@ test &lt;- read.csv (<span class="hljs-string">"../input/titanic/test.csv"</span
 <p><img src="/assets/posts/2020-12-21-titanic-decision-trees_files/unnamed-chunk-5-1.png" width="672"> There is no clear correlation between Age and Survived. Kids and teenagers have higher survival rate, while that of people between 20 and 60 years old is lower. I can make a guess that kids and teenagers travel with family, and family might have a higher survival rate. Let’s look at Parent/Children to see if this is true.</p>
 <p>This is a variable indicate how many parent/children a passenger has. Combining with Sib/Sp, we can find out how big is a family size. In another word, family size = parent/children + sibling/spouse + 1. The 1 accounts for the passenger his/herself.9</p>
 <p><img src="/assets/posts/2020-12-21-titanic-decision-trees_files/unnamed-chunk-6-1.png" width="672"></p>
-<p>It seems that Famiy size does play a part in surviving. Family tends to have a higher surviving rate than people traveling alone, but only small families which has less than five members. Big families tend to not surviving, due to the size of the family. There is one family with 11 people which has no survivors.</p>
+<p>It seems that Family size does play a part in surviving. Family tends to have a higher surviving rate than people traveling alone, but only small families which has less than five members. Big families tend to not surviving, due to the size of the family. There is one family with 11 people which has no survivors.</p>
 <p>After going through some variables, it’s time to fit our tree.</p>
 </div>
 <div id="grow-the-tree" class="section level2">
