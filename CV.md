@@ -5,7 +5,7 @@ title: CV
 <div class="sidebar-right" style="background-color:#202020"></div>
 <h1 class="page-title">Curriculum Vitae</h1>
 <style>
-	.h3{
+	h3{
 		border-bottom: 1px solid #c5c5c5;
 	}
 </style>
