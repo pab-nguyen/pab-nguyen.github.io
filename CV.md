@@ -11,6 +11,14 @@ title: CV
 </style>
 
 ## Professional Experiences    
+### DEKKO Group, JSC  
+***Oracle NetSuite Developer***  
+*January 2020 - Present, Hanoi, Vietnam*  
+• Developed and customized Oracle NetSuite front-end elements (forms, lists, workflows) to satisfy business requirements.  
+• Redesigned firm's database framework, created data entry instructions to ensure consistency and comprehensibility.   
+• Led 10 training sessions on Oracle NetSuite and provided on-site assistance to educate employees on the system.  
+
+
 ### Sunovion Pharmaceuticals       
 ***Strategic Pricing and Contracting Intern***     
 *June 2020 - October 2020, Marlborough, MA*  
