@@ -16,7 +16,7 @@ Hi, I am Phan Nguyen, a self-taught data scientist. Welcome to my website. This 
 </figcaption>
 
 ### What I've done so far  
-I am working as a Oracle NetSuite Developer at a construction materials manufacturer in Vietnam. This SME recently implemented Oracle as their ERP, and is in need of assistance with daily operations and information system. My responsibilities include assisting with the software operational problems, customizing front-end elements (forms, lists), updating data records and documenting changes and work instructions to ensure the company has a smooth transition into the new software.  
+I am working as a Oracle NetSuite Developer at a construction materials manufacturer in Vietnam. This SME recently implemented Oracle as their ERP system, and is in need of assistance with daily operations and information system. My responsibilities include assisting with the software operational problems, customizing front-end elements (forms, lists), updating data records and documenting changes and work instructions to ensure the company has a smooth transition into the new software.  
 
 My previous employment was at Sunovion Pharmaceuticals, where I worked as an intern in the Strategic Pricing and Reimbursement department. During this internship, I had the opportunity to build financial models to quantify policies impact on firms, scripted VBA macros to automate report processes, co-created an improved intern program with my colleagues. 
 
