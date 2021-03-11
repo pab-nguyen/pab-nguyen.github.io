@@ -6,7 +6,7 @@ title: CV
 <h1 class="page-title">Curriculum Vitae</h1>
 <style>
 	h3{
-		border-bottom: 1px solid #c5c5c5;
+		border-bottom: 0.75px solid #c5c5c5;
 	}
 </style>
 
