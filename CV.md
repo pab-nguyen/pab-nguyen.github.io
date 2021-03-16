@@ -73,9 +73,11 @@ capability to pay loans.
 • Dean's List (GPA over 3.3) for 6 semesters  
 • *Coursework*: Derivatives, Computational Finance, Applied Corporate Finance  
 
+
 ## Certificates and Achievements  
 • Passed CFA Level 1, recipient of CFA Scholarship  
 • Bloomberg Market Concept Certificate, 2017  
+
 
 ## Skills  
 Finance: Equity Valuation, Capital Budgeting, Revenue Forecasting, Option Pricing  
