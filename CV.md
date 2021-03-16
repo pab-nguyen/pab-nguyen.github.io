@@ -14,9 +14,10 @@ title: CV
 ### DEKKO Group, JSC  
 ***Oracle NetSuite Developer***  
 *January 2020 - Present, Hanoi, Vietnam*  
-• Developed and customized Oracle NetSuite front-end elements (forms, lists, workflows) to satisfy business requirements.  
-• Redesigned firm's database framework, created data entry instructions to ensure consistency and comprehensibility.   
-• Led 10 training sessions on Oracle NetSuite and provided on-site assistance to educate employees on the system.  
+• Extracted sales, customers, manufacturing and financial data from Oracle NetSuite, built data visualizations and dashboards with Tableau, analyzed and presented insights to executives.  
+• Performed as a help desk, assisted employees with software operational problems, provided weekly training sessions to ensure a smooth transition from legacy platform.  
+• Customized front-end elements (forms, lists, worlfows), updated records, and documented changes and instructions.   
+
 
 
 ### Sunovion Pharmaceuticals       
