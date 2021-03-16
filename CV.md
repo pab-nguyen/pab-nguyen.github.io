@@ -18,8 +18,6 @@ title: CV
 • Performed as a help desk, assisted employees with software operational problems, provided weekly training sessions to ensure a smooth transition from legacy platform.  
 • Customized front-end elements (forms, lists, worlfows), updated records, and documented changes and instructions.   
 
-
-
 ### Sunovion Pharmaceuticals       
 ***Strategic Pricing and Contracting Intern***     
 *June 2020 - October 2020, Marlborough, MA*  
@@ -74,6 +72,9 @@ capability to pay loans.
 • Dean's List (GPA over 3.3) for 6 semesters  
 • *Coursework*: Derivatives, Computational Finance, Applied Corporate Finance  
 
+## Certificates and Achievements  
+• Passed CFA Level 1, recipient of CFA Scholarship  
+• Bloomberg Market Concept Certificate, 2017  
 
 ## Skills  
 Finance: Equity Valuation, Capital Budgeting, Revenue Forecasting, Option Pricing  
@@ -82,4 +83,5 @@ Technical:
 	- Programming: Python (NumPy, Pandas), R, SQL, Tableau   
 	- Visualization: Tableau, Matplotlib, Seaborn, ggplot2   
 	- Finance: Excel, Excel VBA   
-	- Designing: Adobe Photoshop, Premiere   
+	- Designing: Adobe Photoshop, Premiere     
+
