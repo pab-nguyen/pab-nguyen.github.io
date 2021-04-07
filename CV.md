@@ -16,28 +16,24 @@ title: CV
 ### DEKKO Group, JSC  
 ***Oracle NetSuite Developer***  
 *January 2020 - Present, Hanoi, Vietnam*  
-• Extracted sales, customers, manufacturing, and financial data from Oracle NetSuite, SuiteAnalytics, built data visualizations and dashboards with Tableau, analyzed and presented insights to executives.  
-• Performed as help desk, assessed system issues, assisted and communicated with end users regarding operational problems, provided weekly training sessions to ensure smooth transition from legacy platform.  
+• Extracted operational and financial data from Oracle NetSuite (SuiteAnalytics); cleaned, transformed and built dashboards with Tableau; analyzed and presented insights to executives.  
+• Performed as remote help desk, assessed system issues, communicated with end-users regarding operational problems, provided weekly training sessions to ensure smooth transition from legacy platform.  
 • Customized front-end elements (forms, lists, workflows), updated records, and documented changes and instructions.  
-
 
 ### Sunovion Pharmaceuticals       
 ***Strategic Pricing and Contracting Intern***     
 *June 2020 - October 2020, Marlborough, MA*  
-• Reduced average time spent on various operations with VBA Macros: variance report automation from 10 hours to 30 minutes, customer meetings extract from Outlook to Excel from two hours to 10 minutes, Medicaid invoice
-data cleaning and reformatting from five hours to an hour.  
-• Analyzed potential changes in health policies, built models to quantify financial impacts of such policies to firm, presented findings to executive team, helped management team being aware of $300 million potential liability.  
-• Led team of six people to brainstorm, develop and pitch a best-in-class intern program recommendation.  
+• Streamlined operational activities with VBA Macros scripting, improved efficiency and productivity to department.  
+• Reduced time spent on processes: Part D rebate from 10 hours to 30 minutes, Market Access customer report from two hours to 10 minutes, Medicaid invoices reconciliation from five hours to an hour.  
+• Built financial models to quantify monetary impacts of potential changes in health insurance policies, presented findings to Health Policy & Reimbursement team, notified management of $300 million in potential liability.   
+• Led team of six colleagues to brainstorm, develop and pitch a best-in-class intern program recommendation to HR.   
 
 ### IPA Asset Management      
 ***Investment Analyst Intern***        
 *June 2019 - September 2019, Hanoi, Vietnam*     
-• Formulated valuation models using DCF, Multiples, and NAV method with Microsoft Excel; evaluated stocks in oil and plastics industries and issued recommendations for management team.  
-• Pitched 5+ stocks in plastics industries to aid portfolio managers in making
-accurate and timely investment decisions regarding firm's $3M+ portfolio.  
-• Analyzed shareholders' meetings, conference calls, and analyst meetings of
-10+ firms in construction and plastics industry to garner information on stock
-price moves.  
+• Constructed valuation models using DCF, Multiples, and NAV method with Excel, evaluated stocks in oil and plastics industries, issued recommendations for portfolio managers.   
+• Pitched seven stocks in plastics industries to aid portfolio managers in making accurate and timely investment decisions regarding firm's $3M+ portfolio.   
+• Examined shareholders' meetings, conference calls, and analyst meetings transcripts of 10+ firms in construction and plastics industry to garner information on stock price moves.  
 
 ### Deloitte     
 ***Intern at Audit Support Dept.***    
@@ -63,13 +59,15 @@ return forms, and income statements.
 capability to pay loans.  
 
 
-## Education   
-### Bentley University - McCallum Graduate School of Business 
-**Master of Science in Finance & Data Analytics, 2020**  
+## Education
+### University of North America, Fairfax, VA
+**Master of Science in Management & Data Analytics, 2023**  
+### Bentley University - McCallum Graduate School of Business, Waltham, MA 
+**Master of Science in Finance, 2020**  
 • GPA: 3.9/4.0  
 • *Coursework*: Data Management & SQL, Managing with Analytics & Tableau, Statistical Modeling for Business
 & R, Corporate Finance, Financial Modeling & VBA, Advanced Managerial Finance, Market & Investments   
-### Bentley University  
+### Bentley University, Waltham, MA   
 **Bachelor of Science in Corporate Finance, 2019**   
 • GPA: 3.5/4.0   
 • Dean's List (GPA over 3.3) for 6 semesters  
