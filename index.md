@@ -6,7 +6,7 @@ sidebar_link: true
 <div class="sidebar-right" style="background-color:#202020"></div>
 <h1 class="page-title" >{{ page.title }}</h1>
 
-Hi, I am Phan Nguyen, a self-taught data analyst. Welcome to my website. This is where I'm showcasing my projects and portfolio. My areas of interest are [data analytics](https://pab-nguyen.github.io/portfolio/#data-analytics), [equity valuation](https://pab-nguyen.github.io/portfolio/#equity-valuation), [machine learning](https://pab-nguyen.github.io/portfolio/#machine-learning), and [Excel VBA scripting](https://pab-nguyen.github.io/portfolio/#excel-vba). 
+Hi, I am Phan Nguyen. Welcome to my website. This is where I'm showcasing my projects and portfolio. My areas of interest are [data analytics](https://pab-nguyen.github.io/portfolio/#data-analytics), [equity valuation](https://pab-nguyen.github.io/portfolio/#equity-valuation), [machine learning](https://pab-nguyen.github.io/portfolio/#machine-learning), and [Excel VBA scripting](https://pab-nguyen.github.io/portfolio/#excel-vba). 
 
 <p align="center">
 	<img align="center" src="/assets/me.jpg" width="360">
