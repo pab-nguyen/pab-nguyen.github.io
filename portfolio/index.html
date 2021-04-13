@@ -13,10 +13,10 @@ layout: page
 
 
 
-
 <div class="sidebar-right"> 
   <h4> Table of Content </h4>
-    {% for tag in site.tags %}
+  {{ "{% assign sorted_tags = site.tags | sort %}" }}
+    {% for tag in sorted_tags %}
       <a href="#{{tag[0]}}">
         <b>{{tag[0]}}</b>
       </a></br> 
