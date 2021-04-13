@@ -4,7 +4,7 @@ date: 2020-12-24
 layout: post
 tags: data-analytics data-visualization
 topics: data analytics
-summary: "In Vietnam, Education is taken very seriously. Parents and students prepare three years of high school for one exam, that in many people's opinions determine someone's future. Before 2015, students has to take two exams: one deciding whether they graduate high school, and the other is the college entrance exam. These two exams now became one, therefore it is extremely stressful for students in their last year of high school. </br></br>
+summary: "In Vietnam, education is taken very seriously. Parents and students prepare three years of high school for one exam, that in many people's opinions determine your future. Before 2015, students has to take two exams: one deciding whether they graduate high school, and the other is the college entrance exam. These two exams now became one, therefore it is extremely stressful for students in their last year of high school. </br></br>
 
 In this project, I scraped 74,000 exam takers scores in 2020 from the official Government website, analyzed it to find insights about this exam. I then visualized in with Tableau to give the audience insights on this exam. "
 image: /assets/images/collegeexam2020/thumbnail.jpg
@@ -18,7 +18,33 @@ First we will go to [http://diemthi.hcm.edu.vn/Home](http://diemthi.hcm.edu.vn/H
 </figure>
 
 <figure align="center">
-	<img align="center" src="/assets/images/collegeexam2020/site1.jpg" >
+	<img align="center" src="/assets/images/collegeexam2020/site2.jpg" >
 </figure>
 
-There are total 74719 participants in this exams. The ID starts from 02000001 to 02074719. I will create a simple Python file to crawl the data from 
+There are total 74719 participants in this exams. The ID starts from 02000001 to 02074719. I will create a simple Python file to crawl the data from the website, and save it into a .txt file.
+
+<pre>
+import subprocess
+result = subprocess.check_output('curl -F "sobaodanh=02000145" diemthi.hcm.edu.vn/Home/Show')
+print(result)
+
+f = open("sobaodanh.txt","r+")
+f.truncate(0)
+f.close()
+
+for i in range(2000001,2074719):
+    with open("sobaodanh.txt","a") as f:
+        subprocess.run('curl -F "sobaodanh=0'+str(i)+'" diemthi.hcm.edu.vn/Home/Show,stdout=f)
+        f.close()
+        print(i-2000000)
+</pre>
+
+This code snippet will run through all 74,719 exam takers' ID, and input the html site into the text file. 
+After scrapping process, we need to clean the text file so that it allows us to see the students' name, DOB, and their scores.  
+
+I use another Python file to do it, however it was quite manual to look for what to delete and what to keep. You can download this cleaning python file [here](assets/images/collegeexam2020/csv_sbd.py).  
+
+Here is how the clean csv looks like 
+<figure align="center">
+	<img align="center" src="/assets/images/collegeexam2020/csv.jpg" >
+</figure>
