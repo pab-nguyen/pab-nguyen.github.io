@@ -11,14 +11,17 @@ image: /assets/images/collegeexam2020/thumbnail.jpg
 ---
 
 
-First we will go to [http://diemthi.hcm.edu.vn/Home](http://diemthi.hcm.edu.vn/Home). There is a search box available. Students will look put their candidate ID in here, press search, and the site will give their results, as of below.
+First we will go to [http://diemthi.hcm.edu.vn/Home](http://diemthi.hcm.edu.vn/Home). There is a search box available. Students will put their candidate ID in here, press search (Xem điểm), and the site will give their results, as of below.
 
 <figure align="center">
-	<img align="center" src="/assets/images/collegeexam2020/site.jpg" >
+	<img align="center" src="/assets/images/collegeexam2020/site.jpg">
 </figure>
 
 <figure align="center">
 	<img align="center" src="/assets/images/collegeexam2020/site2.jpg" >
+	<figcaption>
+		Example
+	</figcaption>
 </figure>
 
 There are total 74719 participants in this exams. The ID starts from 02000001 to 02074719. I will create a simple Python file to crawl the data from the website, and save it into a .txt file.
@@ -48,3 +51,8 @@ Here is how the clean csv looks like
 <figure align="center">
 	<img align="center" src="/assets/images/collegeexam2020/csv.jpg" >
 </figure>
+
+After that, I use this csv, transform it a bit, put it into Tableau Public, and created this visualizations.
+
+<iframe src="https://public.tableau.com/profile/phan.anh.nguyen#!/vizhome/VietnamCollegeEntranceExamScore2020/Dashboard1:embed=yes">
+</iframe>
