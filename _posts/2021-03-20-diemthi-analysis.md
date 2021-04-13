@@ -49,10 +49,11 @@ I use another Python file to do it, however it was quite manual to look for what
 
 Here is how the clean csv looks like 
 
-After that, I use this csv, transform it a bit, put it into Tableau Public, and created this visualizations.
+<figure align="center">
+	<img align="center" src="/assets/images/collegeexam2020/csv.jpg">
+</figure>
 
-<iframe src="https://public.tableau.com/profile/phan.anh.nguyen#!/vizhome/VietnamCollegeEntranceExamScore2020/Dashboard1:embed=yes&:showVizHome=no" width = '650' height = '450'>
-</iframe>
+After that, I use this csv, transform it a bit, put it into Tableau Public, and created this visualizations.
 
 <div class='tableauPlaceholder' id='viz1618342006735' width="750">
 	<noscript>
