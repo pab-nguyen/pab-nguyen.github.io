@@ -57,7 +57,7 @@ After that, I use this csv, transform it a bit, put it into Tableau Public, and 
 <iframe src="https://public.tableau.com/profile/phan.anh.nguyen#!/vizhome/VietnamCollegeEntranceExamScore2020/Dashboard1:embed=yes&:showVizHome=no" width = '650' height = '450'>
 </iframe>
 
-<div class='tableauPlaceholder' id='viz1618342006735' style='position: relative' width="750">
+<div class='tableauPlaceholder' id='viz1618342006735' width="750">
 	<noscript>
 		<a href='#'>
 			<img alt='Vietnam College Entrance Exam 2020 Statistics ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Vi&#47;VietnamCollegeEntranceExamScore2020&#47;Dashboard1&#47;1_rss.png' style='border: none' />
