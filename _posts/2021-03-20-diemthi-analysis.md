@@ -20,3 +20,5 @@ First we will go to [http://diemthi.hcm.edu.vn/Home](http://diemthi.hcm.edu.vn/H
 <figure align="center">
 	<img align="center" src="/assets/images/collegeexam2020/site1.jpg" >
 </figure>
+
+There are total 74719 participants in this exams. The ID starts from 02000001 to 02074719. I will create a simple Python file to crawl the data from 
