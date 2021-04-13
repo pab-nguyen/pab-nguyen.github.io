@@ -48,9 +48,6 @@ After scrapping process, we need to clean the text file so that it allows us to 
 I use another Python file to do it, however it was quite manual to look for what to delete and what to keep. You can download this cleaning python file [here](assets/images/collegeexam2020/csv_sbd.py).  
 
 Here is how the clean csv looks like 
-<figure align="center">
-	<img align="center" src="/assets/images/collegeexam2020/csv.jpg" >
-</figure>
 
 After that, I use this csv, transform it a bit, put it into Tableau Public, and created this visualizations.
 
