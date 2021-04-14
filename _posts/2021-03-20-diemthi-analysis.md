@@ -54,7 +54,7 @@ Here is how the clean csv looks like
 </figure>
 
 After that, I use this csv, transform it a bit, put it into Tableau Public, and created this visualizations.
-<iframe src="https://public.tableau.com/views/VietnamCollegeEntranceExamScore2020/Dashboard1?:embed=true&:showVizHome=no" width="100%" height="850" width="1000"></iframe>
+<iframe src="https://public.tableau.com/views/VietnamCollegeEntranceExamScore2020/Dashboard1?:embed=true&:showVizHome=no" width="100%" height="850" width="1100"></iframe>
 
 
 
