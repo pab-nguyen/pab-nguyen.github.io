@@ -9,8 +9,16 @@ summary: "In Vietnam, education is taken very seriously. Parents and students pr
 In this project, I scraped 74,000 exam takers scores in 2020 from the official Government website, analyzed it to find insights about this exam. I then visualized in with Tableau to give the audience insights on this exam. "
 image: /assets/images/collegeexam2020/thumbnail.jpg
 ---
+## Introduction
+In Vietnam, education is taken very seriously. Parents and students prepare three years of high school for one exam, that in many people's opinions determine your future. Before 2015, students has to take two exams: one deciding whether they graduate high school, and the other is the college entrance exam. These two exams now became one, therefore it is extremely stressful for students in their last year of high school. 
 
+In this project, I scraped 74,000 exam takers scores in 2020 from the official Government website, analyzed it to find insights about this exam. I then visualized in with Tableau to give the audience insights on this exam. 
 
+In Vietnam, high school graduates need to take a standardized college entrance exam to get considered for higher education. They need to take five tests: Maths, Literature, English, Social Sciences and Natural Sciences. 
+
+## Ask
+
+## Process and Process
 First we will go to [http://diemthi.hcm.edu.vn/Home](http://diemthi.hcm.edu.vn/Home). There is a search box available. Students will put their candidate ID in here, press search (Xem điểm), and the site will give their results, as of below.
 
 <figure align="center">
@@ -20,7 +28,7 @@ First we will go to [http://diemthi.hcm.edu.vn/Home](http://diemthi.hcm.edu.vn/H
 <figure align="center">
 	<img align="center" src="/assets/images/collegeexam2020/site2.jpg" >
 	<figcaption>
-		Official website
+		Website for scraping
 	</figcaption>
 </figure>
 
@@ -51,10 +59,12 @@ Here is how the clean csv looks like
 	<img align="center" src="/assets/images/collegeexam2020/csv.jpg">
 </figure>
 
-There is 
+The headers are ID, Name, DOB and the subjects . Every row is a candidate, and their respective scores for each subjects. -1 means the candidate did not take that particular subject. 
 
-After that, I use this csv, transform it a bit, put it into Tableau Public, and created this visualizations.
-<iframe src="https://public.tableau.com/views/VietnamCollegeEntranceExamScore2020/Dashboard1?:embed=true&:showVizHome=no" height="807" width="1000"></iframe>
+After having a clean .csv file, I push it into Tableau Public, pivoted it, and created this visualizations.
+<iframe src="https://public.tableau.com/views/VietnamCollegeEntranceExamScore2020/Dashboard1?:embed=true&:showVizHome=no" height="807" width="1050"></iframe>
+
+
 
 
 
