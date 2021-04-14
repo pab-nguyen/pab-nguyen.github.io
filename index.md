@@ -24,11 +24,11 @@ I have a MS degree in Finance and Data Analytics at Bentley University. I am pro
 
 Besides programming and visualization tools, I have substantial knowledge and experiences in corporate finance and I am advanced in Excel and VBA. I have worked as an investment analyst at an asset management firm. I have experiences with building complex financial models for equity valuation (DCF), capital budgeting, revenue forecasting, option pricing. Additionally, I have built multiples VBA macros sets to automate reports, reducing significantly labor hours in my previous jobs. 
 
-### What I'm learning
+### What I'm working on
 
 I am currently taking [Google Data Analytics Certificate](https://www.coursera.org/professional-certificates/google-data-analytics) courses on Coursera. I am also doing a Master program in Management and Data Analytics at University of North America.
 
-My previous education has been focusing on finance. Last year, I had the chance to work at Sunovion Pharmaceuticals as an intern for their Strategic Pricing department. During the internship, I learned to build automation macros in Excel VBA, which reduced the average time spent for analysts from a few days to 20 minutes. These VBA macros requires high understanding of coding and Excel. This sparked something in me. I realized I like to code, and work with data. I also remember a project I did in one of my Statistical Modeling class, where my team built a [ML classification model](https://pab-nguyen.github.io/2019/11/28/car-classification.html) to categorize cars by their MSRP prices and their market label (whether they are luxury/performance). These experiences, along with a lengthy research process, make me realized that statistics, programming and data are all things I am highly interested in. I want to be a data analyst, and I am teaching myself how to become one. I am excited for this journey, and by creating this website, I am making the commitment to follow through.  
+I am in the process of switching careers from finance to data analytics. From working with programming and database in previous employments and academic courses, I realized data science, specifically data analytics is what I want to do. I am highly interested in coding, visualizing data and statistics. I want to be a data analyst, and I am teaching myself how to become one. I am excited for this journey, and by creating this website, I am making the commitment to follow through.  
 
 You can check out my portfolio and my CV below. Thank you very much for visiting my website!
 
