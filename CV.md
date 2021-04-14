@@ -10,7 +10,7 @@ title: CV
 	}
 </style>
 
-[Download](https://pab-nguyen.github.io/assets/file/Resume.pdf)
+[Download Resume](https://pab-nguyen.github.io/assets/file/Resume.pdf)
 
 ## Professional Experiences    
 ### DEKKO Group, JSC  
