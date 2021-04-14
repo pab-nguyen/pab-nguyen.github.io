@@ -20,11 +20,11 @@ First we will go to [http://diemthi.hcm.edu.vn/Home](http://diemthi.hcm.edu.vn/H
 <figure align="center">
 	<img align="center" src="/assets/images/collegeexam2020/site2.jpg" >
 	<figcaption>
-		Example
+		Official website
 	</figcaption>
 </figure>
 
-There are total 74719 participants in this exams. The ID starts from 02000001 to 02074719. I will create a simple Python file to crawl the data from the website, and save it into a .txt file.
+There are total 74,719 participants in this exams. From my understanding, the ID takes the form of eights digits. They start from 02000001 and end with 02074719. In this project, I created a simple Python file to crawl the data from the website, by opening the website, input in the IDs, and save the entire html code into a .txt file for all 74,719 participants. Here is how the code looks like.  
 
 <pre>
 import subprocess
@@ -42,19 +42,19 @@ for i in range(2000001,2074719):
         print(i-2000000)
 </pre>
 
-This code snippet will run through all 74,719 exam takers' ID, and input the html site into the text file. 
-After scrapping process, we need to clean the text file so that it allows us to see the students' name, DOB, and their scores.  
+This code snippet will run through all 74,719 exam takers' ID, and input the html site into the text file, as explained above. It took me around 3 hours to scrape this data, and I believe there is a more time-efficient way to do this. The text file is approximately 170 MB in size.  
 
-I use another Python file to do it, however it was quite manual to look for what to delete and what to keep. You can download this cleaning python file [here](assets/images/collegeexam2020/csv_sbd.py).  
+After scrapping process, we need to clean the file so that it allows us to see the students' name, DOB, and their scores in table format. I use another Python file to do it, however it was quite manual to look for what to delete and what to keep. You can download this cleaning python file [here](assets/images/collegeexam2020/csv_sbd.py).  
 
 Here is how the clean csv looks like 
-
 <figure align="center">
 	<img align="center" src="/assets/images/collegeexam2020/csv.jpg">
 </figure>
 
+There is 
+
 After that, I use this csv, transform it a bit, put it into Tableau Public, and created this visualizations.
-<iframe src="https://public.tableau.com/views/VietnamCollegeEntranceExamScore2020/Dashboard1?:embed=true&:showVizHome=no" height="820" width="1100"></iframe>
+<iframe src="https://public.tableau.com/views/VietnamCollegeEntranceExamScore2020/Dashboard1?:embed=true&:showVizHome=no" height="807" width="1000"></iframe>
 
 
 
