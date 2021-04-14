@@ -69,5 +69,7 @@ After having a clean .csv file, I push it into Tableau Public, pivoted it, and c
 <iframe src="https://public.tableau.com/views/VietnamCollegeEntranceExamScore2020/Dashboard1?:embed=true&:showVizHome=no" height="755" width="1080"></iframe>
 
 ## Analysis
+The total participants in my viz is 74,451, instead of 74,719. Approximately 300 records were missing, which I am not sure the cause of. 
 
+Some 
 
