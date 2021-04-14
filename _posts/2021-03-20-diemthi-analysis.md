@@ -16,7 +16,11 @@ I was interested to see the results of the students. In this project, I scraped 
 
 ## Ask    
 There are some few questions I was curious beforehand:  
-1. Are there 
+1. What is the age of the test takers?  
+2. How well did the students do, score-wise?  
+3. What is the score distribution among age and subjects?  
+4. Are there any student that took more than five subjects?  
+5. Is Nguyen still the most common last name? :D    
 
 ## Process and Process
 First we will go to [http://diemthi.hcm.edu.vn/Home](http://diemthi.hcm.edu.vn/Home). There is a search box available. Students will put their candidate ID in here, press search (Xem điểm), and the site will give their results, as of below.
@@ -61,10 +65,9 @@ Here is how the clean csv looks like
 
 The headers are ID, Name, DOB and the subjects . Every row is a candidate, and their respective scores for each subjects. -1 means the candidate did not take that particular subject. 
 
-After having a clean .csv file, I push it into Tableau Public, pivoted it, and created this visualizations.
+After having a clean .csv file, I push it into Tableau Public, pivoted it, and created this visualization.
 <iframe src="https://public.tableau.com/views/VietnamCollegeEntranceExamScore2020/Dashboard1?:embed=true&:showVizHome=no" height="755" width="1080"></iframe>
 
-
-
+## Analysis
 
 
