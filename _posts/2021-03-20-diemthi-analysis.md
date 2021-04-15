@@ -89,4 +89,4 @@ I have answer these questions through a bit of exploratory analysis
 4. Are there any student that took more than five subjects?  **There was one students who took 9 subjects. Most took 6**    
 5. Is Nguyen still the most common last name? :D   **It still is**  
 
-If you have anything to suggest, please email me. I would love to hear from you 
+If you have anything to suggest, please email me. I would love to hear from you! 
