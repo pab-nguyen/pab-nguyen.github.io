@@ -69,7 +69,24 @@ After having a clean .csv file, I push it into Tableau Public, pivoted it, and c
 <iframe src="https://public.tableau.com/views/VietnamCollegeEntranceExamScore2020/Dashboard1?:embed=true&:showVizHome=no" height="755" width="1080"></iframe>
 
 ## Analysis
-The total participants in my viz is 74,451, instead of 74,719. Approximately 300 records were missing, which I am not sure the cause of. 
+The total participants in my viz is 74,451, instead of 74,719. Approximately 300 records were missing, which I am not sure the cause of. We will dive into this data viz to extract some exploratory insights.
 
-Some 
+Around 66,000 of test takers are 18-20 years old. These are the age of high schoolers getting into college. There are people from all ages, surprisingly there is 6 test takers who are older than 50. Median score is 6.8, therefore it is considered quite tough.
 
+Math, Literature and English are the main mandatory subjects that everyone needs to take. With higher ages, the average score of these three subjects get lower. It might be because older people have less access to common education. 
+
+Most test-takers take 6 six subjects. Besides the three mandatory subjects, they have to choose one between  Natural Sciences (Physics, Chemistry, Biology) and Social Sciences (History, Geography, Ethics). There is only one test-taker who took all nine subjects. I have checked her data, and found out that even though she registered for both optional combo tests, she only took one, so her total subjects taken are six. 
+
+Even though Math, Lit and English are mandatory, the number of test-takers are not the same. Math has more participants than Lit does, and Lit has more than English does. One possible reason for this is because of the schedule of the tests. Math is first, Lit is second and English is last. It might be the case that people who didn't do well on a subject, chose not to take the other ones which schedule after. Or simply they just forgot about it. I can do deeper analysis later to check this.
+
+If you want to play with the viz, feel free to do so. It has one subject filter, which shows you the stats of the chosen subject. You will probably find more interesting insights when you play with it. 
+
+## Conclusion  
+I have answer these questions through a bit of exploratory analysis  
+1. What is the age of the test takers?  **All ages. Most are between 18-20**  
+2. How well did the students do, score-wise?  **Median is 6.8. Test was tough**  
+3. What is the score distribution among age and subjects?  **The older you are, the lower score you got**  
+4. Are there any student that took more than five subjects?  **There was one students who took 9 subjects. Most took 6**    
+5. Is Nguyen still the most common last name? :D   **It still is**  
+
+If you have anything to suggest, please email me. I would love to hear from you 
