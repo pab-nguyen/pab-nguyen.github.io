@@ -10,13 +10,21 @@ title: CV
 	}
 </style>
 
-[Download Resume](https://pab-nguyen.github.io/assets/file/Resume.pdf)
+[Download Resume](https://pab-nguyen.github.io/assets/file/Resume_PhanNguyen.pdf)
 
-## Professional Experiences    
+## Professional Experiences 
+### Sunovion Pharmaceuticals  
+*** Data Analytics Intern***   
+*June 2021 - Present, Marlborough, MA*  
+• Extract and transform media and website data of firm’s top three drugs from Google Analytics and internal data.  
+• Build consolidated Tableau dashboards that combine media data with website data to provide actionable insights.  
+• Initiated documentation of dashboards metadata, data sources, dimension/metrics, and how data join together.   
+
 ### DEKKO Group, JSC  
 ***Oracle NetSuite Developer***  
-*January 2020 - Present, Hanoi, Vietnam*  
-• Extracted operational and financial data from Oracle NetSuite (SuiteAnalytics); cleaned, transformed and built dashboards with Tableau; analyzed and presented insights to executives.  
+*January 2020 - May 2021, Hanoi, Vietnam*  
+• Extracted, cleaned and transformed financial data from Oracle NetSuite (Suite Analytics).
+• Designed sales and operations dashboards with Tableau; analyzed KPIs, presented insights to executives.
 • Performed as remote help desk, assessed system issues, communicated with end-users regarding operational problems, provided weekly training sessions to ensure smooth transition from legacy platform.  
 • Customized front-end elements (forms, lists, workflows), updated records, and documented changes and instructions.  
 
@@ -24,7 +32,7 @@ title: CV
 ***Strategic Pricing and Contracting Intern***     
 *June 2020 - October 2020, Marlborough, MA*  
 • Streamlined operational activities with VBA Macros scripting, improved efficiency and productivity to department.  
-• Reduced time spent on processes: Part D rebate from 10 hours to 30 minutes, Market Access customer report from two hours to 10 minutes, Medicaid invoices reconciliation from five hours to an hour.  
+• Reduced 80% time spent on processes: Part D rebate from 10 hours to 30 minutes, Market Access customer report from two hours to 10 minutes, Medicaid invoices reconciliation from five hours to an hour.  
 • Built financial models to quantify monetary impacts of potential changes in health insurance policies, presented findings to Health Policy & Reimbursement team, notified management of $300 million in potential liability.   
 • Led team of six colleagues to brainstorm, develop and pitch a best-in-class intern program recommendation to HR.   
 
@@ -75,11 +83,13 @@ capability to pay loans.
   
   
 ## Certificates and Achievements  
+• Google Analytics Beginner & Advanced Certificate
 • Passed CFA Level 1, recipient of CFA Scholarship  
 • Bloomberg Market Concept Certificate, 2017  
   
   
 ## Skills  
+Data Analytics: ETL, cleaning data, web scraping, data analysis, data visualization, dashboard design
 Finance: Equity Valuation, Capital Budgeting, Revenue Forecasting, Option Pricing  
 Data Science: Exploratory Analysis, Regression, Classification  
 Technical:  
