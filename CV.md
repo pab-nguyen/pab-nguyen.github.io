@@ -14,7 +14,7 @@ title: CV
 
 ## Professional Experiences 
 ### Sunovion Pharmaceuticals  
-*** Data Analytics Intern***   
+***Data Analytics Intern***   
 *June 2021 - Present, Marlborough, MA*  
 • Extract and transform media and website data of firm’s top three drugs from Google Analytics and internal data.  
 • Build consolidated Tableau dashboards that combine media data with website data to provide actionable insights.  
@@ -73,8 +73,7 @@ capability to pay loans.
 ### Bentley University - McCallum Graduate School of Business, Waltham, MA 
 **Master of Science in Finance, 2020**  
 • GPA: 3.9/4.0  
-• *Coursework*: Data Management & SQL, Managing with Analytics & Tableau, Statistical Modeling for Business
-& R, Corporate Finance, Financial Modeling & VBA, Advanced Managerial Finance, Market & Investments   
+• *Coursework*: Advanced Managerial Finance, Market & Investments   
 ### Bentley University, Waltham, MA   
 **Bachelor of Science in Corporate Finance, 2019**   
 • GPA: 3.5/4.0   
@@ -83,15 +82,15 @@ capability to pay loans.
   
   
 ## Certificates and Achievements  
-• Google Analytics Beginner & Advanced Certificate
-• Passed CFA Level 1, recipient of CFA Scholarship  
-• Bloomberg Market Concept Certificate, 2017  
+• Google Analytics Beginner & Advanced Certificate  
+• Passed CFA Level 1, recipient of CFA Scholarship   
+• Bloomberg Market Concept Certificate, 2017   
   
   
 ## Skills  
-Data Analytics: ETL, cleaning data, web scraping, data analysis, data visualization, dashboard design
-Finance: Equity Valuation, Capital Budgeting, Revenue Forecasting, Option Pricing  
-Data Science: Exploratory Analysis, Regression, Classification  
+Data Analytics: ETL, cleaning data, web scraping, data analysis, data visualization, dashboard design  
+Finance: Equity Valuation, Capital Budgeting, Revenue Forecasting, Option Pricing   
+Data Science: Exploratory Analysis, Regression, Classification   
 Technical:  
 	- Programming: Python (NumPy, Pandas), R, SQL, Tableau   
 	- Visualization: Tableau, Matplotlib, Seaborn, ggplot2   
