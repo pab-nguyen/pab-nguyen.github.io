@@ -37,7 +37,7 @@ html {
 }
 @media (min-width: 48em) {
   html {
-    font-size: 17px;
+    font-size: 15px;
   }
 }
 @media (min-width: 58em) {
