@@ -22,7 +22,7 @@ There are some few questions I was curious beforehand:
 4. Are there any student that took more than five subjects?  
 5. Is Nguyen still the most common last name? :D    
 
-## Process and Process
+## Collect and Process
 First we will go to [http://diemthi.hcm.edu.vn/Home](http://diemthi.hcm.edu.vn/Home). There is a search box available. Students will put their candidate ID in here, press search (Xem điểm), and the site will give their results, as of below.
 
 <figure align="center">
