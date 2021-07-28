@@ -16,9 +16,10 @@ title: CV
 ### Sunovion Pharmaceuticals  
 ***Data Analytics Intern***   
 *June 2021 - Present, Marlborough, MA*  
-• Extract and transform media and website data of firm’s top three drugs from Google Analytics and internal data.  
-• Build consolidated Tableau dashboards that combine media data with website data to provide actionable insights.  
-• Initiated documentation of dashboards metadata, data sources, dimension/metrics, and how data join together.   
+• Create and maintain consolidated Tableau dashboards from multiple sources for firm’s top three drugs and present actionable insights to Marketing department, resulting in more accurate and faster marketing decisions.  
+• Contribute to Decision Insights department's effort to develop deep customer insights and fuel firm’s commercial decisions.  
+• Initiate FRD documentation of dashboards’ metadata, data sources, dimension/metrics, and how data join together.  
+
 
 ### DEKKO Group, JSC  
 ***Oracle NetSuite Developer***  
