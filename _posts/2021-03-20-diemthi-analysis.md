@@ -23,7 +23,7 @@ There are some few questions I was curious beforehand:
 5. Is Nguyen still the most common last name? :D    
 
 ## Collect and Process
-First we will go to [http://diemthi.hcm.edu.vn/Home](http://diemthi.hcm.edu.vn/Home). There is a search box available. Students will put their candidate ID in here, press search (Xem điểm), and the site will give their results, as of below.
+First we will go to [http://diemthi.hcm.edu.vn/Home](http://diemthi.hcm.edu.vn/Home). This site updated score every year, thus the version in the screenshot below might not be the same. There is a search box available. Students will put their candidate ID in here, press search (Xem điểm), and the site will give their results.
 
 <figure align="center">
 	<img align="center" src="/assets/images/collegeexam2020/site.jpg">
