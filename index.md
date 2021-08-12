@@ -15,14 +15,14 @@ Hi, I am Phan Nguyen. Welcome to my website. This is where I'm showcasing my pro
 	Artist Bluff Trails in New Hampshire
 </figcaption>
 
-### What I've done so far  
-I am working as a Oracle NetSuite Analyst at a construction materials manufacturer. This SME recently implemented Oracle as their ERP system, and is in need of assistance with daily operations to ensure a smooth change from their legacy system. My responsibilities include assisting with the software operational issues, customizing front-end elements (forms, lists), updating data records and documenting changes and work instructions, and building dashboards for executives.   
+### What I've done so far
+I am working as a Data Analyst Intern at Sunovion Pharmaceuticals for the summer 2021. In this role, I got to work with the Decision Insights team to help the Marketing team to build a consolidated dashboard, which will be used as the single source of truth for all marketing data. My responsibility includes extracting data from different sources (Google Analytics, VAE/NPP Emails, IVA Calls, etc.) using SQL and Excel then push the data into Tableau to build the dashboard. 
 
-My previous employment was at Sunovion Pharmaceuticals, where I worked as an intern in the Strategic Pricing and Reimbursement department. During this internship, I had the opportunity to build financial models to quantify financial impact of health policies changes on firms, scripted VBA macros to automate processes, and co-created an improved intern program with my colleagues. 
+I have worked as a Oracle NetSuite Analyst, where I assisted my employer to integrate Oracle NetSuite as their new ERP, built dashboards for executives, and facilitated training sessions for employees. Before that, I had interned at Sunovion Pharmaceuticals, in the Strategic Pricing and Contracting team. During this internship, I had the opportunity to build financial models to quantify financial impact of health policies changes, scripted VBA macros to automate reports, and co-designed an improved intern program with my colleagues. 
 
-I have a MS degree in Finance and Data Analytics at Bentley University. I am proficient in R and Python programming languages, data processing with SQL. I am familiar with a handful of libraries like ggplot, dplyr for R and matplotlib, pandas, numpy, seaborn for Python. Tableau is another of my trusted tool to create data visualization. 
+I have a MS degree in Finance and Data Analytics at Bentley University. I am proficient in R and Python programming languages, data processing with SQL. I am familiar with a handful of libraries like ggplot, dplyr for R and matplotlib, pandas, numpy, seaborn for Python. 
 
-Besides programming and visualization tools, I have substantial knowledge and experiences in corporate finance and I am advanced in Excel and VBA. I have worked as an investment analyst at an asset management firm. I have experiences with building complex financial models for equity valuation (DCF), capital budgeting, revenue forecasting, option pricing. Additionally, I have built multiples VBA macros sets to automate reports, reducing significantly labor hours in my previous jobs. 
+My most trusted tool Tableau. I love the process of tinkering with data to find the best visual methods to tell the necessary story. My goal is to get on Tableau Viz of the Day one day. 
 
 ### What I'm working on
 
