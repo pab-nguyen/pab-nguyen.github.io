@@ -6,7 +6,7 @@ sidebar_link: true
 <div class="sidebar-right" style="background-color:#202020"></div>
 <h1 class="page-title" >{{ page.title }}</h1>
 
-Hi, I am Phan Nguyen. Welcome to my website. This is where I'm showcasing my projects and portfolio. My areas of interest are [data analytics](https://pab-nguyen.github.io/portfolio/#data-analytics), [data visualization](https://pab-nguyen.github.io/portfolio/#data-visualization),[equity valuation](https://pab-nguyen.github.io/portfolio/#equity-valuation), [machine learning](https://pab-nguyen.github.io/portfolio/#machine-learning), and [Excel VBA scripting](https://pab-nguyen.github.io/portfolio/#excel-vba). 
+Hi, I am Phan Nguyen. Welcome to my website. This is where I host my portfolio of projects I've done in the past. My areas of interest are [data analytics](https://pab-nguyen.github.io/portfolio/#data-analytics), [data visualization](https://pab-nguyen.github.io/portfolio/#data-visualization),[equity valuation](https://pab-nguyen.github.io/portfolio/#equity-valuation), [machine learning](https://pab-nguyen.github.io/portfolio/#machine-learning), and [Excel VBA scripting](https://pab-nguyen.github.io/portfolio/#excel-vba). 
 
 <p align="center">
 	<img align="center" src="/assets/me.jpg" width="360">
@@ -15,22 +15,27 @@ Hi, I am Phan Nguyen. Welcome to my website. This is where I'm showcasing my pro
 	Artist Bluff Trails in New Hampshire
 </figcaption>
 
-### What I've done so far
-I am working as a Data Analyst Intern at Sunovion Pharmaceuticals for the summer 2021. In this role, I got to work with the Decision Insights team to help the Marketing team to build a consolidated dashboard, which will be used as the single source of truth for all marketing data. My responsibility includes extracting data from different sources (Google Analytics, VAE/NPP Emails, IVA Calls, etc.) using SQL and Excel then push the data into Tableau to build the dashboard. 
+### My Career
+I graduated in August 2020 from a five year BS/MS program in Finance at Bentley University. 
 
-I have worked as a Oracle NetSuite Analyst, where I assisted my employer to integrate Oracle NetSuite as their new ERP, built dashboards for executives, and facilitated training sessions for employees. Before that, I had interned at Sunovion Pharmaceuticals, in the Strategic Pricing and Contracting team. During this internship, I had the opportunity to build financial models to quantify financial impact of health policies changes, scripted VBA macros to automate reports, and co-designed an improved intern program with my colleagues. 
+After a several internships in financial services and pharmaceutical industries, and passing CFA level I, I found my interest in data analytics. I applied to a master program, joined a MOOC, tinkered with some side projects, and got hooked into this career path.
 
-I have a MS degree in Finance and Data Analytics at Bentley University. I am proficient in R and Python programming languages, data processing with SQL. I am familiar with a handful of libraries like ggplot, dplyr for R and matplotlib, pandas, numpy, seaborn for Python. 
+Fortunately, in January 2021, I got a position as a Oracle NetSuite Analyst for a manufacturing firm, where I assisted my employer to integrate Oracle NetSuite as their new ERP, built dashboards for executives, and facilitated training sessions for employees. 
 
-My most trusted tool Tableau. I love the process of tinkering with data to find the best visual methods to tell the necessary story. My goal is to get on Tableau Viz of the Day one day. 
+In the summer of 2021, I did a second internship at Sunovion Pharmaceuticals as a Data Analyst Intern. In this role, I got to work with the Decision Insights team to help the Marketing team to build a consolidated dashboard, which will be used as the single source of truth for all marketing data. My responsibility includes extracting data from different sources (Google Analytics, VAE/NPP Emails, IVA Calls, etc.) using SQL and Excel then push the data into Tableau to build the dashboard.
 
-### What I'm working on
+Currently I am working as a Data Analytics and Reporting Specialist at MilliporeSigma, based in Burlington, MA.
+I am very grateful to keep moving forward in this direction of my career path, and I want to share an aspect of it through this website.
+
+### What I am working on 
 
 I am currently taking [Google Data Analytics Certificate](https://www.coursera.org/professional-certificates/google-data-analytics) courses on Coursera. I am also doing a Master program in Management and Data Analytics at University of North America.
 
-I am in the process of switching careers from finance to data analytics. From working with programming and database in previous employments and academic courses, I realized data science, specifically data analytics is what I want to do. I am highly interested in coding, visualizing data and statistics. I want to be a data analyst, and I am teaching myself how to become one. I am excited for this journey, and by creating this website, I am making the commitment to follow through.  
+I am familiar with a handful of libraries like ggplot, dplyr for R and matplotlib, pandas, numpy, seaborn for Python. My most trusted tool Tableau. I love the process of tinkering with data to find the best visual methods to tell the necessary story. My goal is to get on Tableau Viz of the Day one day.
 
-You can check out my portfolio and my CV below. Thank you very much for visiting my website!
+I am excited for this journey, and by creating this website, I am making the commitment to follow through and show you what I am capable of.  
+
+You can check out my portfolio and my CV below. Thank you very much for visiting!
 
 <p align="center">
 	<a class="button" name="button" href="/portfolio/">Portfolio</a>
