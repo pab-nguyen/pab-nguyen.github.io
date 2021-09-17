@@ -18,22 +18,20 @@ Hi, I am Phan Nguyen. Welcome to my website. This is where I host my portfolio o
 ### My Career
 I graduated in August 2020 from a five year BS/MS program in Finance at Bentley University. 
 
-After a several internships in financial services and pharmaceutical industries, and passing CFA level I, I found my interest in data analytics. I applied to a master program, joined a MOOC, tinkered with some side projects, and got hooked into this career path.
+After a several internships in financial services and life sciences industries, I found my interest in data analytics. I applied to a master program, joined a MOOC, worked on some side projects, and got hooked into this career path.
 
 Fortunately, in January 2021, I got a position as a Oracle NetSuite Analyst for a manufacturing firm, where I assisted my employer to integrate Oracle NetSuite as their new ERP, built dashboards for executives, and facilitated training sessions for employees. 
 
 In the summer of 2021, I did a second internship at Sunovion Pharmaceuticals as a Data Analyst Intern. In this role, I got to work with the Decision Insights team to help the Marketing team to build a consolidated dashboard, which will be used as the single source of truth for all marketing data. My responsibility includes extracting data from different sources (Google Analytics, VAE/NPP Emails, IVA Calls, etc.) using SQL and Excel then push the data into Tableau to build the dashboard.
 
 Currently I am working as a Data Analytics and Reporting Specialist at MilliporeSigma, based in Burlington, MA.
-I am very grateful to keep moving forward in this direction of my career path, and I want to share an aspect of it through this website.
+I am grateful to be able to move forward in this direction of my career path, and I want to share a bit of it through this website. 
 
 ### What I am working on 
 
-I am currently taking [Google Data Analytics Certificate](https://www.coursera.org/professional-certificates/google-data-analytics) courses on Coursera. I am also doing a Master program in Management and Data Analytics at University of North America.
+I am taking [Google Data Analytics Certificate](https://www.coursera.org/professional-certificates/google-data-analytics) courses on Coursera and working toward another Master's degree in Data Analytics at University of North America.
 
-I am familiar with a handful of libraries like ggplot, dplyr for R and matplotlib, pandas, numpy, seaborn for Python. My most trusted tool Tableau. I love the process of tinkering with data to find the best visual methods to tell the necessary story. My goal is to get on Tableau Viz of the Day one day.
-
-I am excited for this journey, and by creating this website, I am making the commitment to follow through and show you what I am capable of.  
+I am familiar with a handful of libraries like ggplot, dplyr for R and matplotlib, pandas, numpy, seaborn for Python. My specialization is in data visualization with Tableau. I love the process of tinkering with data to find the best visual methods in order to tell the necessary story. My goal is to get on Tableau Viz of the Day one day.
 
 You can check out my portfolio and my CV below. Thank you very much for visiting!
 
