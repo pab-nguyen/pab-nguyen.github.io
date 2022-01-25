@@ -10,7 +10,7 @@ In this project, I scraped 74,000 exam takers scores in 2020 from the official G
 image: /assets/images/collegeexam2020/thumbnail.jpg
 ---
 ## Introduction  
-For those of you who are not familiar with 
+For those of you who are not familiar with the education system in Vietnam, we have an huge national exam held every year during the summer, which will determine whether a person can get into college or not. And college is being regarded as  
 
 ## Ask    
 There are some few questions I was curious beforehand:  
