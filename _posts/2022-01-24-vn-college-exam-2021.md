@@ -1,8 +1,8 @@
 ---
-title: Vietnam College Entrance Exam 2020
+title: Vietnam College Exam 2021
 date: 2020-12-24 
 layout: post
-tags: data-analytics data-visualization
+tags: data-visualization
 topics: data analytics
 summary: "In Vietnam, education is taken very seriously. Parents and students prepare three years of high school for one exam, that in many people's opinions determine your future. Before 2015, students has to take two exams: one deciding whether they graduate high school, and the other is the college entrance exam. These two exams now became one, therefore it is extremely stressful for students in their last year of high school. </br></br>
 
@@ -10,9 +10,7 @@ In this project, I scraped 74,000 exam takers scores in 2020 from the official G
 image: /assets/images/collegeexam2020/thumbnail.jpg
 ---
 ## Introduction  
-In Vietnam, high school graduates need to take a standardized college entrance exam to get considered for higher education. They need to take five subject tests: Math, Literature, English, Social Sciences and Natural Sciences. Parents and students prepare three years of high school for this one exam, that in many people's opinions determine your future. Before 2015, students has to take two exams: one deciding whether they graduate high school, and the other is the college entrance exam. These two exams now became one, therefore it is extremely stressful for students in their last year of high school.  
-
-I was interested to see the results of the students. In this project, I scraped 74,000 exam takers scores in 2020 from the official Government website of Ho Chi Minh city, transformed it to find insights about this exam. I then visualized in with Tableau to give the audience insights on this exam.  
+For those of you who are not familiar with 
 
 ## Ask    
 There are some few questions I was curious beforehand:  
@@ -66,7 +64,7 @@ Here is how the clean csv looks like
 The headers are ID, Name, DOB and the subjects . Every row is a candidate, and their respective scores for each subjects. -1 means the candidate did not take that particular subject. 
 
 After having a clean .csv file, I push it into Tableau Public, pivoted it, and created this visualization.
-<iframe src="https://public.tableau.com/app/profile/phan.anh.nguyen/viz/VietnameseCollegeTest2021/VietnamCollegeExam2021?publish=yes:embed=true&:showVizHome=no" height="755" width="1085"></iframe>
+<iframe src="https://public.tableau.com/app/profile/phan.anh.nguyen/viz/VietnameseCollegeTest2021/VietnamCollegeExam2021?:embed=true&:showVizHome=no" height="755" width="1085"></iframe>
 
 ## Analysis
 The total participants in my viz is 74,451, instead of 74,719. Approximately 300 records were missing, which I am not sure the cause of. We will dive into this data viz to extract some exploratory insights.
