@@ -64,7 +64,7 @@ Here is how the clean csv looks like
 The headers are ID, Name, DOB and the subjects . Every row is a candidate, and their respective scores for each subjects. -1 means the candidate did not take that particular subject. 
 
 After having a clean .csv file, I push it into Tableau Public, pivoted it, and created this visualization.
-<iframe src="https://public.tableau.com/app/profile/phan.anh.nguyen/viz/VietnameseCollegeTest2021/VietnamCollegeExam2021?:embed=true&:showVizHome=no" height="755" width="1085"></iframe>
+<iframe src="https://public.tableau.com/views/VietnameseCollegeTest2021/VietnamCollegeExam2021?:embed=true&:showVizHome=no" height="755" width="1085"></iframe>
 
 ## Analysis
 The total participants in my viz is 74,451, instead of 74,719. Approximately 300 records were missing, which I am not sure the cause of. We will dive into this data viz to extract some exploratory insights.
