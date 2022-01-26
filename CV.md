@@ -12,10 +12,17 @@ title: CV
 
 [Download Resume](https://pab-nguyen.github.io/assets/file/Resume_PhanNguyen.pdf)
 
-## Professional Experiences 
+## Professional Experiences
+### MilliporeSigma  
+***Analytics and Reporting Specialist***   
+*Sep 2021 - Present, Burlington, MA*  
+• Design dashboards and ad hoc reports supporting senior to mid-level sales management to evaluate effectiveness of sales strategy and execution using Tableau and Power BI.  
+• Communicate with sales enablement and controlling teams to understand sales metrics perspectives, bridge comprehension gap and improve inconsistencies in Palantir Foundry and SAP sales data.  
+
+
 ### Sunovion Pharmaceuticals  
 ***Data Analytics Intern***   
-*June 2021 - Present, Marlborough, MA*  
+*June 2021 - Aug 2021, Marlborough, MA*  
 • Create and maintain consolidated Tableau dashboards from multiple sources for firm’s top three drugs and present actionable insights to Marketing department, resulting in more accurate and faster marketing decisions.  
 • Contribute to Decision Insights department's effort to develop deep customer insights and fuel firm’s commercial decisions.  
 • Initiate FRD documentation of dashboards’ metadata, data sources, dimension/metrics, and how data join together.  
@@ -70,7 +77,8 @@ capability to pay loans.
 
 ## Education
 ### University of North America, Fairfax, VA
-**Master of Science in Management & Data Analytics, 2023**  
+**Master of Science in Management & Data Analytics, 2023**    
+• GPA: 4.0/4.0  
 ### Bentley University - McCallum Graduate School of Business, Waltham, MA 
 **Master of Science in Finance, 2020**  
 • GPA: 3.9/4.0  
