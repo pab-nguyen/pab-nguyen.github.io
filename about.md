@@ -1,6 +1,6 @@
 ---
 title: About
-layout: default
+layout: page
 sidebar_link: true
 ---
 <div class="sidebar-right" style="background-color:#202020"></div>
