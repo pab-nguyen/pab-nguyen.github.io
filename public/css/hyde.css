@@ -88,7 +88,7 @@ html {
     top: 0;
     right: 0;
     bottom: 0;
-    width: 14%;
+    width: 18rem;
     text-align: left;
 
   }
@@ -157,14 +157,23 @@ a.sidebar-nav-item:focus {
 
 @media (min-width: 55em) {
   .content {
-    margin-left:22rem;
-    margin-right:22%;
+    margin-left:19rem;
+    margin-right:19rem;
     max-width: 54rem;
 
 
   }
 }
 
+@media (min-width: 90em) {
+  .content {
+    margin-left:25rem;
+    margin-right:25rem;
+    max-width: 54rem;
+
+
+  }
+}
 
 /*
  * Reverse layout
