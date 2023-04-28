@@ -1,7 +1,6 @@
 # Dependencies
 markdown: kramdown
 highlighter: rouge
-theme: minimal
 
 # Setup
 title:            Phan Nguyen
