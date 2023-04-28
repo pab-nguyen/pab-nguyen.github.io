@@ -44,33 +44,30 @@ layout: default
 {% for tag in sorted_tags %}
 <h3 id='{{tag[0]}}'> 
   {{tag[0]}} 
-</h3> 
--->
+</h3>  
     
-    
-    <!-- 
       {% for post in tag[1] %} 
     -->
-    {% for post in site.posts %}
-      <div class="post">
-        <h3 class="post-title", id="{{post.title}}">
-          <a href="{{ post.url }}">
-            {{ post.title }}
-          </a>
-        </h3>
+{% for post in site.posts %}
+<div class="post">
+  <h3 class="post-title", id="{{post.title}}">
+    <a href="{{ post.url }}">
+      {{ post.title }}
+    </a>
+  </h3>
 
-        {{ post.summary }} 
-        </br></br>
-        <span class="post-date">{{ post.date | date_to_string }}</span>
-        <p align="center">
-          <img align="center" src="{{post.image}}" width="480">
-        </p>
-    
-        </br>
-      </div>  
-      {% endfor %}
-<!-- 
-  {% endfor %}  
+  {{ post.summary }} 
+  </br></br>
+  <span class="post-date">{{ post.date | date_to_string }}</span>
+  <p align="center">
+    <img align="center" src="{{post.image}}" width="480">
+  </p>
+
+  </br>
+</div>  
+{% endfor %}
+{% endfor %}
+<!-- {% endfor %}  
 -->
 </div>
 </div>
