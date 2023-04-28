@@ -39,14 +39,15 @@ layout: default
 </span>
 
 <div class="posts">
-  {% assign sorted_tags = site.date | sort %}
+  <!-- {% assign sorted_tags = site.tags | sort %}
     {% for tag in sorted_tags %}
-    <h3 id='{{post.date}}'> 
+    <h3 id='{{tag[0]}}'> 
       {{tag[0]}} 
-    </h3>
+    </h3> -->
     
     
-    {% for post in tag[1] %}
+    <!-- {% for post in tag[1] %} -->
+    {% for post in site.posts %}
       <div class="post">
         <h3 class="post-title", id="{{post.title}}">
           <a href="{{ post.url }}">
