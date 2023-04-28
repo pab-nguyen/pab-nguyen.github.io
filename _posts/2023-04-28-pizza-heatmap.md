@@ -1,0 +1,10 @@
+---
+title: Pizza Heatmap
+date: 2023-04-28
+layout: post
+tags: data-visualization
+topics: data analytics
+---
+
+<iframe width="100%" height="500" frameborder="0"
+  src="https://observablehq.com/embed/7ec7b385a8a1f34a@latest?cell=*"></iframe>

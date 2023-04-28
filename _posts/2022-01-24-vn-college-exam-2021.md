@@ -7,7 +7,7 @@ topics: data analytics
 summary: "In Vietnam, education is taken very seriously. Parents and students prepare three years of high school for one exam, that in many people's opinions determine your future. Before 2015, students has to take two exams: one deciding whether they graduate high school, and the other is the college entrance exam. These two exams now became one, therefore it is extremely stressful for students in their last year of high school. </br></br>
 
 In this project, I scraped 74,000 exam takers scores in 2020 from the official Government website of Ho Chi Minh City, analyzed it then visualized in with Tableau to give the audience insights on this exam. "
-image: /assets/images/collegeexam2020/thumbnail.jpg
+image: /assets/images/collegeexam2021/thumbnail.png
 ---
 ## Introduction  
 For those of you who are not familiar with the education system in Vietnam, there is an important national exam held every year during the summer, which will determine whether a person can get into college or not. And as I am writing this post in 2022, college is still regarded to be a big decision that set your life course. Personally, I don't believe that's true, yet I am interested to see how Vietnamese students did against this extremely hard exam.  
