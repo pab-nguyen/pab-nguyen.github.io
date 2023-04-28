@@ -25,7 +25,7 @@ layout: default
       <a href="#{{post.title}}">
         {{post.title}}
       </a></br>
-      {% endfor %} 
+      {% endfor %}
       </br>  
     {% endfor %}
 </div>
@@ -61,14 +61,14 @@ layout: default
 
         {{ post.summary }} 
         </br></br>
-    <span class="post-date">{{ post.date | date_to_string }}</span>
+        <span class="post-date">{{ post.date | date_to_string }}</span>
         <p align="center">
           <img align="center" src="{{post.image}}" width="480">
         </p>
     
         </br>
-        </div>  
-    {% endfor %}   
+      </div>  
+    {% endfor %}
 <!-- 
   {% endfor %}  
 -->
