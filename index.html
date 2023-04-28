@@ -55,10 +55,10 @@ layout: default
       {{ post.title }}
     </a>
   </h3>
+  <div class="post-date">{{ post.date | date_to_string }}</div>
 
   {{ post.summary }} 
-  </br></br>
-  <span class="post-date">{{ post.date | date_to_string }}</span>
+  </br>
   <p align="center">
     <img align="center" src="{{post.image}}" width="480">
   </p>
