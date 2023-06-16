@@ -46,6 +46,8 @@ layout: default
 {{tag[0]}} 
 </h3>  
 {% for post in tag[1] %} 
+{% endfor %}
+{% endfor %}  
 -->
 {% for post in site.posts %}
 <div class="post">
@@ -65,7 +67,8 @@ layout: default
   </br>
 </div>  
 {% endfor %}
-{% endfor %}
+
+
 </div>
 </div>
 
