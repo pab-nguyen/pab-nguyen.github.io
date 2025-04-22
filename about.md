@@ -16,6 +16,8 @@ Hi, I am Phan Nguyen. Welcome to my website. This is where I host my portfolio o
 </figcaption>
 
 ### My Career
+Currently I'm the North America Lead for Data & Analytics at MilliporeSigma.
+
 I graduated in August 2020 from a five year BS/MS program in Finance at Bentley University. 
 
 After a several internships in financial services and life sciences industries, I found my interest in data analytics. I applied to a master program, joined a MOOC, worked on some side projects, and got hooked into this career path.
